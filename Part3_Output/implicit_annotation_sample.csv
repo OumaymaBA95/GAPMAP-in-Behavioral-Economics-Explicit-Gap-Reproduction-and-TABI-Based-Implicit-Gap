@@ -1,0 +1,1921 @@
+chunk_id,article_filename,text_excerpt,implicit_gap_sentence
+21,Pre-merger-performance-and-merger-success_2025_Journal-of-Behavioral-and-Exp.pdf,"The 
+manager received the average of the earnings of his or her employees. In the post-merger stage, the subjects performed another 20 rounds 
+of the same task as they did in the pre-merger stage. The experimenter 
+measured the completion times of the individual subjects and compen-
+sated them. Each post-merger group’s completion time is the average 
+of the three employees’ task completion times. During the pre-merger 
+stage, managers collaborated with only one or two out of the three 
+employees. Consequently, we anticipate that discrepancies in agreed-
+upon languages will pose challenges for the manager in guiding the 
+new employee to select the correct pictures, and will also impede the 
+efficiency of the existing employees. Journal of Behavioral and Experimental Economics 118 (2025) 102417 
+3 
+J.S. You et al. Fig. 1. Sample stimuli for experiments. 3.2. Data description
+Before proceeding with the main analysis, we first provide a brief 
+overview of the experimental data in this subsection. Fig. 2 illustrates that task completion times increase sharply imme-
+diately after the merger. For example, the average completion time in 
+the last pre-merger round (round 30) is 36.3 s, compared to 76.4 s in 
+the first post-merger round. The difference in averages is statistically 
+significant at the 1% level, with a calculated 𝑡-value of 7.57. This 
+pattern is consistent with the findings of Weber and Camerer (2003), 
+where the average completion time increased from 48 s in round 20 to 
+130 s in the first post-merger round. Additionally, Weber and Camerer (2003) report that the average 
+completion time for rounds 15–20 (the last five pre-merger rounds) is 
+52 s, while for the first five rounds after the merger, it is 111 s. In our 
+results, the average completion time for rounds 26–30 (the last five pre-
+merger rounds) is 37.3 s, and for the first five rounds after the merger, it 
+is 57.0 s. The mean difference remains statistically significant at the 5% 
+level, with a calculated 𝑡-value of 3.91. These findings further suggest 
+that the performance of merged groups initially declines after mergers, 
+consistent with the results reported by Weber and Camerer (2003). When we consider the performance of each group individually, 
+Fig. 3(a), which shows the five-round average task completion times 
+before and after the mergers, indicates that most post-merger groups 
+experience a decrease in performance immediately after the merger. Furthermore, Fig. 3(b) shows that perf…",
+43,Dishonesty-and-justifications--Evidence-fro_2026_Journal-of-Behavioral-and-E.pdf,"Both coauthors appear to have 
+published using altered or falsified data, with the responsibility for this 
+contested. We are not aware of any specific allegations with regard to 
+this publication, though the data have some odd features which are 
+discussed in the Online Appendix, Section 1. These general and specific 
+concerns lead us to re-examine the theory of Justified Dishonesty. The current evidence base for Justified Dishonesty comprises three 
+elements. First, Justified Dishonesty’s predictions of the mean and 
+distribution of reports have been shown to be remarkably accurate. The 
+most comprehensive evidence failed to reject Justified Dishonesty in 
+13 of 23 countries (Gächter & Schulz, 2016; Shalvi, 2016), showing 
+wide applicability. Second, multiple rolls increase mean claims (Gino 
+& Ariely, 2012; Shalvi et al., 2011, 2012), with Abeler et al.’s (2019) 
+meta analysis finding an effect size of between one fifth and one 
+twentieth of a standard deviation. Third, there is suggestive evidence 
+on mechanisms, with the switching of rolls being rated less negatively 
+than outright lying (Shalvi et al., 2011). On closer inspection, the evidence base is inconclusive. First, we 
+show that a good fit to data does not distinguish Justified Dishonesty 
+from other models (Dufwenberg & Dufwenberg, 2018; Khalmetski & 
+Sliwka, 2019), as its predictions are not unique. This means a good 
+fit to data is not sufficient evidence that Justified Dishonesty explains 
+behaviour. Second, the evidence that control rolls increase mean claims 
+does not unambiguously support the theory, as its specific prediction 
+about the level of lying is not met. Third, there is currently no evidence 
+on the specific mechanism of Justified Dishonesty, i.e. that subjects 
+‘‘shuffle’’ rolls when it pays to do so (Shalvi et al. (2012, p.1267), Shalvi 
+et al. (2015, p.127), Shalvi (2016, p.457)). Fourth, Baro et al. (2024) 
+use an online observed design, and find cheating is influenced by 
+control rolls. However, a self-reported scale of moral self image is not, 
+questioning the mechanism. We conduct two experiments in order to separate between compet-
+ing explanations of lying behaviour. Other studies show that the mean 
+and spread of reports closely match Justified Dishonesty’s predictions 
+when subjects are encouraged to roll twice. In experiment 1, we ask 
+whether this also occurs when subjects are asked to report their first 
+roll before they are asked to roll a second time. In this p…",
+50,Dishonesty-and-justifications--Evidence-fro_2026_Journal-of-Behavioral-and-E.pdf,"The corollary of Justified Dishonesty is 
+strongly rejected for mean claims and distributions for both treatments. This shows that the underlying mechanism of Justified Dishonesty is 
+not at play; people may conform to its first roll predictions, but not 
+because they switch or shuffle rolls. 6. Further data, alternative explanations & open questions
+We designed our experiments in order to test Justified Dishonesty’s 
+specific mechanism, but our data are informative to consider other 
+possibilities. This section is exploratory, using methods that were not 
+preregistered. We first use data from both rolls to assess model fit, 
+rather than examining each rolls separately. Next, we relax the idea 
+that Justified Dishonesty must be implemented by all subjects using 
+mixture models to capture if it captures an element of behaviour that 
+other models do not. We then turn our attention to two open questions 
+— whether our design leads to people altering their first report, and 
+how to think about the second report. 6.1. Using data from both rolls to assess model fit
+We have looked so far at the two reports in isolation — testing the 
+predictions of models on the two rolls independently. We can further 
+exploit the data by using the combination of both rolls, i.e. by using 
+all 36 cells. Fig. 5 presents the data from experiment 1 (bottom row) 
+and experiment 2 (right hand side of the top row). For context, it also 
+shows predictions from luck (i.e. an honest reporting of chance rolls) 
+and Justified Dishonesty (and its corollary). Experiment 1 data is shown for completeness — Justified Dishon-
+esty should not be relevant. Using experiment 2, we can calculate 
+statistics for model fit. We use the 36 cells shown in Fig. 5 as the 
+dependent variable, calibrating relevant models. For the second roll 
+we either use the corollary (Justified Dishonesty) or assume honest 
+reporting of the second roll (all other cases). Table  4 presents statistics for model fit, showing a clear order 
+of model performance. Dufwenberg and Dufwenberg’s (2018) model 
+fits the data best, fairly closely followed by Khalmetski and Sliwka’s 
+(2019) model. Assuming people report honestly is the third best model, 
+with Justified Dishonesty and its corollary producing the least accurate 
+predictions. In all but one case all statistics in both treatments have 
+a consistent order (KS has a slightly lower RMSE than DD in the One 
+Journal of Behavioral and Experimental Economics 120 (2026) 102501 
+8 
+P…",
+88,Legal-reforms--norms--and-child-marriage--observa_2026_Journal-of-Behavioral.pdf,"The regression analyses also demonstrate 
+that no exceptions to the age-of-marriage tend to be associated with an 
+increase in child marriage. These results suggest that the gap between 
+legal reforms and local perceptions may have been too wide to serve as a 
+magnet to reform customs. This is particularly the case if there is no 
+credible risk of monitoring and enforcement. The latter seems to play an 
+important role, as the regression analyses show that mandatory regis -
+tration is associated with a consistent and significant reduction in child 
+marriage rates. Other important aspects are possible ways to circumvent the law and 
+the political willingness to enforce it. Court rulings that got much media 
+attention and enforced laws tend to be more effective; however, there is 
+an important tradeoff between formal and informal marriages that in -
+dividuals seem to largely exploit in response to legal changes. Thus, one 
+should be careful about the unintended consequences of legal changes in 
+places where strong social norms persist. Taken together, the detailed analysis of the legal texts shows that 
+child marriage laws cannot be treated as uniform and are far from being 
+readily comparable. This is shown equally in the respective country- 
+level marriage trends and regression analyses, which cannot be consis -
+tently reconciled with legal actions. Yet, once we dissect the local 
+context, we find evidence that the observed macro-level trends are an 
+aggregate reflection of behavioral responses to the nationally imple -
+mented age-of-marriage laws. While our research is descriptive and cannot establish causal re -
+lationships, since formal and informal institutions may co-produce each 
+other, it represents a first attempt to identify behavioral responses on a 
+large scale and in a cross-country context to a seemingly straightforward 
+minimum age-of-marriage law. We highlight national loopholes, delays 
+in timing, legal pluralism, the relation between informal and formal 
+institutions, the civil registration and vital statistics system, and other 
+contextual factors to explain why existing research into the de -
+terminants of child marriage has not managed to provide a coherent 
+picture of the observed lived practices across contexts. Put differently, 
+our document analysis and exploratory regression models disentangle 
+the nuances of formal and informal marriage institutions. While not 
+offering causal insights, our study complements impact evaluation 
+A.L.…",
+153,Remembering-past-present-bia_2026_Journal-of-Behavioral-and-Experimental-Eco.pdf,"The distinct patterns 
+for future-biased participants are difficult to reconcile with this expla-
+nation, as time inconsistency alone does not appear to drive the results 
+(see Table  4). While the alternative explanations above fit the data poorly, our de-
+sign cannot cleanly separate them. A natural idea is to use inconsistency 
+across visits (e.g., how much a person’s switching point changes) as a 
+proxy for cognitive noise. The problem is that present or future bias also 
+creates exactly this kind of change. Put simply: if someone is present-
+biased, we expect their switching point to shift across visits even when 
+they are perfectly consistent with their (biased) preferences. That same 
+shift is what we would label as ‘‘noise’’ under an inconsistency proxy. As a result, any inconsistency-based measure mixes two things — 
+random noise and systematic bias — and cannot tell them apart. To 
+disentangle these mechanisms, future work would need an independent 
+way to measure noise or preference stability (for example, a dedicated 
+noise task or repeated blocks within a visit that change variability 
+without changing the underlying preference), as in Enke, Graeber, & 
+Oprea, 2025. Journal of Behavioral and Experimental Economics 120 (2026) 102484 
+9 
+B. Bakó et al. 5. Conclusion
+This study explores potential relationships between present bias 
+and memory accuracy in intertemporal decision-making, examining 
+patterns consistent with motivated misremembering. Using data from 
+a classroom experiment with university students, we find evidence 
+suggesting that individuals exhibiting present bias may show lower 
+accuracy in recalling earlier choices, particularly when those choices 
+involved immediate rewards. Present-biased participants appear to re-
+call their past decisions as more future-oriented, a pattern consis-
+tent with, but not exclusive to, self-serving memory distortion, as 
+non-motivational factors like cognitive noise could also contribute. Our analysis suggests that present bias is significantly associated 
+with the occurrence of directional misremembering (a potential mani-
+festation of motivated misremembering) during the second visit, when 
+immediate rewards were available. This relationship does not hold 
+during the first visit, when no immediate rewards were involved, 
+indicating that memory inaccuracies may be context-dependent, poten-
+tially reflecting ego-protective motives. Furthermore, a greater degree 
+of present bias appears to be associ…",
+177,-Beat-the-market---or--Take-care-of-your-savings---Can-lang_2025_Journal-of-.pdf,"Finally, both studies point to a practical approach to engaging 
+women in the financial sector: language and communication. Experi -
+mental studies have demonstrated that gender-fair language influences 
+women ’ s career choices ( Chatard et al., 2007 ); and enhances the 
+perceived accessibility of careers and relative self-efficacy ( Vervecken & 
+Hannover, 2015 ). Gender-fair language reduces perceived disparities in 
+success between men and women in the same occupational role 
+( Vervecken & Hannover, 2015 ) and increases women ’ s intention to 
+pursue these positions ( Horvath et al., 2016 ). Existing literature exten -
+sively documents the benefits of gender-fair language in encouraging 
+Fig. 4. Means and significant differences for the variable Behavioural intention 
+in investing in investment funds considering the main effect of the experimental 
+condition; p = .05 (Study 2). Table 4 
+Results analysis of variance (Study 2). Predictors Intimidation Interests Intention to invest
+F(df) p η 2 F(df) p η 2 F(df) p η 2
+Condition 3.72 (2.200) 0.003 .04 3.13 (2.200) < 0.05 .03 3.05 (2.202) 0.05 .03
+Gender 31.97 (1.200) < 0.001 .14 9.11 (1.200) 0.003 .04 10.38 (1.202) < 0.001 .05
+Gender* 
+Condition
+0.363(2.200) .70 .004 0.57(2.200) .57 .006 0.28(2.202) .75 .003
+V.A. Giannella et al. Journal of Behavioral and Experimental Economics 117 (2025) 102399 
+6 
+women to pursue specific professions. In this study, we have expanded 
+this literature by testing the positive effect not only of gender-fair lan -
+guage, but also of gender-fair metaphors. Applying them to an unex -
+plored field where a significant gender gap urgently calls for effective 
+and immediate intervention. One limitation of these studies is the cultural context in which they 
+were carried out. Since the reference culture is a key factor in the 
+perception of cultural snapshots. Indeed, cultural norms and values 
+shaping gender roles and financial behaviour can vary considerably 
+across countries. This cultural dimension influences not only in -
+dividuals ’ financial attitudes and behaviours but also how language -
+— and its metaphorical content — is interpreted and processed. Cross-cultural research by Kosakowska-Berezecka and colleagues 
+(2023) indicates that Italy remains one of the few countries where a 
+marked and deeply rooted distinction persists in how men and women 
+perceive their respective gender roles. In particular, Italian women tend 
+to attribute significantly lower levels of agency to th…",
+183,Assessing-risk-attitudes-among-physicians--medica_2025_Journal-of-Behavioral.pdf,"3
+As signaled by an anonymous reviewer, it must be acknowledged that 
+higher-order risk preferences, such as prudence and temperance, also influence 
+decision-making under uncertainty ( Noussair et al., 2014 ), though empirical 
+research on these aspects remains limited. Therefore, relying solely on the 
+estimation of individuals ’ risk aversion parameters may not be sufficient to fully 
+characterize their behavior. In fact, studies have found that risk aversion, 
+prudence, and temperance are positively correlated (Mayrhofer et al., 2020). 4
+See, for instance, Andersen et al. (2008) . M. Finocchiaro Castro et al. Journal of Behavioral and Experimental Economics 117 (2025) 102384 
+2 
+2.2. Individual attitude toward risk
+Regardless of the approach chosen, several factors may affect atti -
+tudes toward risk. Each of these is briefly analyzed in the following 
+subsets. 2.2.1. Differences across populations
+When eliciting the behavior of different populations, aspects such as 
+sex, background, wealth, and age have a systematic effect on between- 
+group comparisons ( Fr ´echette, 2016 ; Rosen et al., 2003 ). In fact, most 
+or at least a combination of these factors may bias risk attitude estimates 
+( Egan et al., 2011 ). Therefore, accounting for the sociodemographic 
+characteristics of the participant pools under investigation is pre -
+liminary for comparing risk-taking behaviors across groups. 2.2.2. Hypothetical vs. real incentives
+The propensity toward risk may change according to whether par -
+ticipants face hypothetical or real payoffs, although the evidence is 
+mixed ( Beattie & Loomes, 1997 ; Camerer & Hogarth, 1999 ; Dohmen 
+et al., 2011 ; Ettenson & Coughlin, 1982 ; Faff et al., 2008 ; Holt & Laury, 
+2002 ; Xu et al., 2016 ). Some scholars claim that decisions taken under 
+hypothetical stakes perfectly replicate human economic behavior, 
+although this assumption appears unrealistic to many (for a discussion, 
+see Harrison, 2014 ). For example, Thaler (1981) reports enormous dis -
+count rates using hypothetical incentives in the context of time prefer -
+ences. However, as Thaler (1981) points out, variations are too dynamic 
+and systemic to be uniquely attributable to the use of hypothetical 
+stakes. Masclet and Rebi `ere (2023) find that participants ’ responses to 
+Giving and Burning Games were qualitatively similar across treatments 
+with different incentives, although there were some quantitative dif -
+ferences between real and hypothetical rewards.…",
+191,Assessing-risk-attitudes-among-physicians--medica_2025_Journal-of-Behavioral.pdf,"Alternatively, researchers may opt for a combination of laboratory 
+sessions with students acting as physicians and online/field experiments 
+with even a few physicians (e.g., Brosig-Koch et al., 2016 ) in order to 
+facilitate their involvement, allowing doctors to participate at their 
+convenience without interfering with their work schedule ( Finocchiaro 
+Castro et al., 2024b ). In this scenario, lab sessions would represent a 
+good starting point for inferring physicians ’ behavior, and the results 
+can then be compared with real clinicians ’ decisions. Although our results pass several robustness checks, some limitations 
+should be acknowledged. First, our sample was not composed only of 
+physicians; therefore, although we controlled for participant type in the 
+regressions, caution is required when drawing insights from students 
+playing the role of physicians. Second, all four designs were reported on 
+the HL questionnaire with a hypothetical payoff. Although the relevant 
+literature provides mixed evidence, we cannot exclude the possibility 
+that some participants were not fully motivated to complete the HL 
+lottery list. As noted above, it is controversial whether monetary in -
+centives are strictly necessary to assess an individual ’ s behavior ( Gneezy 
+& Rustichini, 2000 ; Gneezy et al., 2011 ). Furthermore, while some studies on risk elicitation using HL, both in 
+the laboratory (e.g. Faff et al., 2008 ; Kühberger et al., 2002 ; Wiseman & 
+Levin, 1996 ) and in the field ( Bra ˜nas-Garza et al., 2021 ) seem to confirm 
+that not paying at all or paying makes no substantial difference, other 
+findings support the use of real stakes to reveal participants ’ true risk 
+attitudes ( Barreda-Tarrazona et al., 2011 ; Laury & Holt, 2008 ). Despite 
+the lack of a general theory on when incentives matter, the results 
+informed by hypothetical payoffs should be interpreted with caution. Another limitation concerns the size of the stakes used in the lotteries, 
+which ranged from 1.60 to 3.85 Euros. On the one hand, we cannot 
+exclude the fact that the difference between the minimum and 
+maximum payoffs available is too small to be meaningful in terms of risk 
+attitude variability. On the other hand evidence indicates that increasing 
+incentives does not substantially change mean behavior under hypo -
+thetical scenarios ( Camerer & Hogarth, 1999 ; Holt & Laury, 2002 ). Consequently, even after increasing the size of the payoffs, our 
+findings persist in terms…",
+197,Can-reference-dependent-loss-aversion-ex_2025_Journal-of-Behavioral-and-Expe.pdf," 
+Contents lists available at ScienceDirect
+Journal of Behavioral and Experimental Economics
+journal homepage: www.elsevier.com/locate/jbee  
+Can reference-dependent loss aversion explain choice behaviour? Inmaculada R. Puerta a
+ ,∗, José Luis Pinto b
+a Department of Economics, Quantitative Methods and Economic History, Universidad Pablo de Olavide, Seville, Spain
+b Department of Economics, Universidad de Navarra, Pamplona, Spain
+A R T I C L E  I N F O
+JEL classification:
+D01
+D91
+Keywords:
+Reference-dependence
+Loss aversion
+Reference point
+ A B S T R A C T
+This paper examines the extent to which reference-dependent loss aversion, on its own, can explain choice 
+behaviour under risk. To this end, a model of preferences over monetary lotteries and a rule of endogenous 
+reference points are developed. The model is characterised by a new property of reference-dependent loss 
+aversion. It is reduced to the expected value when the reference point is invariant across choices and satisfies 
+first-order stochastic dominance. Our findings highlight the crucial role of loss aversion in explaining risk 
+attitudes. In particular, the results show that the change in the reference point could be responsible for the 
+observed well-known choice patterns, such as the common consequence effect and the common ratio effect, 
+as well as for their reverse effects. The model predicts this behaviour by making use of only one function that 
+weights losses with a value that increases with the reference point. Neither a probability weighting function 
+nor a specific functional form for the utility of outcomes is required. 1. Introduction
+Reference-dependent models (e.g., Kahneman & Tversky, 1979; 
+Kőszegi & Rabin, 2006, 2007; Tversky & Kahneman, 1992) play a 
+central role in behavioural economics, offering a framework to account 
+for systematic deviations from expected utility theory (EUT). These 
+models posit that individuals evaluate outcomes relative to a reference 
+point, rather than on an absolute scale. The two most significant 
+elements of reference-dependent models are: (1) the reference point, 
+with respect to which outcomes are evaluated in terms of losses or 
+gains; and (2) loss aversion, which is the assumption that losses loom 
+larger than equally sized gains. These two elements pose a problem. On the one hand, the reference 
+point is not directly observable, and its formation currently remains an 
+open question (for recent studies on this topic, see, e.g., Arkes et al.,…",
+236,Do-giving-voice-and-social-information-help-in_2025_Journal-of-Behavioral-an.pdf,"We also assess the 
+sensitivity of results to an alternative measure of zero-sum thinking, the 
+sum of each participant’s responses to the three statements. Consistent 
+with results in Table  11, the aggregated indicator, not shown here for 
+brevity, is negatively and significantly correlated with initial beliefs, 
+but not correlated with the change in beliefs. To summarize, estimation 
+results in Table  11, indicate that zero-sum thinking is associated with 
+initial rent control beliefs, even after accounting for the ideology, but 
+that neither one of these two traits is associated with the revision of 
+the unfounded belief. A question that arises is how zero–sum thinking (in particular, 
+the income zero-sum indicator, the more relevant one), ideology and 
+the misconception about rent control are related. Fig. 1 suggests that 
+this relationship is U-shaped: although a zero-sum mentality is more 
+Journal of Behavioral and Experimental Economics 117 (2025) 102374 
+17 
+J. Brandts et al. Fig. 1. Zero-sum thinking and belief in rent control by ideology. Note: Sample = 361 participants in the RVVS2 condition (Refutational video + voice + disaggregated social 
+information). Ideology scale: 1 = far left; 10 = far right; 11 = Don’t know. Income zero-sum indicator: ‘‘In Spain there are different groups of people according to their income 
+levels. If a group becomes more wealthy, this usually comes at the expense of other groups’’. Rent control statement: ‘‘Establishing rent controls, such that rents did not exceed a 
+certain amount of money, would increase the number of people who have access to housing facilities’’. frequent among left leaning participants, those on the far right also 
+share this trait. This observation is in line with (Chinoy et al., 2023), 
+who find that in the case of the US, individuals with highest zero–sum 
+worldviews show more sympathy towards the attack to the Capitol, 
+both among Democrats and Republicans. 8. Conclusions
+In this paper we investigate how to communicate to citizens the 
+research-based consensus among economists about the consequences 
+of a certain policy, rent control, based on state of the art empirical 
+evidence. This is often more challenging than correcting factual misper-
+ceptions, because it involves communicating scientific knowledge about 
+causal relations among variables. The challenge is even stronger when 
+the scientific consensus contradicts popular beliefs, as in the case of 
+the rent-control policy, and touche…",
+244,Does-lobbying-discourage-individuals-from_2025_Journal-of-Behavioral-and-Exp.pdf," 
+Contents lists available at ScienceDirect
+Journal of Behavioral and Experimental Economics
+journal homepage: www.elsevier.com/locate/jbee  
+Does lobbying discourage individuals from fighting climate change? Raphael Epperson
+Department of Public Finance, University of Innsbruck, Universitätsstraße 15, 6020 Innsbruck, Austria
+A R T I C L E  I N F O
+Link to code of analysis: https://doi.org/10.176
+05/OSF.IO/ZYU85
+JEL classification:
+D62
+H41
+Q54
+Keywords:
+Beliefs
+Climate change
+Experiment
+Lobbying
+Pro-environmental behavior
+Spillover
+ A B S T R A C T
+Lobbying is commonly expected to reduce climate protection. Does such a belief affect individuals’ own 
+climate protection efforts? According to conditional cooperation, for example, it should discourage individuals 
+from contributing. I investigate this issue of high policy relevance using an online experiment with a large 
+heterogeneous sample from the German population. To identify the causal effect of citizens’ beliefs about the 
+impact of lobbying on climate protection, I induce exogenous variation in these beliefs and measure subsequent 
+individual behavior. I find some evidence for a discouragement effect: Expecting a more negative impact of 
+lobbying reduces individual contributions to climate protection. While not all considered behaviors show a 
+significant effect, treatment differences consistently point in the same direction. These results emphasize the 
+risk of spillover effects through citizens’ beliefs and lend support to a more holistic approach when evaluating 
+the consequences of lobbying or climate policies. 1. Introduction
+Lobbying is a billion-dollar industry (OECD, 2012) that relies on 
+different strategies to influence political decision-making. Previous re-
+search shows that lobbying can be effective in exerting influence (e.g., 
+Gawande et al., 2006; Giger & Klüver, 2016; Igan & Mishra, 2014; 
+Markussen & Svendsen, 2005) and in securing substantial returns for 
+the lobbying party (de Figueiredo & Silverman, 2006; Kang, 2016). For example, Kang (2016) estimates that lobbying by the energy 
+sector during the 110th U.S. Congress had a significant impact on the 
+enactment of policies, with the returns from lobbying expenditures 
+exceeding 130 percent. In light of this evidence, it is not surprising that 
+people’s perception of lobbying is rather negative. An often held belief 
+is that lobbying negatively affects policy-making and primarily benefits 
+businesses and politicians instead of citi…",
+245,Does-lobbying-discourage-individuals-from_2025_Journal-of-Behavioral-and-Exp.pdf,"For example, participants in Group Negative are 32 percent 
+more likely to expect a negative impact of lobbying on climate pro-
+tection than participants in Group Positive. Exploiting this variation 
+to identify the causal effect of beliefs, I find that participants who 
+have been induced to hold more negative beliefs report significantly 
+less contributions to climate and environmental protection for the 
+post-experimental period (average treatment effect of −0.13 standard 
+deviations, 95% CI: [−0.22, −0.04]). The most substantial effect comes 
+from the likelihood of (not) taking a plane. However, all self-reported 
+behaviors point in the same direction – i.e., more negative beliefs lead 
+to less pro-climate behavior – and the effects on the joint measure 
+as well as the single behavior of (not) taking a plane are robust to 
+multiple hypothesis correction. While the estimated treatment effect on 
+the observed contribution to carbon emission reductions also suggests 
+a slightly negative impact of holding more negative beliefs, it is not 
+significant at any conventional level (average treatment effect of −0.06
+standard deviations, 95% CI: [−0.14, 0.03]). Hence, the results offer 
+some evidence that beliefs about lobbying affect pro-climate behavior 
+on the individual level, but they also suggest that the causal link might 
+not be equally pronounced across the range of relevant behaviors. The paper contributes to three strands of the literature. First, it 
+complements previous research on the consequences of lobbying by 
+investigating a potential spillover effect that has received little at-
+tention so far. Several studies investigate whether and how lobbying 
+influences political decision-making (e.g., Bertrand et al., 2020; Giger 
+& Klüver, 2016; Igan & Mishra, 2014; for a review, see de Figueiredo 
+& Richter, 2014), including the context of environmental and climate 
+policy (Gullberg, 2008; Kang, 2016; Markussen & Svendsen, 2005; 
+Meng & Rode, 2019). However, little is known about whether – in 
+addition to a direct impact of lobbying – the public perception of 
+lobbying might cause behavioral adjustments on the individual level. This spillover can be a relevant factor in assessing the welfare effects 
+of lobbying, particularly in the context of climate protection, where 
+massive action of all actors is needed to mitigate the risk of severe 
+consequences. Second and more generally, this paper contributes to a large litera-
+ture on the determinants of pro-e…",
+276,Food-waste-salience-and-task-knowledge-to-reduce-i_2025_Journal-of-Behaviora.pdf,"In contrast, information about 
+the negative impacts of food waste in landfills significantly reduced 
+solid food waste among university students in a dining setting (Qi & 
+Roe, 2017). These studies suggest that while informational interven-
+tions making people aware of the food waste problem can enhance 
+attitudes and norms regarding food waste avoidance, their direct im-
+pact on reducing food waste may be limited unless combined with other 
+persuasive elements. In contrast, providing knowledge on how to reduce food waste has 
+shown more consistent effects on food waste reduction. In a university 
+canteen setting, enhancing the salience of food waste alongside offering 
+smaller servings led to a 20 percent reduction in plate waste (Visschers 
+et al., 2020). Within a US College, presenting a narrow menu that made 
+smaller portions more accessible significantly reduced food waste (Liu 
+et al., 2022). All options were equally available on both menus, but they 
+differed in how easily and quickly customers could choose their dishes. In an all-you-can-eat buffet setting, informing guests that they could fill 
+their plates more than once reduced food waste by 20.5 percent (Kall-
+bekken & Sælen, 2013). In another experiment in a pizzeria, diners who 
+were made aware of the food waste problem and guided to ask the staff 
+for a pizza box significantly asked for more takeaway of their leftovers 
+than in the control group (Stöckli et al., 2018). These findings indicate 
+that highlighting practical knowledge in combination with enhancing 
+salience or as a standalone intervention can effectively reduce food 
+waste across various restaurant and canteen settings. As shown by the 
+systematic meta-analysis by Lohmann et al. (2024), interventions to 
+reduce food waste generally can have a range of different effect sizes, 
+averaging from small to medium. Among the array of experiments, 
+choice architecture interventions that target decision information, such 
+as framing, often prove to be as effective, if not more, than providing 
+explicit incentives. Despite the variety of studies on food waste reduction through 
+information provision that makes the food waste problem more salient 
+or guides consumers, significant research gaps remain. Existing studies 
+predominantly focus on institutional settings such as school cafete-
+rias (Martins et al., 2016; Sharma et al., 2019), university canteens 
+((Nisa et al., 2021; Visschers et al., 2020), and household environ-
+ments (Roe et a…",
+281,Food-waste-salience-and-task-knowledge-to-reduce-i_2025_Journal-of-Behaviora.pdf,"To investigate why the sample sizes differ between the treatment 
+groups, we look at the restaurant’s aggregate sales data, which provides 
+a weekly overview of sales from all customers, not only the experi-
+mental sample. The restaurant sold 1803 dishes in the control weeks, 
+1855 while T1 was implemented, and 1407 while T2 was in place. This 
+evidence, along with the fact that week 42 was a public school holiday, 
+helps explain the observed differences in sample sizes between T2 and 
+the other experimental groups. 3.3.4. Social desirability and demand effects
+Based on self-reported behavior, social desirability bias may affect 
+our survey data. Such bias could affect the estimated treatment effects 
+if participants in the treatment groups systematically underreport food 
+waste. While there is no formal test, we offer two indicative analyses 
+using the available data. First, previous studies suggest that women 
+are more prone to social desirability bias and experimenter demand 
+effects (e.g. de Quidt et al., 2018; Hebert et al., 1995; Paunonen, 
+2016; Tang et al., 2022). We test this prediction and estimate gender-
+specific CATE, as larger treatment effects for women would support 
+the concern that social desirability bias exacerbates our main results. Appendix Table B8 presents treatment effect estimates for men and 
+women using self-reported food waste and the probability of order-
+ing a large dish (similar to Table  4) as the outcome. We consider 
+the latter a more objective and less biased behavioral measure. Both 
+models suggest that the treatments are slightly more effective for men 
+than women, with differences primarily significant at the 10% level. Alternative explanations for gender differences could involve variations 
+in environmental attitudes and responsiveness to interventions using 
+social pressure. There is, however, little evidence in the literature that 
+would support the notion that women are less likely to respond to our 
+intervention, which could overshadow the gender-specific differences 
+linked to social desirability (e.g. Weinschenk et al., 2018). While cer-
+tainly inconclusive, it would be surprising to see men showing greater 
+treatment effects if prior studies are correct that women are more prone 
+to social desirability, potentially driving our results. Second, while social desirability concerns the participants’ self-
+image, the experience of pressure to comply with a social norm depends 
+on whether participants feel observed…",
+296,Moral-preferences-in-ultimatum-and-i_2025_Journal-of-Behavioral-and-Experime.pdf,"Journal of Behavioral and Experimental Economics 117 (2025) 102371
+Available online 9 May 2025
+2214-8043/© 2025 The Author(s). Published by Elsevier Inc. This is an open access article under the CC BY license ( http://creativecommons.org/licenses/by/4.0/). Contents lists available at ScienceDirect
+Journal of Behavioral and Experimental Economics
+journal homepage: www.elsevier.com/locate/jbee  
+Moral preferences in ultimatum and impunity games
+Valerio Capraro a
+ , Ismael Rodriguez-Lara b,c
+ ,∗
+a Department of Psychology, University of Milan-Bicocca, Italy
+b Department of Economics, Universidad de Malaga, Spain
+c Economic Science Institute (ESI), Chapman University, United States of America
+A R T I C L E  I N F O
+JEL classification:
+C91
+D03
+D60
+D81
+Keywords:
+Ultimatum game
+Impunity game
+Moral preferences
+Moral foundations theory
+Individualizing dimensions
+Binding dimensions
+Moral suasion
+ A B S T R A C T
+We report on two experiments (total N = 2572) testing the role of moral preferences in one-shot, anonymous 
+ultimatum and impunity games, which vary the veto power of responders. In the impunity game, if an 
+offer is lower than the responder’s minimum acceptable offer, the proposer still receives his share, while the 
+responder gets nothing. Study 1 is correlational and explores how moral preferences, as measured using the 
+Moral Foundations Questionnaire, explain behaviour in the two games. Study 2 is causal and investigates 
+the effect of moral suasion on behaviour. Regarding proposers, both studies provide evidence that moral 
+preferences affect offers more in the impunity game than in the ultimatum game. For responders, Study 1 
+shows that moral preferences explain behaviour similarly in both games, while Study 2 demonstrates that 
+moral suasion influences behaviour more strongly in the impunity game. Exploratory analyses of the binding 
+and individualizing dimensions help reconcile these results. Our findings shed light on the complex relationship 
+between moral preferences and behaviour in ultimatum and impunity games. 1. Introduction
+‘‘I am gonna make him an offer he cannot refuse’’. [The Godfather, 1972.] In this article, we study the role of morality in the ultimatum 
+game (Güth et al., 1982) and the impunity game (Bolton & Zwick, 
+1995). In our version of the ultimatum game, the proposer makes an 
+offer about how to divide a sum of money between himself and the 
+responder, who is asked to determine her minimum acceptable offer 
+(MAO). If the propos…",
+327,The-impact-of-process-automation-on_2025_Journal-of-Behavioral-and-Experimen.pdf,"HUMAN SYSTEM  
+ 
+Non-automated – automated
+𝛥 = 11.57 𝛥 = 9.86  
+ (𝑝 = 0.0000) (𝑝 = 0.0001) 
+ 𝛥 = 10.71
+ (𝑝 = 0.0000)
+Note: The table shows 𝑝-values for a two-sided Wilcoxon signed-rank test/Wilcoxon 
+rank-sum test if the difference could be zero. higher in the non-automated decision process than in the automated 
+decision process. Hence, Hypothesis  5 (that workers will have the same 
+expectation about the performance threshold in both processes) cannot 
+be confirmed. Interestingly, workers anticipate a different performance threshold 
+in both processes, but the actual threshold set by the managers does 
+not differ significantly. As Fig. 3 shows and Table  9 confirms, the 
+performance threshold set by the managers in the automated decision 
+process does not differ significantly from the performance threshold set 
+in the non-automated decision process in both treatments. Table 9
+Differences in the managers’ performance threshold set between the Non-automated 
+and the Automated decision process. HUMAN SYSTEM  
+ Non-automated – automated 𝛥 = 6.76 𝛥 = − 2.65  
+ (𝑝 = 0.1953) (𝑝 = 0.8511) 
+ Non-automated 𝛥 = − 2.08
+ (𝑝 = 0.9565)
+ Automated 𝛥 = − 11.49
+ (𝑝 = 0.2283)
+Note: The table shows 𝑝-values for a two-sided Wilcoxon signed-rank test/Wilcoxon 
+rank-sum test if the difference could be zero. The performance thresholds set in the automated decision process 
+in treatment SYSTEM , however, are more dispersed than those in the 
+other conditions. Managers in treatment HUMAN , who decide indepen-
+dently which approach to use, also do not set significantly different 
+performance thresholds than managers in treatment SYSTEM , wherein 
+an automated third party randomly decides which approach to use. 6. Conclusion
+The number of automated management tasks has notably increased 
+recently. Here, we report a first attempt to evaluate the impact of 
+such process automation on performance. More specifically, we focus 
+on the perceptions of individuals regarding automated processes in 
+management tasks and whether these perceptions influence human 
+performance. Our study design emphasizes the impact of process au-
+tomation, with a focus on process rigidity. It centers on performance 
+and whether performance is influenced by who decides to automate a 
+process: the direct manager or a more remote third party. Additionally, 
+we investigate procedural fairness, trust in the process for receiving a 
+bonus, and expectations. Journal of Behavioral and Experimental Economics 117 (2025)…",
+331,The-impact-of-process-automation-on_2025_Journal-of-Behavioral-and-Experimen.pdf,"The ques-
+tions were asked right after the decision and before the final performance 
+was announced. The answer method used is presented in brackets. Apart 
+from the first five questions, which were only presented to workers, all 
+questions were asked to workers and managers. 1. Why did you choose to transfer the amount you have chosen 
+to participant B in Approach BLUE (participant B knows how 
+Journal of Behavioral and Experimental Economics 117 (2025) 102377 
+15 
+C. Strobel
+much you transferred)? [Open Question] (For the answers given, 
+see online data set.) 2. Why did you choose to transfer the amount you have chosen to 
+participant B in Approach GREEN (participant B does not know
+how much you transferred)? [Open Question] (For the answers 
+given, see online data set.) 3. What do you think is the minimum amount you would have had 
+to transfer to get the bonus if participant B decided to use Ap-
+proach BLUE (participant B knows how much you transferred)? [Integer from 0 to 120 points] (For an analysis of the answers 
+given, see Section 5.1.) 4. What do you think is the minimum amount you would have 
+had to transfer to get the bonus if participant B decided to use 
+Approach GREEN (participant B does not know how much you 
+transferred)? [Integer from 0 to 120 points]  (For an analysis of 
+the answers given, see Section 5.1.) 5. How much do you agree with this statement: ‘I think that I will 
+get a bonus.’? (For an analysis of the answers given, see Appendix 
+A.4.) 6. Do you consider the procedure to get the bonus to be fair? (For 
+an analysis of the answers given, see Appendix  A.3.) 7. How do you see yourself: Are you a person who is willing to 
+take risks or do you try to avoid taking risks? Please select a 
+number on a scale from 0 to 10. The value 0 means: ‘‘not at all 
+willing to take risks’’ and the value 10 means: ‘‘very willing to 
+take risks’’. [scale 0 to 10]. (For an analysis of the answers given, 
+see Appendix  A.7.) 8. Generally speaking, would you say that most people can be 
+trusted or that you cannot be too careful in dealing with other 
+people? Please select a number on a scale from 0 to 10. The value 
+0 means: ‘‘can’t be too careful’’ and the value 10 means: ‘‘most 
+people can be trusted’’. [Scale 0 to 10] (For an analysis of the 
+answers given, see Appendix  A.7.) 9. What is your gender? (For a summary of the answers given, see 
+Section 5.) 10. What is your age [in years]? [Integer ] (For a summary of the 
+answers given, see Section 5.)…",
+335,Using-a-brief-contact-to-improve-trust-in_2025_Journal-of-Behavioral-and-Exp.pdf,"(2019) find that a brief visit of 
+a police officer to citizens’ doors to discuss methods of improvement of 
+policing in their neighborhoods improves the perception of the police. The fact that no effect is found at the collective level could be an 
+indication that discussions about policing are necessary to translate the 
+effect toward the out-group in general, although this result would need 
+to be confirmed by future research. Regarding the recurring political 
+debate about proximity or community policing, results from the present 
+paper imply that the contact can improve relations at the individual 
+level, and might be an argument in favor of having officers patrolling 
+the same neighborhoods regularly. Since interventions in different 
+countries have yielded varying results (Blair et al., 2020; Peyton et al., 
+2019), future research should explore whether these differences stem 
+from the context or the intervention itself. Second, I contribute to the literature on the contact hypothesis. I 
+show that even a brief, cheap and easy to replicate contact can have a 
+positive effect on trust at the individual level, which is an advantage 
+relative to previous protocols which were much longer in time, and 
+therefore potentially difficult to scale-up (Lowe, 2021; Mousa, 2020; 
+Scacco & Warren, 2018). The results found in this paper tend to confirm 
+the results from recent meta-studies on the topic (Clochard, 2024; 
+Lowe, 2025; Paluck et al., 2019), with a weaker effect of contact 
+at the collective level, sometimes called generalizability effects, than 
+at the individual level. I also present in the appendix a potential 
+theoretical explanation, based on a theoretical framework of Bayesian 
+updating, for the results, in particular if participants have had several 
+(potentially negative) interactions with out-group members (Clochard, 
+2024; Page-Gould et al., 2008). The heterogeneity analysis based on 
+previous interactions with the outgroup is a novel finding in the contact 
+literature. The remainder of the paper is organized as follows. In Section 2, 
+I review the relevant literature on police-population relations and the 
+contact hypothesis. In Section 3, I present the experimental design of 
+the experiment I conducted and the data. I present empirical results, 
+as well as a theoretical framework which can explain some findings in 
+Section 4. Section 5 concludes. 2. Literature review
+This paper is linked to two main strands of literature: the first is the 
+…",
+352,-You-can-quit----Exploring-the-efficacy-of-new_2025_Journal-of-Behavioral-an.pdf,"Secondly, 
+these new warnings were not designed to generate specific emotions, 
+even indirectly, such as fear, anger or discomfort (with even the opposite 
+aim for some of them). Yet, even when taking this into account, the 
+reaction to the new warnings was still somehow relatively weak: none of 
+those warnings exceeded or even equalled the conventional regulatory 
+warnings in terms of thought-provoking impact and credibility 
+(although on average they fared much better for these measures than for 
+others). It is also worth noting that ENDS-related warnings were 
+perceived as less credible, particularly among non-smokers, indicating 
+widespread scepticism regarding the role of vaping in smoking cessa -
+tion. This underscores the importance of clinically validating these 
+methods before advocating for a transition to ENDS. Finally, despite the benefit of novelty and the fact that they are larger 
+and more visible, no alternative set of warnings outperformed conven -
+tional regulatory warnings. Some new sets of warnings may have yielded 
+scores not significantly different from those obtained by the regulatory 
+warnings, but they varied with the measures chosen (intentions, WTP, 
+perceived efficacy). Based on these data, it seems appropriate to 
+conclude that the evidence shows clearly that the regulatory warnings 
+are those that, for all measures, seem to perform at least as well as all 
+others, if not significantly better. This general finding contrasts with 
+Hoek et al. (2013) , who used a qualitative approach to show that new 
+warnings based on immediate social risks are effective in young adult 
+smokers (aged 18 to 30). It is however consistent with Waheed (2023)
+C. Ben Lakhdar et al. Journal of Behavioral and Experimental Economics 119 (2025) 102452 
+7 
+who concludes that “ policy makers do not necessarily have to be con -
+cerned with whether smoking cessation messages are framed in terms of 
+gains or losses ” . Evidence is thus so far mixed and further research is needed. In 
+particular, while none of the alternative warning types we tested 
+consistently outperformed conventional ones, it remains possible that 
+certain alternative motivational warnings could prove valuable for 
+specific subpopulations, through improved designs, or as a complement 
+to existing warnings. For instance, cognitive dissonance may influence 
+smokers ’ intentions to quit (see Table 4 , the coefficient associated with 
+the interaction of smoking and COMM), while also having, as…",
+361,Avoiding-cognitive-inconsistency--Experimenta_2025_Journal-of-Behavioral-and.pdf,"Not least, this is the first study to examine the effects of increased 
+salience of cognitive inconsistency in the context of sustainable online 
+shopping — a topic of growing importance. In 2024, the global share of 
+online shopping over total sales amounted to 20%, generating revenues 
+of more than 4.1 trillion US$, and this share is expected to continue 
+rising (van Gelder, 2024). In Germany, where this study was conducted, 
+60% of the population made online purchases in 2023 (Koptyug, 2025). At the same time, online shopping has a significant environmental 
+impact due to high carbon emissions, excessive packaging, resource 
+consumption, and waste (Forbes, 2020; Irgini, 2024; Oceana, 2020). Addressing these challenges requires the adoption of eco-friendly 
+practices in logistics, packaging, and production, as well as fair labor 
+and responsible sourcing policies, all while fostering greater demand 
+for sustainably produced products. However, evidence regarding the 
+role of sustainability in online shopping is scarce and inconclusive: 
+While some studies suggest that sustainability aspects play only a minor 
+role for online shopping (Rausch et al., 2021) — possibly even less than 
+for offline shopping (Ermecke et al., 2023) — others point toward an 
+increased importance of sustainability (Jacobs et al., 2018). The subsequent Sections 2 and 3 explain the underlying theoretical 
+model and the experimental design and hypotheses, respectively. Sec-
+tion 4 describes the data employed for our empirical analysis. Section 5 
+presents the results, while the last section summarizes and concludes. 2. Theoretical underpinnings
+Our theoretical analysis builds upon Konow (2000) and Rabin 
+(1994), who developed rational choice models in which cognitive disso-
+nance negatively affects utility ‘‘because it is unpleasant’’ (Rabin, 1994, 
+p. 178). Accordingly, individuals try to avoid cognitive inconsistency 
+and the potentially resulting cognitive dissonance, either by adjusting 
+their behavior to fit their beliefs about what is moral, or by modifying 
+these beliefs to fit their behavior, that is, by deceiving themselves. Both options come at a cost: Adapting behavior may reduce utility, 
+whereas changing beliefs causes cognitive unease because ‘‘there is 
+likely to be a natural [...] set of beliefs about the morality of an 
+activity’’ (Rabin, 1994, p. 180) and an ‘‘intellectually honest view of 
+what is fair’’ (Konow, 2000, p. 1077). Individuals therefore balance the 
+ma…",
+363,Avoiding-cognitive-inconsistency--Experimenta_2025_Journal-of-Behavioral-and.pdf,"Subjects of group InformationBC received information on the com-
+mon criticism of conventional online shopping, such as the systematic 
+destruction of returned products, packaging waste ending up in the 
+ocean, as well as bad working conditions (see Item ExpA4 in Appendix 
+C). When providing this information, we immediately asked respon-
+dents whether they had already been familiar with this criticism prior 
+to the survey. The information on negative aspects of conventional 
+online shopping may increase the salience of cognitive inconsistency 
+when participants have a positive attitude toward sustainable produc-
+tion, but subsequently choose the conventional voucher (information 
+treatment): The information raises their awareness that their voucher 
+choice is not in line with their values. As subjects of group Informa-
+tionBC received the information before their voucher choice — and 
+without being aware of the upcoming choice —, they had the oppor-
+tunity to avoid cognitive inconsistency by aligning their choice with 
+this information. Former studies have found that people tend to avoid 
+information that might increase the salience of cognitive inconsistency 
+(e.g., Dana et al., 2007; Edenbrandt et al., 2021; Matthey & Regner, 
+2011; Onwezen & van der Weele, 2016). In our study, however, the 
+information is forced upon them and participants have to actively 
+confirm or deny to have known it before. In line with Proposition  2, we formulate
+3 Note that, according to Proposition  1, this pre-decision reminder also 
+increases the likelihood that individuals adapt their beliefs about their knowl-
+edge of the morality of each action. However, this implication cannot be tested 
+empirically in our setting. 4 Here, we deviate from our pre-analysis plan in that we expand the control 
+group to increase the statistical power of our analysis (see Supplementary 
+Materials, Section 7 for our power analyses): Instead of taking ReminderSD as 
+control group alone, we combine the groups ReminderSD and InformationSD 
+to form the control group, because subjects of both groups do not receive any 
+information or reminder before the voucher choice. To check the robustness 
+of the empirical results and stick to our pre-analysis plan, we only take 
+ReminderSD as control group, finding that the results only change marginally 
+(see Supplementary Materials, Section 4, Table 13). Journal of Behavioral and Experimental Economics 119 (2025) 102387 
+3 
+J. Eßer et al. Fig. 1. Experimenta…",
+432,Drivers-of-tax-compliance--Survey-evidence_2025_Journal-of-Behavioral-and-Ex.pdf,"Drivers of tax compliance: Survey evidence from 1761 Greek micro-firms
+Augustinos Dimitras
+a , †
+, Vasileios Fourlas
+a , *
+, Erich Kirchler
+b , c
+, George Peppas
+a
+a
+School of Social Sciences, Hellenic Open University, Aristotelous 18, Patras 26335, Greece
+b
+Faculty of Psychology, University of Vienna, Austria
+c
+IHS-Institute for Advanced Studies, Vienna, Austria
+ARTICLE INFO
+Keywords:
+Micro-business owners
+Voluntary compliance
+Enforced compliance
+Slippery slope framework
+SSF
+ABSTRACT
+In countries where tax compliance is low and tax evasion is widespread, the specific compliance behavior of 
+micro-business owners remains poorly understood. This study addresses this gap by analyzing both voluntary 
+and enforced tax compliance among a nationally representative sample of 1761 micro-business owners in Greece. Guided by the Slippery Slope Framework (SSF), we find that trust in tax authorities is closely associated with 
+voluntary compliance, whereas perceptions of coercive power are primarily linked to enforced compliance. Notably, women leading micro-businesses report higher trust and stronger compliance intentions across both 
+motivational types. Perceptions of fairness, legitimacy, and corruption, as well as emotional responses toward tax 
+authorities, are related to trust and indirectly associated with voluntary compliance. Our findings underscore the 
+central role of trust in understanding cooperative taxpayer behavior and suggest that service-oriented, trans -
+parent, and fair administrative practices could support greater voluntary compliance, particularly within the 
+micro-business sector. 1. Introduction
+Traditional economic theories of tax compliance — most notably the 
+seminal model by Allingham and Sandmo (1972) — conceptualize 
+taxpayer behavior as the outcome of rational utility maximization, 
+whereby individuals weigh the expected costs and benefits of evasion, 
+factoring in audit probabilities and penalty rates. While analytically 
+elegant, this deterrence-based approach has proven insufficient in 
+explaining the persistently high levels of compliance observed even in 
+low-enforcement contexts ( Andreoni et al., 1998 ; Fischer et al., 1992 ). This limitation was already acknowledged by Allingham and Sandmo 
+(1972 , p. 326), who noted: 
+“… may perhaps be criticized for giving too little attention to non -
+pecuniary factors in the taxpayer ’ s decision on whether or not to 
+evade taxes. It need hardly be stressed that in addition to the income 
+lo…",
+434,Drivers-of-tax-compliance--Survey-evidence_2025_Journal-of-Behavioral-and-Ex.pdf,"Trust refers to the 
+belief that authorities act competently and benevolently ( Tyler, 2003 ), 
+whereas power reflects the ability of authorities to detect and penalize 
+noncompliance. These dimensions give rise to two complementary 
+pathways: voluntary compliance, driven by intrinsic motivation and a 
+A. Dimitras et al. Journal of Behavioral and Experimental Economics 119 (2025) 102480 
+2 
+sense of moral obligation, and enforced compliance, rooted in strategic 
+behavior influenced by deterrence and monitoring ( Ryan & Deci, 2000 ). Voluntary compliance aligns with “ commitment ” postures, reflecting 
+socially and morally driven behavior, whereas enforced compliance 
+resembles “ resistance, ” reflecting compliance under external pressure 
+( Braithwaite, 2003 ). To capture greater nuance, the extended Slippery Slope Framework 
+(e-SSF; Gangl et al., 2015 ; Hofmann et al., 2014 ) differentiates between 
+coercive and legitimate power and between reason-based and implicit 
+trust ( Castelfranchi & Falcone, 2010 ). Coercive power, exercised 
+through audits and sanctions, may increase resistance and erode trust. In 
+contrast, legitimate power — grounded in professionalism, transparency, 
+and public acceptance — enhances compliance and encourages reci -
+procity ( Hofmann, Hartl et al., 2017 ). Trust can be further distinguished by its underlying mechanisms. Reason-based trust arises from deliberate evaluations of authorities ’ 
+competence, fairness, and transparency ( Eriksen & Fallan, 1996 ; Mur -
+phy, 2004 ), whereas implicit trust reflects intuitive, automatic reliance 
+shaped by social norms, emotions, and patriotic sentiments ( Gangl et al., 
+2016 ; Hallsworth et al., 2017 ). Although reason-based and implicit trust 
+are conceptually distinct, they often reinforce one another. Neverthe -
+less, implicit trust is difficult to measure reliably in tax contexts ( Gangl 
+et al., 2020 ). By integrating these distinctions, the SSF and e-SSF demonstrate how 
+interactions between taxpayers and authorities — shaped by trust and 
+power — translate the multifaceted factors discussed in Section 2.1 into 
+observable compliance outcomes. The next section applies these theo -
+retical insights to examine the compliance behavior of micro-business 
+owners in the Greek context. 2.3. Micro-Business owners ’ compliance behavior in the Greek context
+Greece provides a compelling setting for examining tax compliance, 
+as micro-business owners operate within one of the largest shadow 
+e…",
+440,Drivers-of-tax-compliance--Survey-evidence_2025_Journal-of-Behavioral-and-Ex.pdf,"Conversely, tax knowledge and perceived compliance norms were not 
+significant predictors, diverging from studies in more educated pop -
+ulations ( Braithwaite, 2003 ; Torgler, 2007 ), possibly reflecting the 
+complexity and opacity of the Greek tax system ( Schneider & Enste, 
+2013 ). Negative emotions - fear, anger, and anxiety - were positively 
+linked to enforced compliance but negatively associated with voluntary 
+compliance, supporting dual-process models of compliance ( Gangl et al., 
+2013 ; Olsen et al., 2018 ; Wenzel, 2004 ). These findings underscore the need to move beyond one-size-fits-all 
+approaches, considering both micro-business owners’ heterogeneity and 
+contextual factors. Future research should employ longitudinal or 
+experimental designs to clarify causal links between trust, coercive 
+power, and compliance, investigate how enforcement strategies can 
+strengthen legitimacy, minimize negative spillovers, and integrate 
+behavioral and moral factors. Jointly examining trust and power path -
+ways can provide deeper insight into how enforcement strategies 
+interact with perceptions of authority to shape compliance behavior in 
+real-world business contexts, thereby informing more tailored and 
+effective policy interventions. 5.2. Strengths and limitations
+Previous studies testing the SSF in Greece have often relied on 
+experimental surveys with small samples, primarily comprising under -
+graduate students (e.g., Batrancea et al., 2019 ; Kaplanoglou & Rapanos, 
+2015 ). These designs, while valuable, provide limited real-world 
+applicability, due to reliance on hypothetical scenarios and the 
+absence of actual tax experience ( Batrancea et al., 2022 ; Hartl et al., 
+2015 ). By contrast, this study draws on a large, nationally representative 
+sample of micro-business owners operating in a real business environ -
+ment, thereby enhancing the policy relevance of the findings. Nonetheless, limitations remain. First, although self-reported mea -
+sures are commonly used and theoretically justified in tax compliance 
+research ( Braithwaite, 2003 ), their accuracy in capturing actual 
+behavior is subject to debate ( Hite, 1988 ; Onu, 2016 ; Santoro, 2021 ). To 
+address this, the study employed validated, theory-driven instruments 
+and implemented quality-control measures during data collection (see 
+Section 3.4 ). Second, while the regression and mediation analyses were robust 
+across multiple estimation techniques, the cross-sectional design limits 
+c…",
+443,Drivers-of-tax-compliance--Survey-evidence_2025_Journal-of-Behavioral-and-Ex.pdf,"Journal of Economic 
+Behavior & Organization, 214 , 406 – 442. https://doi.org/10.1016/j.jebo.2023.08.011
+Lazos, G., Pazarskis, M., Karagiorgos, A., & Koutoupis, A. (2022). The tax compliance 
+cost for businesses and its key determinants: Evidence from Greek businesses. Journal of Tax Administration, 7 (1), 39 – 56 . Litina, A., & Palivos, T. (2016). Corruption, tax evasion and social values. Journal of 
+Economic Behavior & Organization, 124 , 164 – 177. https://doi.org/10.1016/j. jebo.2015.09.017
+MacKinnon, D. P., & Pirlott, A. G. (2015). Statistical approaches for enhancing causal 
+interpretation of the M to Y relation in mediation analysis. Personality and Social 
+Psychology Review, 19 (1), 30 – 43. https://doi.org/10.1177/1088868314542878
+Mardhiah, M., Miranti, R., & Tanton, R. (2019). The slippery slope framework: Extending 
+the analysis by investigating factors affecting trust and power . CESifo (CESifo Working 
+Paper No. 7494) https://www.cesifo.org/en/publikationen/2019/working-paper/sli 
+ppery-slope-framework-extending-analysis-investigating-factors . McCaffery, E. J., & Baron, J. (2004). Framing and taxation: Evaluation of tax policies 
+involving household composition. Journal of Economic Psychology, 25 (6), 679 – 705. 
+https://doi.org/10.1016/j.joep.2003.07.001
+Muehlbacher, S., Kirchler, E., & Schwarzenberger, H. (2011). Voluntary versus enforced 
+tax compliance: Empirical evidence for the “ slippery slope ” framework. European 
+Journal of Law and Economics, 32 (1), 89 – 97. https://doi.org/10.1007/s10657-011- 
+9236-9
+Murphy, K. (2004). The role of trust in nurturing compliance: A study of accused tax 
+avoiders. Law and Human Behavior, 28 (2), 187 – 209. https://doi.org/10.1023/B: 
+LAHU.0000022322.94776.ca
+Murphy, K., & Tyler, T. (2008). Procedural justice and compliance behaviour: The 
+mediating role of emotions. European Journal of Social Psychology, 38 (4), 652 – 668. 
+https://doi.org/10.1002/ejsp.502
+OECD. (2022). Financing SMEs and entrepreneurs 2022 . OECD Publishing. https://doi.org/ 
+10.1787/e9073a0f-en
+Olsen, J., Kasper, M., Enachescu, J., Benk, S., Budak, T., & Kirchler, E. (2018). Emotions 
+and tax compliance among small business owners: An experimental survey. International Review of Law and Economics, 56 , 42 – 52. https://doi.org/10.1016/j. irle.2018.05.004
+Olsen, J., Kogler, C., Brandt, M. J., Dezs ˝o, L., & Kirchler, E. (2019). Are consumption 
+taxes really disliked more than equivalent costs? Inconclusive results in the USA and …",
+446,Elicitation-bias-in-Multiple-Price-List_2025_Journal-of-Behavioral-and-Exper.pdf,"The prospect that is kept constant in a CL may 
+appear more salient, and a certain amount may also appear more salient 
+than a risky prospect, especially if its value has to be recalculated in 
+every row due to the changing probabilities. Certainty effect and present bias. Another useful theoretical in-
+sight about how decisions over time and under risk is the perspec-
+tive that only present consumption is certain while any future con-
+sumption is uncertain Chakraborty, Halevy, and Saito (2020), Halevy 
+(2008). Chakraborty et al. (2020) therefore suggest that present bias 
+and certainty effects are closely related. In our experimental design 
+we only use delayed prospects which should imply that we avoid 
+present bias and certainty effects as the ‘‘sure’’ delayed amounts in our 
+experiments are inherently uncertain. 2.2. Elicitation approach and bias
+Presenting full CLs versus Row by Row elicitation. The presentation 
+of full CLs has been associated with bias towards the middle of the lists, 
+Multiple Switching Behavior (MSB), and Never Switching Behavior 
+Journal of Behavioral and Experimental Economics 119 (2025) 102479
+3
+S.T. Holden et al. (NSB) (Andersson et al., 2016; Jack, McDermott, & Sautmann, 2022; 
+Yu, Zhang, & Zuo, 2021). The extent of such biases depends not only 
+on the design of the CL (complexity) but also on how they are presented 
+to subjects. Some show the whole CL to the respondents, while others 
+present only one row at a time to obtain a sequence of binary decisions. Charness, Eckel, Gneezy, and Kajackaite (2018) compared the re-
+sults from presenting a full HL CL with presenting only one random 
+row from the HL CL to subjects and investigated whether these two 
+alternative approaches influence the gender differences in the elicited 
+risk preference parameter. Earlier studies have found small gender 
+differences with the standard HL approach when the whole list is 
+presented to subjects. However, when only a single row is presented to 
+subjects, the gender difference in the elicited risk preference parameter 
+became much larger. They argue that subjects have more problems 
+responding consistently when presented with the whole HL CL due to 
+its complexity. The complexity is reduced when subjects only look at 
+one row in the list, and this enhances comprehension and is therefore 
+likely to reduce decision errors that may mask the true preferences. This was based on a lab experiment with well-educated subjects at 
+two university campuses …",
+452,Elicitation-bias-in-Multiple-Price-List_2025_Journal-of-Behavioral-and-Exper.pdf,"(a) Discount rate distributions, (b) Risk premium distributions for 𝑝(𝑤𝑖𝑛) = 0 .75, (c) Risk premium distributions for 𝑝(𝑤𝑖𝑛) = 0 .1, (d) Risk premium 
+distributions for 𝑝(𝑤𝑖𝑛) = 0 .25, all by Elicitation Method. for the discount rate distributions for the pure time CLs 1–4. We also 
+use standardized risk premium distributions for pure risk CLs 5, 11, and 
+12 to investigate how these standardized risk premium distributions 
+vary with 𝑝(𝑤𝑖𝑛). Figures 4a–d show the distributions. Fig. 4a shows 
+an initial higher share of subjects with low discount rates in the T1 
+treatment, in line with a starting point bias towards the top of the CLs. However, for subjects with higher discount rates, this may even have 
+been reversed as T1 is also associated with a higher share of subjects 
+with discount rates that are higher than 80%. Fig. 4b assesses the risk premium distribution for 𝑝(𝑤𝑖𝑛) = 0 .75
+and illustrates a strong starting point bias for T1. T1 leads to the 
+classification of a much higher share (0.43–0.48) of the sample as risk 
+neutral or risk loving with negative risk premia than T0 and T2 (share 
+0.25–0.28), which have similar risk premium distributions. A similar 
+pattern is also found in Fig. 4c with 𝑝(𝑤𝑖𝑛) = 0 .1. In line with an 
+inverse S-shaped 𝑤(𝑝) function, this CL has a substantially higher share 
+of subjects with negative risk premiums. For T1, the bias of the starting 
+point may have inflated the estimated share of risk loving subjects, 
+with approximately 70% of the sample being associated with negative 
+risk premia compared to T0 and T2, with 50% and 42%–43% of the 
+samples with negative risk premia, respectively. Surprisingly, Fig. 4d 
+with 𝑝(𝑤𝑖𝑛) = 0 .25 shows much lower differences between the three 
+treatments, all of which give negative risk premiums for less than 50% 
+(35%–45%) of the sample. We will further examine the significance of 
+these differences with parametric models in the next section. 6.2. Parametric models
+Table  6 presents linear panel data models that jointly test for start-
+ing point bias and CL order bias for the different elicitation methods. The dependent variable is the lowest row number at the switch point 
+for each CL of each respondent, giving 20 observations for each. The 
+RE (T0) method with intermediate CL order is the base. The models 
+are run as random effects models with CL fixed effects (CL FE) and 
+enumerator FE. Starting from the bottom of the CL (T2) is associated 
+with a significantly higher switch point …",
+472,Evaluating-behavioural-strategies-for-environme_2025_Journal-of-Behavioral-a.pdf,"Evaluating behavioural strategies for environmental cooperation: Evidence 
+from a public goods game
+Valeria Faralla
+a , *
+, Alessandro Innocenti
+b
+a
+Department of Studies for Economics and Business, University of Piemonte Orientale, and LabVR UNISI, University of Siena, Italy
+b
+Department of Social, Political and Cognitive Sciences and LabVR UNISI, University of Siena, Italy
+ARTICLE INFO
+Keywords:
+Behavioural intervention
+Educational nudge
+Informed-based nudge
+Non-educational nudge
+Boosting
+Cooperation
+ABSTRACT
+In a laboratory experiment, this study investigates the effectiveness of different behavioural interventions 
+designed to promote climate-friendly behaviours within the framework of a public good game. The results show 
+that educative nudging, which involves providing information-based cues to encourage contribution levels, 
+significantly increased participant cooperation levels. In contrast, non-educative nudges, a classical default op -
+tion, and boosting techniques proved less effective in fostering collaborative behaviour. While participants 
+generally perceived educational interventions favourably, their acceptability declined when considering real-life 
+applications, and the acceptability of nudging/boosting instruments in experimental and real-life contexts was 
+not significant in terms of contributions to the game. The study also finds that individuals with stronger envi -
+ronmental values were more inclined to contribute to the public good. These results underscore the importance 
+of effectiveness and ethical concerns regarding the acceptability of behavioural interventions in decision-making, 
+suggesting the need for further research to refine these approaches and enhance their long-term impact in real- 
+world settings. 1. Introduction
+The pressing challenge of climate change and the urgent need to 
+reduce CO2 emissions call for a multidimensional approach that en -
+compasses not only policies and technologies but also behavioural 
+changes at both individual and collective levels. In this context, 
+behavioural intervention techniques have taken on an increasingly 
+prominent role, providing strategies to influence individuals ’ choices 
+toward more sustainable behaviours. This study aims to explore the 
+effectiveness of various behavioural strategies, including educative 
+nudges, non-educative nudges, and boosting, in promoting pro-social 
+behaviours within the context of a public goods game designed to 
+reduce CO2 emissions. Through empiri…",
+473,Evaluating-behavioural-strategies-for-environme_2025_Journal-of-Behavioral-a.pdf,"These nudges 
+may include informational campaigns, feedback mechanisms, educa -
+tional workshops, and other interventions that increase awareness and 
+promote understanding of the reasoning process, thereby empowering 
+individuals to make more thoughtful decisions. Educative nudges in the 
+form of informational content may also encourage behaviour that ben -
+efits others or the community. For example, Schultz et al. (2007) found 
+that high-energy-consuming households tend to decrease their con -
+sumption when informed about the average usage in their neighbour -
+hood. More recently, Bhanot (2021) found that norm messaging (e.g., a 
+smiley, neutral, or frowny face depending on water consumption) can 
+encourage water conservation by reducing water use by 1–5 %. Simi -
+larly, Huitink et al. (2020) found that supermarket customers increased 
+their vegetable purchases after receiving messages about other cus -
+tomers’ vegetable-buying habits. Khanal et al. (2025) used information-based nudges to influence 
+consumer meat choices. They found that comparative, goat-focused 
+information—emphasising how goat meat’s attributes compare with 
+those of other meats—was significantly more effective than providing 
+generic information. Their results suggest that, when supported by 
+appropriate information, goat meat could represent a viable alternative 
+to conventional meats, particularly for consumers seeking healthier and 
+more environmentally sustainable options. These findings underscore 
+the potential of informational content as a behavioural change tool 
+( Barron & Nurminen, 2020 ). Nevertheless, the broader academic liter -
+ature offers mixed evidence on the effectiveness of informational nudges 
+across different contexts. For instance, Clark et al. (2014) found that a simple informational 
+flyer about tax-advantaged retirement savings increased participation 
+by 2.5 percentage points among younger workers, but demonstrated no 
+significant effect among older employees, highlighting potential de -
+mographic variations in nudge responsiveness. More critically, Fang 
+et al. (2025) conducted a randomised field experiment to test three types 
+of text messaging designed to promote electric heating adoption by 
+addressing the cost overestimation of electricity expenses, the under -
+estimation of health damage from traditional coal heating, and the 
+popularity of electric heating. The authors found that these 
+informational nudges were largely ineffective in correcting cogn…",
+479,Evaluating-behavioural-strategies-for-environme_2025_Journal-of-Behavioral-a.pdf,"2
+Please note that this category consists of only nine subjects. Table 5 
+Logistic regression for full cooperation ( n = 79). Intercept   1.64 
+(0.30)
+Treatment: Non-educative Nudge (base = Control) 0.67 
+(0.40)
+Treatment: Educative Nudge (base = Control) 1.15** 
+(0.38)
+Treatment: Boosting (base = Control)   0.11 
+(0.43)
+N. Obs. 325
+Log-likelihood   172.9709
+AIC 353.9418
+BIC 369.1139
+* p < 0.05, ** p < 0.01, *** p < 0.001. Bonferroni correction was applied for p-values. V. Faralla and A. Innocenti                                                                                                                                                                                                                   Journal of Behavioral and Experimental Economics 119 (2025) 102464 
+7 
+these concerns do not necessarily influence their behaviour when 
+making decisions in practical contexts. This may occur for various rea -
+sons that should be deeply investigated (e.g., the attitude-behaviour 
+gap), but it certainly gives rise to important ethical implications. If an 
+intervention works regardless of whether people find it acceptable, this 
+raises questions about consent and informed decision-making in 
+behavioural policies. We also found that individuals who placed greater 
+importance on environmental issues were more likely to contribute to 
+the public good, indicating a strong alignment between environmental 
+values and cooperative behaviour. In experiments addressing environ -
+mental issues, participants with stronger pro-environmental values may 
+respond more positively to interventions promoting environmentally 
+friendly behaviours, regardless of the specific mechanism employed. 5.1. Limitations of the study
+A limitation of the present study is that it employs a one-shot game. Although this experimental setup does not account for the dynamic 
+nature of cooperation behaviours in repeated interactions or real-life 
+settings, many climate-related choices may represent singular decision 
+points entailing individual commitment, like voting on environmental 
+policies, buying an electric vehicle, or homeowner energy investments. These examples represent a one-time choice with lasting environmental 
+impact that may not be individually optimal in the short term (e.g., 
+higher vehicle cost). Furthermore, one-shot public goods games have 
+been used in previous research examining pro-social contributions 
+( Catola et al., 2021 ) and in an environmental context ( Goeschl et al.…",
+492,Evaluators--masculine-gender-identity-may-drive_2025_Journal-of-Behavioral-a.pdf,"We could speculate that in other, less 
+conservative cultural contexts, stereotypes about occupations - 
+including entrepreneurship - may change faster than in Slovakia. Alas, 
+given the OECD (2023) report about gender social norms, such optimism 
+remains largely unwarranted. Extant literature shows that, similarly as 
+in other countries, entrepreneurship in Slovakia is viewed as a 
+hyper-masculine occupation with both men and women believing that 
+strong instrumental traits — traditionally associated with masculin -
+ity — are necessary to thrive in business ( Adamus et al., 2021 ; Gupta 
+et al., 2009 ). Interestingly, however, in the general population, there are 
+no significant differences in self-ascribed masculinity between men and 
+women ( Adamus & Ballov ´a Miku ˇskov ´a, 2023 ). Thus, our study corrob -
+orates the view that there may be strong self-selection of women who see 
+themselves as masculine in entrepreneurship. In line with previous 
+studies, such women are more likely to believe they have skills to pursue 
+a career in entrepreneurship, express entrepreneurial intentions and, 
+ultimately, start doing business ( Adamus et al., 2021 ; Gupta et al., 
+2009 ). Alas, they may also be more sceptical about other women ’ s 
+entrepreneurial competences. As with every empirical study, this study is not free from limitations. Specifically, our experiment included evaluations of simplified one-page 
+proposals that may have limited ability to fully reflect the complexity of 
+real-life investment situations. Further, the choice to focus on peer- 
+evaluations by entrepreneurs may not cover all potential biases and 
+stereotypes held by other stakeholders engaged in the evaluation of 
+nascent businesses. Moreover, in our analyses, we controlled for eval -
+uators ’ age and sector, but there may be other potentially confounding 
+factors such as expertise, knowledge of the sector or investment expe -
+rience that should be taken into account in future studies. Finally, 
+although setting our study in Slovakia provides an interesting cultural 
+framework, whether the role of gender norms and stereotypes is robust 
+across countries remains unclear. Given these limitations, caution is 
+warranted when attempting to generalise our results to other cultural 
+contexts and decisions made by other stakeholders. Future research 
+could address the limitations by using diverse quantitative and quali -
+tative methodological perspectives. It is also advisable to include a 
+broa…",
+517,Gender-of-the-opponent-and-reaction-to-_2025_Journal-of-Behavioral-and-Exper.pdf,"Empirical evidence indicates that women are 
+more likely than men to drop out after setbacks, especially in male-
+dominated fields (Buser & Yuan, 2019; Ellis, Fosdick, & Rasmussen, 
+2016; Price, 2010). Therefore, understanding how men and women 
+react to winning or losing, and whether these reactions depend on the 
+opponent’s gender, provides valuable insights into labor market dynam-
+ics. Additionally, our study explores how prior competitive outcomes, 
+particularly unexpected losses, influence subsequent decisions to re-
+enter competition. The controlled setting of a lab experiment allows 
+us to isolate and examine these behavioral responses. The seminal experimental study on gender differences in willingness 
+to compete is Niederle and Vesterlund (2007). It documents, in a 
+lab experiment, a significant gender gap in tournament entry, driven 
+by men being more overconfident and more willing to perform in 
+a competition. Subsequent research has consistently confirmed that 
+men tend to be more confident and competitive than women (Alan, 
+Ertac, Kubilay, & Loranth, 2020; Dreber et al., 2014; Kamas & Preston, 
+2012; Ludwig, Fellner-Röhling, & Thoma, 2017). This leads to an over-
+representation of low-performing men and an under-representation of 
+high-performing women in competitive settings. While in a lab envi-
+ronment, these suboptimal choices directly affect individuals’ earnings, 
+at a broader level, a loss of efficiency is incurred if qualified women 
+are not assigned to high positions in favor of less competent men. The 
+analysis of public interventions, aimed at reducing the gender gap in 
+competitiveness and in the labor market, shows that these differences 
+are not irreversible (Balafoutas & Sutter, 2012; Beaman et al., 2012). Moving from individual characteristics to competition features,
+Buser, van den Assem, and van Dolder (2023) test and confirm the 
+validity of gender differences in competitive preferences in a quasi-
+experimental real-world setting with exceptionally high stakes.4 In 
+this study, the authors also analyze how the gender of the opponent 
+influences the decision to enter competition, finding that women tend 
+to avoid competing against men. On the other hand, men seem to 
+anticipate female behavior and show a greater willingness to compete 
+against women. In contrast, when considering hormonal influences, 
+women appear more responsive than men to the characteristics of their 
+opponent. Brañas-Garza, Chowdhury, Espín, and Nieboer…",
+538,Peers--performance-feedback--Evidence-fro_2025_Journal-of-Behavioral-and-Exp.pdf,"Peers ’ performance feedback: Evidence from soccer penalty shootouts
+David Boto-García
+a , *
+, Alessandro Bucciol
+b
+a
+Department of Economics, University of Oviedo, Asturias, Spain
+b
+Department of Economics, University of Verona, Verona, Italy
+ARTICLE INFO
+JEL codes:
+D91
+J24 
+Keywords:
+Feedback
+Performance
+Choking under pressure
+Soccer
+ABSTRACT
+This paper examines the role of peers ’ performance feedback on individual productivity in competitive envi -
+ronments. We specifically study the link between individual performance and the past performance of teammates 
+and opposing teams. We use a dataset on all the penalty kicks in knockout stages of World Cup and European Cup 
+competitions in male soccer from 1976 to 2024. We find that the probability of scoring a penalty kick is 17.9 
+percentage points lower after the opponent team scored a kick but does not change with the outcome of a 
+teammate ’ s penalty kick. Our evidence supports the notion that individuals ’ underperformance when feeling 
+pressure ( “ choking under pressure ” ) is primarily driven by feedback on competitors ’ performance, rather than by 
+teammates ’ performance. 1. Introduction
+When performing in high-pressure competitions, individuals often 
+perform in an unexpected way compared to their level of skills ( Genakos 
+et al., 2015 ). Although greater incentives increase effort ( Lazear & 
+Rosen, 1981 ), the psychological pressure arising from high payoffs and 
+the fear of failure can lead to a deterioration in performance, a phe -
+nomenon commonly known as “ choking under pressure ” . This anxiety 
+and stress that competitors experience in highly contested environments 
+vary depending on whether agents perform individually or as part of a 
+team. In team settings, the social dimension also plays a role. In this 
+context, there is an additional source of psychological pressure: The 
+feeling of guilt associated with failing to meet others ’ expectations in 
+case of subpar performance ( Charness & Dufwenberg, 2006 ). There are many competitive contexts where individuals perform 
+sequential teamwork. Examples include corporate businesses that 
+compete for sales targets, management consulting firms that work on 
+client projects, hackathon contests for software programmers, and sport 
+teams. In dynamic settings, individuals typically receive signals about 
+their own and their opposing teams ’ productivity. From the point of 
+view of a rational agent, any performance feedback should change the 
+pri…",
+549,Return-intentions-of-Ukrainian-refugees--The_2025_Journal-of-Behavioral-and-.pdf,"Although the general economic factors behind the pref-
+erences to migrate and return and the implications of these decisions 
+for the host and home countries have been discussed, little is known 
+about non-economic motivations behind return intent of war refugees. 2.2. Return intent of refugees: security concerns and psychological factors
+Economic models of migrations do not explicitly accommodate war 
+refugees which might have other motivations for or against return than 
+economic migrants. Research on war refugees from Syria identifies 
+security situation and living conditions (e.g. electricity supply) as one 
+of the most important factors behind decisions to return (Beaman, 
+Onder, & Onder, 2022). Camarena and Hägerdal (2020) and Gosn et al. (2021) underline the role of psychological attachments to home and 
+host country alongside security and economic concerns. By looking at 
+World War II evacuees in Finland Lynch et al. (2019) find a strong 
+link between ‘‘social bonding’’ (marriage and fertility choices) and 
+likelihood to return. Meta-review of Hagen-Zanker, Hennessey, and 
+Mazzilli (2023) reveals an increasing role of psychological factors, such 
+as feeling of hope, personality traits, and mental representations of the 
+host and the home countries. Müller (2019) suggests that imagining 
+the future and (lack of) hope in the home country reduce the desire 
+of Syrian refugees to return; Debray, Ruyssen, and Schewel (2025) 
+mentions hope for improvements in the home country among the 
+factors behind preferences to stay. 2.3. Social identity and return intentions
+Social identity, broadly defined as the sense of belonging to a social 
+category or group (Tajfel & Turner, 1979, Tajfel & Turner, 1986, Hogg 
+& Williams, 2000) has long been known to affect people’s (economic) 
+behavior (Akerlof & Kranton, 2000, Akerlof & Kranton, 2010, Davis, 
+2010). The main premise of this approach is that group membership shapes 
+individual behavior, i.e. individuals derive extra utility from aligning 
+their behavior to the one prescribed by the group norms (Reynolds, 
+2019, Muldoon, Lisciandra, Bicchieri, Hartmann, & Sprenger, 2014). Research has shown that (various types of) social identity affects peo-
+ple’s social, risk, time preferences and cooperation (Benjamin, Choi, & 
+Strickland, 2010, Benjamin, Choi, & Fisher, 2016, Chen, Li, Liu, & Shih, 
+2014). We define national identity as ‘‘a subjective or internalized sense 
+of belonging to the nation’’ (See, Huddy & Khatib…",
+555,Return-intentions-of-Ukrainian-refugees--The_2025_Journal-of-Behavioral-and-.pdf,"For 
+participants with above-the-mean values of dispositional national iden-
+tity (to the right of the red vertical line indicating the mean identity 
+score), our identity-salience manipulation generated higher return in-
+tentions compared to a control condition. This supports our Hypothesis 
+2a: salience increases the willingness to return for participants with a 
+high level of national identity. Fig. 2 depicts an interesting different pattern: for the below-the-
+mean values of pride (to the left of the red vertical line indicating 
+the mean pride score in the sample), salience manipulation decreases 
+the willingness to return. For the above-the-mean values of pride (to 
+the right of the red vertical line indicating the mean pride score in 
+the sample), the salience manipulation does not have any effect on 
+intention return. This observation supports our Hypothesis 2b: salience of pride 
+decreases the willingness to return for participants with low levels of 
+pride. This finding of the negative effect of pride salience has very im-
+portant policy implications. It suggests that for people who developed 
+low pride levels (e.g. due to no major successes on the battlefield, 
+or pre-war unhappiness with economic prospects or the development 
+of civic institutions), the pride-salience interventions might backfire. National identity salience seems to matter more for people who score 
+high on the identity values prior to an intervention. Therefore, for the 
+salience manipulation to be effective, a long-term shift in dispositional 
+national identity might be needed. This shift might require investment 
+into maintaining the link with Ukraine, e.g. by supporting Ukrainian 
+cultural and educational programs in the diaspora. 6. Discussion and conclusions
+We have conducted a large-scale online experiment with Ukrainian 
+refugees in Poland to measure the link between national identity, pride, 
+and the willingness to return to Ukraine. We document a significant 
+positive association of national identity and national pride on the 
+immediate return intention (‘‘to return as soon as possible’’). Exogenous 
+manipulation of identity- and pride-salience produced interesting find-
+ings: for people with high levels of dispositional national identity the 
+salience increased the return intent, for people with low pride scores 
+the pride-salience manipulation backfired. We suggest several explanations for this finding. First, pride-salience 
+manipulations might have reminded people…",
+583,The-attitude-behavior-gap-is-not-one-sided--Som_2025_Journal-of-Behavioral-a.pdf,"Binder and Blankenberg (2017) take a similar approach 
+but operationalize the attitude–behavior gap differently. First, they ask 
+participants to rate their lifestyle from an environmental perspective 
+on a 1–5 Likert scale. Then, on the same scale, they let participants 
+rate how often they engage in various pro-environmental behaviors 
+(such as ‘‘Do you turn off the water while brushing teeth?’’). The 
+attitude–behavior gap is the ratio of individuals answering 4–5 on 
+Journal of Behavioral and Experimental Economics 119 (2025) 102446 
+2 
+V. Zíka et al. the lifestyle question and 1—never on the behavior questions. One 
+of the findings is that the attitude–behavior gap is larger for more 
+costly behaviors (p. 317). This is in line with the low-cost hypothesis 
+by Diekmann and Preisendorfer (2003), stating that ‘‘environmental 
+concern influences ecological behavior primarily in situations (. . . ) connected with low costs and little inconvenience’’ (p. 443). In other 
+words, pro-environmental attitudes translate into pro-environmental 
+behavior only as long as the costs of such behavior do not exceed its 
+perceived benefits. These studies base their conclusions on self-reported data derived 
+from non-validated measures, which introduces at least three method-
+ological issues. First, measuring attitudes with a single question makes 
+it easy for participants to infer the study’s purpose, potentially influenc-
+ing their responses to subsequent behavior-related questions. Second, 
+the lack of incentive-compatible measures for behavior increases the 
+likelihood that reported behavior does not reflect actual behavior. Third, the categorical nature of the responses (e.g., Likert scale or bi-
+nary) limits the ability to quantify the magnitude of pro-environmental 
+behavior. Three recent experimental studies, to varying degrees, ad-
+dress these concerns and also find support for the low-cost hypothesis. However, they too face methodological challenges, which we discuss in 
+the following paragraph. Like the aforementioned studies, they do not 
+differentiate between the positive and negative attitude–behavior gap. Farjam et al. (2019) find that pro-environmental attitudes ‘‘have a 
+positive behavioral effect only in case the associated costs are low’’ 
+(p. 166). The study employs the Collective-Risk Social Dilemma Task
+developed by Milinski et al. (2008). This game, which resembles a 
+threshold public goods game, assigns participants to groups of six, 
+where each me…",
+595,The-effect-of-social-distancing-on-tru_2025_Journal-of-Behavioral-and-Experi.pdf,"For the respondents who self-reported a decrease of social 
+interactions between the two waves we find a stronger effect of social 
+distancing on trust towards In-group members, while the null results 
+are confirmed across the board. 5 Mixed evidence is also a common feature of other behavioral traits. For 
+instance, risk aversion (Alsharawy et al., 2021; Harrison et al., 2021; Shachat 
+et al., 2021), cooperation (Babin et al., 2021; Buso et al., 2020; Shachat et al., 
+2021) and pro-social behavior (Aksoy et al., 2021; Branas-Garza et al., 2022; 
+Loeschel et al., 2021). Journal of Behavioral and Experimental Economics 119 (2025) 102402 
+2 
+A. Filippin and N. Pace
+2. The experiment
+The experiment has been pre-registered at the AEA RCT Registry (ID 
+AEARCTR-0005629). The sample is composed of respondents in New 
+York City, Tucson (Arizona), and in the metropolitan area of Phoenix 
+(Arizona). Given the impossibility of gathering people during the out-
+break, the experiment was conducted online using the Prolific platform, 
+in accordance with all the relevant guidelines and regulations. Subjects 
+provided their explicit consent to participate and were free to withdraw 
+at any time during the experiment. As a purely observational study, the 
+experiment is considered automatically preapproved by the University 
+of Teramo. In what follows we describe the selection of our sample, the 
+experimental tasks, the design, the procedures, and a power analysis. 2.1. Selection of the study areas and screening phase
+We first filtered the Prolific database in the US based on the state 
+of residence of the respondents. For our treatment condition we pre-
+selected only the states with a sufficiently large number of subjects and 
+at the same time not having already implemented a stay-at-home policy 
+at the state level or at least in large cities: Arizona, Kentucky, Florida, 
+and Virginia. Subjects in these states were invited to a screening phase 
+in the week March 22–March 29, 2020 with two goals. The first was 
+to obtain their city of residence in order to run the In-group treatment 
+(see below Section 2.3). The second was to have readily available a list 
+of active and responsive participants, given our need to run Wave 1 as 
+soon as the stay-at-home policy was announced in one of these states. For this second reason we also ran the screening in New York City, 
+where the stay-at-home policy had already been implemented on March 
+20. The screening paid $0.25 (flat) per respon…",
+601,The-effect-of-social-distancing-on-tru_2025_Journal-of-Behavioral-and-Experi.pdf,"In-group Out-group
+ (1) (2) (3) (4)
+ Arizona 0.306*** 0.296** 0.183 0.206  
+ (0.115) (0.120) (0.152) (0.157)  
+ Wave2 −0.111 −0.112 0.000 −0.001  
+ (0.069) (0.070) (0.057) (0.059)  
+ Arizona*Wave2 (DDR) 0.073 0.075 −0.133 −0.128  
+ (0.079) (0.080) (0.106) (0.107)  
+ Compliant 0.129 0.118 0.065 0.033  
+ (0.115) (0.124) (0.116) (0.122)  
+ Compliant*Arizona −0.356** −0.365* −0.065 −0.061  
+ (0.174) (0.188) (0.193) (0.204)  
+ DDR*Compliant 0.181** 0.189** 0.022 0.017  
+ (0.087) (0.091) (0.121) (0.123)  
+ Controls No Yes No Yes  
+ Constant 0.540*** 0.524*** 0.484*** 0.627*** 
+ (0.090) (0.243) (0.087) (0.246)  
+ DDR + DDR*Compliant 0.254** 0.264** −0.111 −0.111  
+ (0.104) (0.109) (0.100) (0.102)  
+ N. Obs. 202 200 208 206  
+Note: Linear probability model, fixed effects. Dep. var. : Passing the money as Player 
+A. Standard errors clustered at individual level are reported in parentheses. DDR: Interaction between treated group (Arizona) and treatment period (Wave2). DDR*Compliant: Interaction between DDR and Compliance to the treatment. Controls: Age, gender, nationality, mother tongue, employment and student status, risk 
+tolerance. * P-val. < 0.1, ** P-val. < 0.05, *** P-val. < 0.01.
+our data this channel does not appear to work in levels either. Those 
+who pass as Player A in Wave 1 are not more likely to reduce social 
+interactions than those who keep the dollar (Fisher exact test, P-val =
+0.672). In principle, the imperfect compliance to the treatment may also 
+have blurred significant effects on the other behavioral traits. Repeating 
+the same exercise seen in Table  7 for risk aversion, trustworthiness, and 
+solidarity shows that this is not the case. Compliant subjects are never 
+characterized by a significantly different effect, and the total effect of 
+the treatment remains fairly close to zero in all the circumstances (see 
+Tables  C.9–C.11 in Appendix). 5. Conclusion
+Previous literature provides mixed evidence about the effect of 
+social distancing on individual preferences. Contributions usually rely 
+upon repeated cross sections, however, in which individual hetero-
+geneity and unobservable characteristics play a critical role. This is 
+particularly true in a turbulent period like that of the COVID-19 out-
+break. This paper investigates experimentally whether trust, trustworthi-
+ness, and solidarity react to social distancing. We improve upon the 
+existing literature using a panel structure and exploiting an exogenous 
+manipulation of social distanci…",
+630,The-honest--electricity--thief-Experimental-eviden_2025_Journal-of-Behaviora.pdf,"Instead, we use the condonement of electricity theft; it provides 
+us with information of how people view this behaviour but does not 
+tell us whether they actively engage in it. We are interested whether 
+dishonesty levels differ between those that are strictly opposed to 
+electricity theft and those that are not. We use stated social norms 
+as a tool to analyse behaviour that is not socially desirable. Here, 
+we use stated social norms regarding electricity theft as a proxy for 
+the individual’s behaviour. We expect that people reporting that most 
+people similar to oneself engage in electricity theft are also highly likely 
+to engage in electricity theft themselves. We therefore anticipate that 
+these people are on average less honest in the game than people who 
+report that the minority of people similar to them engages in electricity 
+theft. Based on the literature, we expect the social network (here defined 
+as ‘‘people that are important to the respondent’’) as well as trust to play 
+a major role in electricity theft. To answer our third research question 
+we elicit trust level as well as injunctive norms in regard to electricity 
+theft on an individual level. On the one hand, we are interested in the 
+contagiousness of social norms erosion (electricity theft justified by the 
+behaviour of the majority) and on the other hand, we examine whether 
+an ’’access to electricity is a basic right’’ notion (electricity theft jus-
+tified by poverty) is responsible for the condonement of electricity 
+theft. To analyse the acceptance of electricity theft in a community, 
+we ask about electricity theft in general, in how far the acceptance 
+of electricity theft depends on the behaviour of the majority, and the 
+socio-economic status of a person. Our survey also entails question on 
+trust towards different entities such as the electricity provider or the 
+government, satisfaction with electricity supply, the electricity access 
+of the social network, awareness of negative effects of electricity theft 
+on the local community, and general socio-economic data. Given that in the literature dishonesty in the die-in-a-cup game often 
+correlates with dishonest behaviour in the ’’real world’’, the first two 
+research questions intend to shed light on whether dishonesty in the 
+game carries over into norms condoning electricity theft, while the 
+third research question provides novel insights on the factors that shape 
+social norms towards electricity theft. We run the st…",
+638,The-honest--electricity--thief-Experimental-eviden_2025_Journal-of-Behaviora.pdf,"This 
+indicates that the contagiousness of social norms is more likely in tight-
+knit communities. The only other variable that is significant is the idea 
+that not being able to afford electricity is the main driver of electricity 
+theft. When looking at the awareness of negative effects of electricity 
+theft we find that low quality of service and no negative effects as 
+reason for electricity theft are significant in the unaware group. While 
+low quality of service reduces the likelihood of condonement, no nega-
+tive consequences increases the likelihood of condonement significantly 
+(table A.1.2). 4.4.3. Condonement of electricity theft due to poverty
+The third social norm refers to the basic rights approach by in-
+cluding poverty as a justification for electricity theft. Most of our 
+socio-economic variables are not significant (Table  6) but we find in 
+model 4 and 5 age becomes significant. The older a person is, the less 
+likely they are condoning electricity theft due to poverty. The effect of 
+income is inconclusive in model 3 and not significant when we control 
+for townships. Regarding trust we find that people that place high trust 
+in the local government are less likely to condone electricity theft. This 
+could indicate that these people trust the government to find a solution 
+to the electricity access problem which would make theft due to poverty 
+obsolete. We also find that trust towards neighbours increases the 
+likelihood of condoning electricity theft due to poverty. This even holds 
+for people who are aware of the negative consequences of electricity 
+theft (table A.1.3). We also see that satisfaction with the electricity 
+service reduces the probability of electricity theft condonement, but 
+this effect is only significant in model 3. Again, we find that people 
+who are unaware of the negative effects of electricity theft, condone 
+electricity theft due to affordability issues more often than those you 
+are aware of the negative effects. One reason for the lack of significant results on income could be 
+that not income per se is often seen as a factor for engaging in or the 
+condoning of illegal activities but rather it is income inequality (Mimmi 
+& Ecer, 2010). Since income is fairly equal (the whole area is among 
+the poorest in Colombia), we might not be able to detect this effect. Journal of Behavioral and Experimental Economics 119 (2025) 102457 
+11 
+E. Schuch et al. 5. Discussion and conclusion
+We find that dishonesty levels i…",
+647,Time-pressure-and-motivated-delay-effects-on-san_2025_Journal-of-Behavioral-.pdf,"delay treatment increased the effectiveness of the sanctions. Some of 
+this effect may be due to individual unobserved preferences related 
+to cooperation and the public goods game. The recorded responses 
+indicate that upon reflection, subjects consider the sanctions as proso-
+cial tools, and when faced with sanctions they give significantly more 
+to the public good. The process of writing the motivation for the 
+voting choice of sanctions appears to have increased the salience of 
+the sanctions faced by participants, as indicated by the interaction 
+coefficient between sanctions adopted (SA) and motivated delay (MD), 
+though it is statistically insignificant (𝑝-value = 0 .062). This may indi-
+cate a prosocial reaction to sanctions when using deliberative thought 
+processes, making sanctions more effective. In the impact of motivated delay on subsequent contribution deci-
+sions there may also be a motivation spillover effect due to the focus on 
+motivation in the voting stage. Economic behavior is often governed by 
+psychological motivations (Ring et al., 2023) and can impact behavior 
+in a social dilemma through recall of emotions and context specific 
+motivations (Bartke et al., 2019; Chierchia et al., 2017). Motives are 
+important to social dilemma behavior and may not solely depend on 
+stable unchanging preferences. Our treatment, which makes motivation 
+more salient may impact contributions to the public good as it activates 
+participants’ psychological motivation for providing the public good. Journal of Behavioral and Experimental Economics 119 (2025) 102403 
+6 
+T. Guilfoos and J.F. Suter
+Fig. 3. Contributions during PGG. To investigate the impact of motives on contributions in the moti-
+vated delay treatment we regress the classified topics on contributions 
+in the public goods stage. The 1638 observations from Table  4 only 
+contains the 273 subjects from the treatment of motivated delay with 
+six PGG contribution rounds. Also, we note that our classification of 
+motives, which can be found in the appendix, is coarse as it is based 
+on word association with common topics. In Table  4 we find that the motivation of self-interest is negatively 
+related to contributions, as expected, but reduces in significance with 
+demographic controls. We also find that cooperative motivation is 
+positive and statistically significant in explaining higher contributions. This is suggestive of the emotions and specific motivations for contri-
+bution differences fou…",
+680,What-works-in-financial-education--Experime_2025_Journal-of-Behavioral-and-E.pdf," 
+Contents lists available at ScienceDirect
+Journal of Behavioral and Experimental Economics
+journal homepage: www.elsevier.com/locate/jbee  
+What works in financial education? Experimental evidence on program 
+impact
+Gonzalo Llamosas García a
+ ,∗, Cristina Mazas Pérez-Oleaga b
+a Department of Business Administration, University of Cantabria, Avenida de los Castros s/n, 39005 Santander, Spain
+b Department of Social Sciences, Universidad Europea del Atlántico, Isabel Torres 21, 39011 Santander, Spain
+A R T I C L E  I N F O
+Keywords:
+Financial education
+Systematic literature review
+Quantitative analysis
+Literature review
+Experimental studies
+Financial literacy
+ A B S T R A C T
+Financial education is increasingly essential for safeguarding both individual and corporate well-being. This 
+study systematically reviews global financial education experiments using a dual-method framework that 
+integrates a deep learning classifier with advanced multivariate statistical techniques. Our analysis indicates 
+that while short-term improvements in financial literacy are common, such gains tend to diminish over time 
+without ongoing reinforcement. Moreover, the limited impact of digital innovations and monetary incentives 
+suggests that successful financial education depends on more than simply deploying technological solutions 
+or extrinsic rewards. Overall, this review provides valuable insights into the evolving landscape of financial 
+education in a dynamic economic context and underscores the need for sustainable strategies that secure lasting 
+improvements in financial literacy. 1. Introduction
+Financial education is widely acknowledged as a pivotal element 
+on the international agenda (Kirton & Wang, 2022; OECD, 2022a). Although the COVID-19 pandemic has highlighted existing financial 
+vulnerabilities and renewed the focus on financial education (Fornero & 
+Lo Prete, 2023), there remains limited evidence on whether this crisis 
+has triggered lasting shifts in financial literacy levels (Litterscheidt & 
+Streich, 2020; Proestakis, Marandola, Lourenço, & van Bavel, 2024; 
+Sconti, Caserta, & Ferrante, 2024). Recent data from OECD (2023), 
+for example, reveals a concerning statistic: a substantial proportion of 
+adults lacks a fundamental grasp of core financial concepts and the 
+capacity to apply essential financial skills in complex scenarios. In fact, 
+OECD (2023) reports that merely 34% of adults worldwide reach the 
+minimum target level for financial literacy. The…",
+681,What-works-in-financial-education--Experime_2025_Journal-of-Behavioral-and-E.pdf,"Indeed, randomized school-based experiments often high-
+light positive impacts on financial knowledge and behavioral changes 
+(Amagir, van den Brink, Groot, & Wilschut, 2022; Maldonado & De 
+Witte, 2021; Rodriguez & Martinez, 2022; Sconti et al., 2024). Building 
+on this evidence, recent randomized trials that deploy fully digital, 
+game-based courses mark a new frontier in the field (Cannistrà et al., 
+2024). However, notable gaps remain in the literature, particularly 
+when it comes to systematic reviews of randomized controlled trials 
+spanning multiple social and demographic contexts (Sayinzoga, Bulte, 
+& Lensink, 2016). Although meta-studies such as Kaiser, Lusardi, Menkhoff, and Urban 
+(2022), Kaiser and Menkhoff (2020) have thoroughly assessed the 
+scope of financial education programs, our study employs a dual-
+method quantitative framework that combines machine learning with 
+multivariate statistical methods, examining an extensive array of ex-
+perimental interventions. We adhere to the PRISMA 2020 guidelines 
+(Preferred Reporting Items for Systematic Reviews and Meta-Analyses) 
+to maintain transparency and reproducibility in our selection, screen-
+ing, and inclusion procedures (Page et al., 2021). Drawing from major 
+bibliographic sources like Scopus, Web of Science, and Google Scholar, 
+we screened out articles that failed to specify a clear financial education 
+component or lacked sufficient outcome data to evaluate program 
+effectiveness. Ultimately, 70 empirical studies were included, allowing 
+for a wide-ranging, multiangle view of financial education’ s impact on 
+financial literacy. Our dual-method framework combines XGBoost, an advanced
+gradient-boosting algorithm known for robustly identifying key pre-
+dictive features in complex, heterogeneous datasets (Chen & Guestrin, 
+2016; Natekin & Knoll, 2013), with an ordinal logistic regression to 
+enhance interpretability. Specifically, XGBoost’ s capacity to model 
+non-linear interactions (Zhang & Haghani, 2015) offers nuanced in-
+sights into the factors driving financial education effectiveness. We 
+then employ ordinal logistic regression (Agresti, 2002; Tutz, 2022) to 
+address the ordered nature of our outcome categories, clarifying both 
+the magnitude and direction of crucial predictors. This more granular 
+approach transcends a simple comparison of differences across studies, 
+analyzing in detail how each variable influences financial education, 
+while also incorporating a time dimension a…",
+704,When-leadership-messaging-fails-to-encourage-produc_2025_Journal-of-Behavior.pdf,"Thus, compared with the stakes in laboratory experiments, the expected 
+costs and benefits associated with decision-making in the 
+field — especially in the case of firms — tend to be much larger. This 
+discrepancy is likely to be another factor that contributes to differences 
+between the results of laboratory and field experiments. Third, the absence of a treatment effect may reflect specific limita -
+tions of the message employed in our study. It is possible that the 
+message failed to generate sufficient salience or motivation, either 
+because of an inherently weak first-mover appeal or because recipients 
+made a rational assessment that the marginal benefits of participating in 
+the seminar were too low. These possibilities suggest that our null 
+finding may be context-specific and indicate the need for future research 
+Table 5 
+Association between interest in the webinar and behaviors. (1) (2) (3) (4) (5)
+Panel A: Strong interest and webinar 1
+Strong 
+interest in 
+webinar
+Not 
+registered 1
+Registered 
+1
+Not 
+attended 1
+Attended 
+1
+Total 
+1
+0 127 8 130 5 135
+​ (94.1 %) (5.9 %) (96.3 %) (3.7 %) (67.8 
+%)
+1 54 10 59 5 64
+​ (84.4 %) (15.6 %) (92.2 %) (7.8 %) (32.2 
+%)
+Total 181 18 189 10 199
+​ (91.0 %) (9.0 %) (95.0 %) (5.0 %) (100 
+%)
+Panel B: Strong interest and webinar 2
+Strong 
+interest in 
+webinar
+Not 
+registered 2
+Registered 
+2
+Not 
+attended 2
+Attended 
+2
+Total 
+2
+0 115 20 123 12 135
+​ (85.2 %) (14.8 %) (91.1 %) (8.9 %) (67.8 
+%)
+1 46 18 48 16 64
+​ (71.9 %) (28.1 %) (75.0 %) (25.0 %) (32.2 
+%)
+Total 161 38 171 28 199
+​ (80.9 %) (19.1 %) (85.9 %) (14.1 %) (100 
+%)
+Panel C: General interest and webinar 1
+General 
+interest in 
+webinar
+Not 
+registered 1
+Registered 
+1
+Not 
+attended 1
+Attended 
+1
+Total 
+1
+0 62 3 63 2 65
+​ (95.4 %) (4.6 %) (96.9 %) (3.1 %) (32.7 
+%)
+1 119 15 126 8 134
+​ (88.8 %) (11.2 %) (94.0 %) (6.0 %) (67.3 
+%)
+Total 181 18 189 10 199
+​ (91.0 %) (9.0 %) (95.0 %) (5.0 %) (100 
+%)
+Panel D: General interest and webinar 2
+General 
+interest in 
+webinar
+Not 
+registered 2
+Registered 
+2
+Not 
+attended 2
+Attended 
+2
+Total 
+2
+0 61 4 62 3 65
+​ (93.9 %) (6.2 %) (95.4 %) (4.6 %) (32.7 
+%)
+1 100 34 109 25 134
+​ (74.6 %) (25.4 %) (81.3 %) (18.7 %) (67.3 
+%)
+Total 161 38 171 28 199
+​ (80.9 %) (19.1 %) (85.9 %) (14.1 %) (100 
+%)
+Notes : Each pair of columns (e.g., Registered/Not registered, Attended/Not 
+attended) reflects two possible outcomes for a binary variable. Percentages in 
+parentheses denote the distribution within each row for that pair. Colu…",
+707,Work-meaningfulness-and-eff_2025_Journal-of-Behavioral-and-Experimental-Econ.pdf,"Work meaningfulness and effort
+Femke Cnossen
+a , *
+, Milena Nikolova
+b
+a
+University of Groningen, Faculty of Spatial Sciences and GLO, Netherlands
+b
+University of Groningen, Faculty of Economics and Business, IZA, GLO, Brookings Institution, Netherlands
+ARTICLE INFO
+JEL Codes:
+J01
+J30
+J32
+J81
+I30
+I31
+M50 
+Keywords:
+Meaningful work
+Motivation
+Non-monetary benefits of work
+Labor market outcomes
+Self-determination theory
+ABSTRACT
+Does experiencing work meaningfulness — defined as perceiving one ’ s work as personally or socially significant 
+and worthwhile — influence employee effort? Drawing on self-determination theory, we define need satisfaction 
+as the fulfillment of autonomy, competence, and relatedness at work. We develop a utility framework in which 
+need satisfaction enhances motivation, lowers the perceived marginal cost of effort, and fosters work mean -
+ingfulness, which in turn increases effort. Using original Dutch LISS panel survey data, we find that autonomy, 
+competence, and relatedness are positively associated with work meaningfulness, which in turn relates to higher 
+self-reported effort and stronger pro-effort attitudes. These results indicate that meaningfulness is not a fixed 
+outcome but one that may be shaped by job design. This would imply that organizations can boost productivity 
+and worker well-being by creating conditions that satisfy employees ’ psychological needs. Our findings 
+contribute to labor economics by integrating motivation as an endogenous outcome into labor supply models and 
+by providing empirical evidence on the link between meaningfulness and effort. 1. Introduction
+Work meaningfulness, which we define as the extent to which in -
+dividuals perceive their work as personally or socially significant, 
+worthwhile, or purposeful, has garnered growing attention in the eco -
+nomics literature. 1
+This burgeoning body of research has advanced both 
+the theoretical frameworks and empirical evidence on its determinants 
+and consequences (e.g., Ashraf et al., 2025 ; Burbano et al., 2024a , 
+2024b ; Cassar & Meier, 2018 ; De Neve et al., 2023 ; Nikolova & Cnossen, 
+2020 ; Nikolova et al., 2023 ). Recent economic models show how non-pecuniary factors, such as 
+intrinsic motivation, public service motivation, or mission alignment, 
+shape worker behavior and job sorting (see Cassar & Meier, 2018 ; 
+Nikolova, 2025 ; Rebitzer & Taylor, 2011 for overviews). Specifically, 
+preferences-for-meaning models (e.g., Cassar & Meier, 2018 ;…",
+709,Work-meaningfulness-and-eff_2025_Journal-of-Behavioral-and-Experimental-Econ.pdf,"Like Cassar and Meier ’ s preferences for meaning model (2018) , we 
+2
+Our own data replicate this finding ( Table A2 ): women in our sample report 
+significantly higher levels of work meaningfulness than men, even after con -
+trolling for occupation, job characteristics, and personality traits. F. Cnossen and M. Nikolova                                                                                                                                                                                                                  Journal of Behavioral and Experimental Economics 119 (2025) 102460 
+2 
+model a worker ’ s utility function U that depends on three arguments: 
+utility from income Y , utility from meaning M , and the disutility of effort 
+e , which negatively enters the model as the cost of exerting effort C ( e ) . Income Y is a function of wages w and effort e with decreasing marginal 
+returns to effort. In both models, workers choose an effort level that 
+equalizes the marginal benefits from income and meaning with the 
+marginal costs of exerting effort. Unlike Cassar and Meier, who assume 
+fixed effort, and later extensions ( Kesternich et al., 2021 ; De Schouwer 
+et al., 2023 ) that allow endogenous effort, our model assumes the 
+disutility of effort decreases with rising motivation. It also introduces a 
+minimum motivation threshold required to exert effort and to derive 
+utility from meaningful work — a feature absent in preference-based 
+models. We conjecture that work meaningfulness arises from the interplay 
+between the work environment and the individual ’ s psychological needs 
+for autonomy, competence, and relatedness, which shape motivation a . As a result, meaningfulness enters the utility function as M ( a ) . For 
+instance, an employer may grant the same level of autonomy to all 
+employees, yet individuals can perceive it differently depending on their 
+preference for and understanding of independent work. 3
+We treat the 
+three psychological needs as fixed over time,
+4
+while allowing employers 
+to create conditions that satisfy them. Increasing relatedness — such as 
+by fostering stronger collegiality — will raise motivation a and thus M ( a ) , 
+though the size of this effect will differ across workers. We treat effort e and motivation a — a vector capturing the satisfac -
+tion of autonomy, competence, and relatedness — as inputs in the utility 
+function underlying labor supply, and specify a cost-of-effort function 
+C ( e , a ) tha…",
+711,Work-meaningfulness-and-eff_2025_Journal-of-Behavioral-and-Experimental-Econ.pdf,"We adjust the analysis sample as follows: we exclude those with a 
+non-working status as of May 2023 (16 individuals), respondents with 
+missing information on the WAMI, autonomy, competence, or related -
+ness variables (325 respondents), 40 individuals who are aged 67 or 
+older, and 2 respondents who reported that they are reaching normal 
+retirement age and are aged 66 and older. The final sample comprises 
+2142 respondents. We measured work meaningfulness using the WAMI ( Steger et al., 
+2012 ), as detailed in Appendix A . The WAMI captures work meaning -
+fulness through three interrelated dimensions: positive meaning, 
+meaning-making through work, and greater-good motivations. The first 
+dimension (positive meaning) captures the intrinsic value of work, 
+recognizing the personal significance and worth individuals find in their 
+work tasks, reflecting a deep-seated sense of purpose. The second 
+dimension (meaning-making through work) explores the role of work in 
+an individual ’ s life, specifically how work contributes to broader per -
+sonal and existential goals, facilitating self-understanding and growth. Finally, the WAMI considers the pro-social orientation to working, 
+focusing on motivations that extend beyond personal benefit to 
+contribute positively to society at large. 8
+Our data has information on workers, who already satisfy the necessary 
+condition for labor supply a > a
+min
+. Research on unemployed individuals high -
+lights the absence of motivation in this group and advocates active labor market 
+policies that create conditions for meeting basic psychological needs. For 
+example, Van der Vaart et al. (2020) show that enhancing motivation and 
+satisfying these needs can reduce negative experiences and promote active 
+participation. 9
+In the full model, where both a and e vary, higher motivation will lead to 
+more effort, and thus to a higher income. 10
+Potentially, changing motivation could trigger job quits or occupational 
+switches, which is an empirical question that future research should investigate. 11
+The dataset is freely available from the LISS data archive website: https 
+://www.dataarchive.lissdata.nl/study-units/view/1474
+F. Cnossen and M. Nikolova                                                                                                                                                                                                                  Journal of Behavioral and Experimental Economics 119 (2025) 102460 
+4 
+To …",
+713,Work-meaningfulness-and-eff_2025_Journal-of-Behavioral-and-Experimental-Econ.pdf,"Effort 0 1
+Best work 0 1
+Work meaningfulness 0 1
+Positive meaning 0 1
+Meaning-making through work 0 1
+Greater good motivations 0 1
+Autonomy 0 1
+Competence 0 1
+Relatedness 0 1
+Age 46.796 12.249
+Biological sex ​ ​
+Female and ""other"" 0.497 0.500
+Male 0.503 0.500
+Marital status ​ ​
+Not married (single, divorced/separated, widowed) 0.483 0.500
+Married 0.517 0.500
+Children in household ​ ​
+No children 0.537 0.499
+One or more children 0.463 0.499
+Urbanity ​ ​
+Non-urban 0.504 0.500
+Urban 0.495 0.500
+No information 0.001 0.031
+College education ​ ​
+No 0.481 0.500
+Yes (WO and HBO) 0.514 0.500
+No information 0.005 0.068
+Personal net income tertile ​ ​
+Poorest 0.307 0.461
+Middle 0.317 0.465
+Richest 0.317 0.465
+No information 0.060 0.237
+Employee status ​ ​
+Self-employed 0.099 0.298
+Employee 0.901 0.298
+Profession ​ ​
+Advanced Academic/Professional (Architect, Physician, 
+Scholar)
+0.144 0.351
+Senior Management (Manager, Director, Company Owner) 0.098 0.297
+Intermediate Professional (Teacher, Artist, Nurse) 0.299 0.458
+Mid-Level Supervisory/Commercial (Department Manager, 
+Shopkeeper)
+0.118 0.323
+Clerical and Support Work (Administrative Assistant, 
+Accountant)
+0.185 0.388
+Skilled Manual Work (Car Mechanic, Foreman) 0.059 0.235
+Semi-Skilled Manual Work (Driver, Factory Worker) 0.061 0.240
+Basic Manual Labor (Cleaner, Packer) and Agricultural 
+Work (Farm Worker, Farmer)
+0.036 0.187
+Working hours ​ ​
+< 30 h per week 0.334 0.472
+31 – 40 h per week 0.501 0.500
+> 40 h per week 0.165 0.371
+Public employee ​ ​
+Not a public employee 0.561 0.496
+Public employee 0.341 0.474
+Missing information 0.098 0.297
+Permanent contract ​ ​
+Yes 0.824 0.381
+No 0.176 0.381
+Number of years with the employer ​ ​
+1 year or less 0.139 0.346
+2 – 5 years 0.263 0.441
+6 or more years 0.596 0.491
+Missing information 0.002 0.048
+Note: N = 2142. F. Cnossen and M. Nikolova                                                                                                                                                                                                                  Journal of Behavioral and Experimental Economics 119 (2025) 102460 
+6 
+challenges preference-based models that assume individuals self-select 
+into meaning-rich jobs and supports our argument that meaningful -
+ness is shaped largely within the workplace through the satisfaction of 
+autonomy, competence, and relatedness. For both employers and poli -
+cymakers, the implication is that enhancing meaningfulness requires not 
+just better…",
+738,Comparing-transparent-and-covert-nudges--A-meta-an_2025_Journal-of-Behaviora.pdf,"Jachimowicz, J. M., Duncan, S., Weber, E. U., & Johnson, E. J. (2018). When and why 
+defaults influence decisions. Behavioural Public Policy , 1 – 28. https://doi.org/ 
+10.1017/bpp.2018.43
+Kantorowicz-Reznichenko, E., & Kantorowicz, J. (2021a). To follow or not to follow the 
+herd? Transparency and social norm nudges. Kyklos,, 74 (3), 362 – 377. https://doi. org/10.1111/kykl.12274
+Leimst ¨adtner, D., S ¨orries, P., & Müller-Birn, C. (2023a). Investigating responsible nudge 
+design for informed decision-making enabling transparent and reflective decision- 
+making. Mensch Und Computer, 2023 , 220 – 236. https://doi.org/10.1145/ 
+3603555.3603567
+Liu, X., Zhao, N., Li, S., & Zheng, R. (2022a). Opt-out policy and its improvements 
+promote COVID-19 vaccinations. Social Science & Medicine, 307 , Article 115120. 
+https://doi.org/10.1016/j.socscimed.2022.115120
+Liu, X., Zhao, N., & Zheng, R. (2023a). The effects of default nudges on promoting 
+approval of welfare cuts: An exploration during COVID-19. Frontiers in Psychology, 
+13 , Article 1038750. https://doi.org/10.3389/fpsyg.2022.1038750
+Madrian, B. C., & Shea, D. F. (2001). The power of suggestion. The Quarterly Journal of 
+Economics, 116 (4), 1149 – 1187. https://doi.org/10.1162/003355301753265543
+Maier, M., Barto ˇs, F., Stanley, T. D., Shanks, D. R., Harris, A. J. L., & Wagenmakers, E.-J. (2022). No evidence for nudging after adjusting for publication bias. Proceedings of 
+the National Academy of Sciences, 119 (31), Article e2200300119. https://doi.org/ 
+10.1073/pnas.2200300119
+Marchiori, D. R., Adriaanse, M. A., & De Ridder, D. T. D. (2017). Unresolved questions in 
+nudging research: Putting the psychology back in nudging. Social and Personality 
+Psychology Compass, 11 (1), e12297. https://doi.org/10.1111/spc3.12297
+McKenzie, C. R. M., Liersch, M. J., & Finkelstein, S. R. (2006). Recommendations implicit 
+in policy defaults. Psychological Science,, 17 (5), 414 – 420. https://doi.org/10.1111/ 
+j.1467-9280.2006.01721.x
+Mertens, S., Herberz, M., Hahnel, U. J. J., & Brosch, T. (2022). The effectiveness of 
+nudging: A meta-analysis of choice architecture interventions across behavioral 
+domains. Proceedings of the National Academy of Sciences, 119 (1), Article 
+e2107346118. https://doi.org/10.1073/pnas.2107346118
+Michaelsen, P. (2024). Transparency and nudging: An overview and methodological 
+critique of empirical investigations. Behavioural Public Policy , 1 – 11. https://doi.org/ 
+10.1017/bpp.2024.7
+Michaelsen,…",
+751,Happiness-and-willingness-to-c_2025_Journal-of-Behavioral-and-Experimental-E.pdf,"We can 
+claim that they are similar constructs and studying affect would allow 
+for deductions on life satisfaction ( Diener & Seligman, 2004 ; Lyubo -
+mirsky et al., 2005 ; Spronken, Holland, Figner & Dijksterhuis, 2019 ). K. Overdick                                                                                                                                                                                                                                       Journal of Behavioral and Experimental Economics 116 (2025) 102365 
+11 
+Second, correlational analysis can serve as a proxy although it does not 
+allow for causal insights. Together with theoretical considerations on 
+the direction of causality it is another pragmatic alternative. 7. Contributions
+The main contribution is the empirical examination of the relation -
+ship between happiness and WTC. This relationship had not been 
+examined methodically before to my best knowledge, despite already 
+being raised as an open question in the literature ( Buser et al., 2024 ). Notwithstanding expectations to the contrary, happiness did not change 
+willingness to compete. Importantly, I explain these differences by 
+showing that subjective preferences (competitiveness and task confi -
+dence) are mediators of these effects. These subjective variables measure 
+how competitive subjects think they are and how many tasks they will 
+be able to complete. I find a high correlation between the real-effort and 
+incentive-compatible experimental measure of WTC and the simple 
+questionnaire measure. Moreover, the findings show some overlap with 
+a null result in the literature examining choices ( Hanley et al., 2016 ). Together with research that successfully identifies effects, I therefore 
+contribute to establishing patterns of happiness-related and 
+non-happiness related constructs. Lastly, I contribute by extending the 
+types of samples used from what are often student or sometimes field 
+experiments to online experiments ( Kessel et al., 2021 ; Lane, 2017 ; 
+Niederle & Vesterlund, 2007 ). 8. Conclusion
+I test the effect of happiness on WTC using two incentive-compatible 
+experiments. I find no link between happiness and WTC. Exploratory 
+analyses reveal that a potential reason for the lack of an effect of 
+happiness is that positive affect does not change subjective competi -
+tiveness and task confidence, which are relevant to behaviour in this 
+context. This contrasts with other variables such as gender that correl…",

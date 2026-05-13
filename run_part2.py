@@ -1,0 +1,830 @@
+#!/usr/bin/env python3
+"""
+Run Part 2 pipeline from terminal (no notebook needed).
+Usage:
+  cd "/Users/momoba/Desktop/Advanced ML Project "
+  .venv/bin/python run_part2.py
+
+Models (use --model to force):
+  --model gemini   FREE: export GEMINI_API_KEY=your-key  (https://aistudio.google.com/apikey)
+  --model openai   Paid: export OPENAI_API_KEY=sk-your-key
+                   Stronger: export OPENAI_MODEL=gpt-4o  (default: gpt-4o-mini)
+  --model ollama   Local: ollama run llama3.2  (https://ollama.com)
+
+Regenerate annotation template:
+  .venv/bin/python run_part2.py --annotation-only
+
+Corpus folder: PDFs under Dataset/ by default. Expanded Part 3 corpus:
+  export GAPMAP_DATASET=Dataset_expanded   # folder under project root with PDFs
+
+Performance: Use --no-post-filter to disable pattern-based filtering (compare precision/recall).
+
+Beyond GAPMAP (Salem et al. 2025) explicit-gap baseline:
+  -- Post-filter: keep only LLM lines matching shared gap-regex patterns (annotation guide).
+  -- Hybrid (--hybrid): merge LLM output with rule_based_extract() on each chunk.
+  -- Optional Part 3 (run_part3.py): cleaned gold, semantic-compare metric, agreement export.
+GAPMAP's IPBES experiment reports plain LLM extraction + ROUGE; these layers are our additions.
+"""
+import os
+import re
+import json
+import time
+from pathlib import Path
+from pypdf import PdfReader
+import nltk
+import pandas as pd
+from tqdm import tqdm
+
+# Set API key here if not using export
+# os.environ["GEMINI_API_KEY"] = "..."   # Free from aistudio.google.com/apikey
+# os.environ["OPENAI_API_KEY"] = "sk-proj-..."
+
+nltk_data = Path(__file__).parent.resolve() / "nltk_data"
+nltk.data.path.insert(0, str(nltk_data))
+nltk.download("punkt", quiet=True, download_dir=str(nltk_data))
+nltk.download("punkt_tab", quiet=True, download_dir=str(nltk_data))
+
+PROJECT_ROOT = Path(__file__).parent.resolve()
+# Override with expanded corpus: export GAPMAP_DATASET=Dataset_expanded  (relative to project root or absolute path)
+_ds = os.environ.get("GAPMAP_DATASET", "").strip()
+if _ds:
+    _p = Path(_ds)
+    DATASET_BASE = _p if _p.is_absolute() else PROJECT_ROOT / _p
+else:
+    DATASET_BASE = PROJECT_ROOT / "Dataset"
+OUTPUT_DIR = PROJECT_ROOT / "Part2_Output"
+OUTPUT_DIR.mkdir(exist_ok=True)
+
+# Patterns used by gold standard (aligns model output with gold)
+GAP_PATTERNS = [
+    r"remains unknown", r"remains unclear", r"it is unclear", r"it remains unclear",
+    r"further research (is )?needed", r"further research (is )?required",
+    r"more research (is )?needed", r"limited evidence", r"no study has", r"no studies have",
+    r"notable gaps remain", r"future work should", r"future research should",
+    r"we lack (data|evidence|information)", r"little is known", r"poorly understood",
+    r"remains (to be )?explored", r"merits further (study|research)", r"warrants further (study|research)",
+    r"open (question|questions)", r"unresolved", r"under-researched", r"understudied",
+    r"scant evidence", r"scarce (evidence|data)", r"inconclusive", r"mixed evidence",
+    r"may lead to unintended",
+]
+_GAP_RE = re.compile("|".join(f"({p})" for p in GAP_PATTERNS), re.I)
+
+
+def filter_predictions(preds: list, use_filter: bool) -> list:
+    """Keep only predictions that match gold-standard patterns. Raises precision."""
+    if not use_filter or not preds:
+        return preds
+    return [p for p in preds if _GAP_RE.search(p)]
+
+
+def _is_citation_fragment(s: str) -> bool:
+    """Filter out citation-only fragments (matches annotate_gold_standard)."""
+    s = s.strip()
+    if len(s) < 40:
+        if re.search(r"et\s+al\.|&\s*[A-Za-z]|,\s*\d{4}\)?\.?$", s):
+            return True
+    return False
+
+
+def rule_based_extract(text: str) -> list:
+    """Extract sentences containing gold-standard patterns (same as annotate_gold_standard)."""
+    from nltk.tokenize import sent_tokenize
+    sentences = sent_tokenize(text)
+    return [s.strip() for s in sentences if _GAP_RE.search(s) and len(s.strip()) > 15 and not _is_citation_fragment(s.strip())]
+
+def extract_text_from_pdf(pdf_path):
+    try:
+        reader = PdfReader(str(pdf_path))
+        return "\n".join(p.extract_text() or "" for p in reader.pages)
+    except Exception as e:
+        print(f"Error: {pdf_path.name}: {e}")
+        return ""
+
+def load_articles():
+    articles = []
+    pdf_paths = list(DATASET_BASE.glob("**/*.pdf"))
+    for pdf_path in sorted(pdf_paths):
+        if "Editorial" in pdf_path.name or "Board" in pdf_path.name:
+            continue
+        text = extract_text_from_pdf(pdf_path)
+        if len(text.split()) > 500:
+            articles.append({"id": pdf_path.stem[:80], "filename": pdf_path.name, "text": text})
+    return articles
+
+def chunk_text(text, max_words=1000):
+    from nltk.tokenize import sent_tokenize
+    sentences = sent_tokenize(text)
+    chunks, current, count = [], [], 0
+    for sent in sentences:
+        n = len(sent.split())
+        if count + n > max_words and current:
+            chunks.append({"text": " ".join(current), "word_count": count})
+            current, count = [], 0
+        current.append(sent)
+        count += n
+    if current:
+        chunks.append({"text": " ".join(current), "word_count": count})
+    return chunks
+
+def chunk_all(articles):
+    all_chunks = []
+    cid = 0
+    for art in articles:
+        for c in chunk_text(art["text"]):
+            all_chunks.append({
+                "chunk_id": cid, "article_filename": art["filename"],
+                "text": c["text"], "word_count": c["word_count"]
+            })
+            cid += 1
+    return all_chunks
+
+EXTRACT_SYSTEM_PROMPT = """You are an expert at identifying explicit knowledge gaps in behavioral economics literature.
+
+TASK: Extract ONLY sentences that explicitly state knowledge gaps (e.g., what is unknown, what needs more research). Quote each sentence VERBATIM from the text — do not paraphrase.
+
+PHRASES TO LOOK FOR: "remains unknown", "remains unclear", "further research is needed", "limited evidence", "no study has", "future work should", "little is known", "poorly understood", "open question", "inconclusive", "mixed evidence", "under-researched", "scarce evidence".
+
+DO NOT EXTRACT: General background, statements of what the paper found, summaries of results, or implicit gaps (things you infer but authors did not state).
+
+EXAMPLES:
+Example 1 - Input: "The mechanism remains unclear. Our results show a strong effect. Further research is needed to replicate these findings."
+Output:
+The mechanism remains unclear.
+Further research is needed to replicate these findings.
+
+Example 2 - Input: "Little is known about long-term effects. We addressed this gap."
+Output:
+Little is known about long-term effects.
+
+Output each sentence on a new line. If none found, output: NONE"""
+
+
+def extract_with_gemini(chunks, use_post_filter=True):
+    """Use Google Gemini (free tier). Rate-limited."""
+    from google import genai
+    from google.genai import types
+
+    client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+    model_id = "gemini-2.0-flash"
+
+    predictions = []
+    delay = 4.0  # Free tier ~15 RPM
+    for c in tqdm(chunks, desc="Extracting (Gemini)"):
+        try:
+            resp = client.models.generate_content(
+                model=model_id,
+                contents=f"{EXTRACT_SYSTEM_PROMPT}\n\nExtract explicit knowledge gap statements:\n\n{c['text'][:8000]}",
+                config=types.GenerateContentConfig(temperature=0),
+            )
+            content = (resp.text or "").strip()
+            if content.upper() == "NONE":
+                predictions.append({"chunk_id": c["chunk_id"], "predictions": "[]"})
+            else:
+                lines = [l.strip() for l in content.split("\n") if l.strip() and l.strip().upper() != "NONE"]
+                lines = filter_predictions(lines, use_post_filter)
+                predictions.append({"chunk_id": c["chunk_id"], "predictions": json.dumps(lines)})
+        except Exception as e:
+            print(f"Error chunk {c['chunk_id']}: {e}")
+            predictions.append({"chunk_id": c["chunk_id"], "predictions": "[]"})
+        time.sleep(delay)
+    return predictions
+
+
+def extract_with_openai(chunks, model=None, use_post_filter=True):
+    """Use OpenAI GPT (paid). Set OPENAI_MODEL=gpt-4o for stronger model (default: gpt-4o-mini)."""
+    from openai import OpenAI
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+    model = model or os.environ.get("OPENAI_MODEL", "gpt-4o-mini")
+
+    def build_prompt(chunk_text):
+        return [{"role": "system", "content": EXTRACT_SYSTEM_PROMPT},
+                {"role": "user", "content": f"Extract explicit knowledge gap statements:\n\n{chunk_text[:8000]}"}]
+
+    def extract_one(c):
+        for attempt in range(2):  # retry once on 429
+            try:
+                resp = client.chat.completions.create(model=model, messages=build_prompt(c["text"]), temperature=0)
+                content = resp.choices[0].message.content.strip()
+                if content.upper() == "NONE":
+                    return {"chunk_id": c["chunk_id"], "predictions": "[]"}
+                lines = [l.strip() for l in content.split("\n") if l.strip() and l.strip().upper() != "NONE"]
+                lines = filter_predictions(lines, use_post_filter)
+                return {"chunk_id": c["chunk_id"], "predictions": json.dumps(lines)}
+            except Exception as e:
+                if "429" in str(e) and attempt == 0:
+                    time.sleep(2)  # wait before retry
+                else:
+                    print(f"Error chunk {c['chunk_id']}: {e}")
+                    return {"chunk_id": c["chunk_id"], "predictions": "[]"}
+        return {"chunk_id": c["chunk_id"], "predictions": "[]"}
+
+    predictions = []
+    # Use 1 worker to stay under 200k TPM rate limit (parallel workers hit 429)
+    with ThreadPoolExecutor(max_workers=1) as ex:
+        futures = {ex.submit(extract_one, c): c for c in chunks}
+        for f in tqdm(as_completed(futures), total=len(futures), desc=f"Extracting ({model})"):
+            predictions.append(f.result())
+    return predictions
+
+
+def extract_with_ollama(chunks, use_post_filter=True):
+    """Use Ollama (local Llama). Requires: ollama run llama3.2 (or llama3.1)."""
+    import urllib.request
+    import urllib.error
+
+    model = os.environ.get("OLLAMA_MODEL", "llama3.2")
+    base_url = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
+
+    def chat(prompt_text):
+        data = json.dumps({
+            "model": model,
+            "messages": [
+                {"role": "system", "content": EXTRACT_SYSTEM_PROMPT},
+                {"role": "user", "content": f"Extract explicit knowledge gap statements:\n\n{prompt_text[:8000]}"}
+            ],
+            "stream": False
+        }).encode()
+        req = urllib.request.Request(f"{base_url}/api/chat", data=data, method="POST",
+                                     headers={"Content-Type": "application/json"})
+        with urllib.request.urlopen(req, timeout=120) as r:
+            out = json.loads(r.read().decode())
+        return out.get("message", {}).get("content", "").strip()
+
+    predictions = []
+    for c in tqdm(chunks, desc=f"Extracting (Ollama/{model})"):
+        try:
+            content = chat(c["text"])
+            if content.upper() == "NONE":
+                predictions.append({"chunk_id": c["chunk_id"], "predictions": "[]"})
+            else:
+                lines = [l.strip() for l in content.split("\n") if l.strip() and l.strip().upper() != "NONE"]
+                lines = filter_predictions(lines, use_post_filter)
+                predictions.append({"chunk_id": c["chunk_id"], "predictions": json.dumps(lines)})
+        except Exception as e:
+            print(f"Error chunk {c['chunk_id']}: {e}")
+            predictions.append({"chunk_id": c["chunk_id"], "predictions": "[]"})
+    return predictions
+
+
+def _apply_hybrid_to_files():
+    """Merge rule-based extractions into existing prediction files."""
+    print("Loading articles and chunking...")
+    articles = load_articles()
+    chunks = chunk_all(articles)
+    chunk_by_id = {c["chunk_id"]: c for c in chunks}
+
+    pred_files = list(OUTPUT_DIR.glob("predictions_*.csv"))
+    if not pred_files:
+        print("No prediction files found.")
+        return
+    for f in sorted(pred_files):
+        df = pd.read_csv(f)
+        rows = []
+        for _, r in df.iterrows():
+            raw = json.loads(r["predictions"]) if isinstance(r["predictions"], str) else r["predictions"] or []
+            rule_extracts = rule_based_extract(chunk_by_id.get(r["chunk_id"], {}).get("text", ""))
+            combined = list(dict.fromkeys(raw + rule_extracts))
+            rows.append({"chunk_id": r["chunk_id"], "predictions": json.dumps(combined)})
+        pd.DataFrame(rows).to_csv(f, index=False)
+        print(f"Applied hybrid to {f.name}")
+    print("\nRun --compare to see updated metrics.")
+
+
+def _apply_filter_to_files():
+    """Overwrite prediction files with filtered versions."""
+    def load_preds(x):
+        if isinstance(x, str):
+            try:
+                return json.loads(x)
+            except Exception:
+                return []
+        return x if isinstance(x, list) else []
+
+    pred_files = list(OUTPUT_DIR.glob("predictions_*.csv"))
+    if not pred_files:
+        print("No prediction files found.")
+        return
+    for f in sorted(pred_files):
+        df = pd.read_csv(f)
+        rows = []
+        for _, r in df.iterrows():
+            preds = load_preds(r["predictions"])
+            kept = filter_predictions(preds, use_filter=True)
+            rows.append({"chunk_id": r["chunk_id"], "predictions": json.dumps(kept)})
+        pd.DataFrame(rows).to_csv(f, index=False)
+        print(f"Applied filter to {f.name}")
+    print("\nRun --filter-and-eval to see updated metrics.")
+
+
+def run_filter_and_eval():
+    """Apply post-filter to existing predictions and re-evaluate. No API calls."""
+    from rouge_score import rouge_scorer
+
+    gold_path = OUTPUT_DIR / "gold_standard.csv"
+    if not gold_path.exists():
+        print("No gold_standard.csv found.")
+        return
+
+    gold_df = pd.read_csv(gold_path)
+    gold_df = gold_df[gold_df["gold_gap_sentences"].notna() & (gold_df["gold_gap_sentences"].astype(str).str.strip() != "")]
+    gold_ids = set(gold_df["chunk_id"])
+    gold_by_chunk = gold_df.set_index("chunk_id")["gold_gap_sentences"].to_dict()
+
+    def load_preds(x):
+        if isinstance(x, str):
+            try:
+                return json.loads(x)
+            except Exception:
+                return []
+        return x if isinstance(x, list) else []
+
+    def eval_preds(preds_list, name):
+        scorer = rouge_scorer.RougeScorer(["rougeL"], use_stemmer=True)
+        threshold = 0.55
+        tp = fp = fn = 0
+        for p in preds_list:
+            if p["chunk_id"] not in gold_ids:
+                continue
+            cid = p["chunk_id"]
+            preds = load_preds(p["predictions"])
+            gold_list = [g.strip() for g in str(gold_by_chunk.get(cid, "")).split(";") if g.strip()]
+            matched_gold_idxs = set()
+            for pred in preds:
+                best_idx, best_f1 = None, 0.0
+                for i, gold in enumerate(gold_list):
+                    f1 = scorer.score(gold, pred)["rougeL"].fmeasure
+                    if f1 >= threshold and f1 > best_f1:
+                        best_idx, best_f1 = i, f1
+                if best_idx is not None:
+                    matched_gold_idxs.add(best_idx)
+                    tp += 1
+                else:
+                    fp += 1
+            fn += len(gold_list) - len(matched_gold_idxs)
+        prec = tp / (tp + fp) if (tp + fp) > 0 else 0
+        rec = tp / (tp + fn) if (tp + fn) > 0 else 0
+        f1 = 2 * prec * rec / (prec + rec) if (prec + rec) > 0 else 0
+        return prec, rec, f1
+
+    pred_files = list(OUTPUT_DIR.glob("predictions_*.csv"))
+    if not pred_files:
+        print("No prediction files found.")
+        return
+
+    print("\n=== Post-filter impact (ROUGE-L, threshold 0.55) ===\n")
+    print(f"{'Model':<25} {'Precision':>10} {'Recall':>10} {'F1':>10}  (after filter)")
+    print("-" * 60)
+
+    for f in sorted(pred_files):
+        name = f.stem.replace("predictions_", "")
+        df = pd.read_csv(f)
+        preds = df.to_dict("records")
+        orig_prec, orig_rec, orig_f1 = eval_preds(preds, name)
+
+        filtered = []
+        for p in preds:
+            raw = load_preds(p["predictions"])
+            kept = filter_predictions(raw, use_filter=True)
+            filtered.append({"chunk_id": p["chunk_id"], "predictions": json.dumps(kept)})
+
+        new_prec, new_rec, new_f1 = eval_preds(filtered, name)
+        print(f"{name:<25} {new_prec:>10.4f} {new_rec:>10.4f} {new_f1:>10.4f}")
+        print(f"  (original:           {orig_prec:.4f} {orig_rec:.4f} {orig_f1:.4f})")
+
+
+def run_error_analysis():
+    """Analyze false positives and false negatives for ALL prediction CSVs; write
+    Part2_Output/error_analysis.md (primary, gpt4o_mini for back-compat) and
+    Part2_Output/error_analysis_<model>.md for every other model. Also writes a
+    cross-model summary table at the top of error_analysis.md."""
+    from rouge_score import rouge_scorer
+    from collections import defaultdict
+
+    gold_path = OUTPUT_DIR / "gold_standard.csv"
+    if not gold_path.exists():
+        print("No gold_standard.csv found.")
+        return
+
+    gold_df = pd.read_csv(gold_path)
+    gold_df = gold_df[gold_df["gold_gap_sentences"].notna() & (gold_df["gold_gap_sentences"].astype(str).str.strip() != "")]
+    gold_ids = set(gold_df["chunk_id"])
+    gold_by_chunk = gold_df.set_index("chunk_id")["gold_gap_sentences"].to_dict()
+
+    def load_preds(x):
+        if isinstance(x, str):
+            try: return json.loads(x)
+            except: return []
+        return x if isinstance(x, list) else []
+
+    scorer = rouge_scorer.RougeScorer(["rougeL"], use_stemmer=True)
+    threshold = 0.55
+
+    pred_files = sorted(OUTPUT_DIR.glob("predictions_*.csv"))
+    if not pred_files:
+        print("No prediction files found.")
+        return
+
+    def analyze(pred_path):
+        name = pred_path.stem.replace("predictions_", "")
+        preds = pd.read_csv(pred_path).to_dict("records")
+        preds = [p for p in preds if p["chunk_id"] in gold_ids]
+        fps, fns = [], []
+        for p in preds:
+            cid = p["chunk_id"]
+            pred_list = load_preds(p["predictions"])
+            gold_list = [g.strip() for g in str(gold_by_chunk.get(cid, "")).split(";") if g.strip()]
+            matched_gold_idxs = set()
+            for pred in pred_list:
+                best_idx, best_f1 = None, 0.0
+                for i, gold in enumerate(gold_list):
+                    f1 = scorer.score(gold, pred)["rougeL"].fmeasure
+                    if f1 >= threshold and f1 > best_f1:
+                        best_idx, best_f1 = i, f1
+                if best_idx is not None:
+                    matched_gold_idxs.add(best_idx)
+                else:
+                    fps.append({"chunk_id": cid, "prediction": pred[:200] + ("..." if len(pred) > 200 else "")})
+            for i, gold in enumerate(gold_list):
+                if i not in matched_gold_idxs:
+                    fns.append({"chunk_id": cid, "gold": gold[:200] + ("..." if len(gold) > 200 else "")})
+        fp_by_pattern = defaultdict(list)
+        for fp in fps:
+            words = fp["prediction"].split()[:5]
+            key = " ".join(words) if words else "(empty)"
+            fp_by_pattern[key].append(fp)
+        return name, fps, fns, fp_by_pattern
+
+    def write_report(out_path, name, fps, fns, fp_by_pattern, header_summary=None):
+        with open(out_path, "w") as f:
+            f.write("# Error Analysis: False Positives and False Negatives\n\n")
+            f.write(f"Model: {name}\n")
+            f.write(f"ROUGE-L threshold: {threshold}\n\n")
+            if header_summary is not None:
+                f.write(header_summary)
+            f.write("## Summary\n\n")
+            f.write(f"- **False positives:** {len(fps)}\n")
+            f.write(f"- **False negatives:** {len(fns)}\n\n")
+            f.write("## False Positive Examples (sample of 15)\n\n")
+            for fp in fps[:15]:
+                f.write(f"- **Chunk {fp['chunk_id']}:** \"{fp['prediction']}\"\n")
+            f.write("\n## False Negative Examples (sample of 15)\n\n")
+            for fn in fns[:15]:
+                f.write(f"- **Chunk {fn['chunk_id']}:** \"{fn['gold']}\"\n")
+            f.write("\n## Failure Mode Patterns (FP)\n\n")
+            f.write("FP predictions grouped by opening words (most common first):\n\n")
+            for pattern, items in sorted(fp_by_pattern.items(), key=lambda x: -len(x[1]))[:10]:
+                f.write(f"- `{pattern}...` -- {len(items)} occurrences\n")
+
+    results = []
+    for pf in pred_files:
+        name, fps, fns, fp_by_pattern = analyze(pf)
+        results.append((name, fps, fns, fp_by_pattern))
+
+    # Cross-model summary table (for paper Table)
+    summary_lines = ["## Cross-model FP/FN summary\n\n"]
+    summary_lines.append(f"| Model | False positives | False negatives |\n")
+    summary_lines.append(f"| --- | ---: | ---: |\n")
+    for name, fps, fns, _ in results:
+        summary_lines.append(f"| {name} | {len(fps)} | {len(fns)} |\n")
+    summary_lines.append("\n")
+    header_summary = "".join(summary_lines)
+
+    # Write per-model files
+    for name, fps, fns, fp_by_pattern in results:
+        per_model_path = OUTPUT_DIR / f"error_analysis_{name}.md"
+        write_report(per_model_path, name, fps, fns, fp_by_pattern,
+                     header_summary=header_summary)
+        print(f"Wrote {per_model_path}")
+
+    # Back-compat primary file: gpt4o_mini if present, else first
+    primary = next((r for r in results if r[0] == "gpt4o_mini"), results[0])
+    name, fps, fns, fp_by_pattern = primary
+    out = OUTPUT_DIR / "error_analysis.md"
+    write_report(out, name, fps, fns, fp_by_pattern, header_summary=header_summary)
+    print(f"Wrote {out}")
+
+
+def run_threshold_tuning():
+    """Evaluate at ROUGE thresholds 0.50, 0.55, 0.60 and report sensitivity."""
+    from rouge_score import rouge_scorer
+
+    gold_path = OUTPUT_DIR / "gold_standard.csv"
+    if not gold_path.exists():
+        print("No gold_standard.csv found.")
+        return
+
+    gold_df = pd.read_csv(gold_path)
+    gold_df = gold_df[gold_df["gold_gap_sentences"].notna() & (gold_df["gold_gap_sentences"].astype(str).str.strip() != "")]
+    gold_ids = set(gold_df["chunk_id"])
+    gold_by_chunk = gold_df.set_index("chunk_id")["gold_gap_sentences"].to_dict()
+
+    def load_preds(x):
+        if isinstance(x, str):
+            try: return json.loads(x)
+            except: return []
+        return x if isinstance(x, list) else []
+
+    def eval_at_threshold(predictions, thresh):
+        scorer = rouge_scorer.RougeScorer(["rougeL"], use_stemmer=True)
+        pred_filtered = [p for p in predictions if p["chunk_id"] in gold_ids]
+        tp = fp = fn = 0
+        for p in pred_filtered:
+            cid = p["chunk_id"]
+            preds = load_preds(p["predictions"])
+            gold_list = [g.strip() for g in str(gold_by_chunk.get(cid, "")).split(";") if g.strip()]
+            matched = set()
+            for pred in preds:
+                best_idx, best_f1 = None, 0.0
+                for i, gold in enumerate(gold_list):
+                    f1 = scorer.score(gold, pred)["rougeL"].fmeasure
+                    if f1 >= thresh and f1 > best_f1:
+                        best_idx, best_f1 = i, f1
+                if best_idx is not None:
+                    matched.add(best_idx)
+                    tp += 1
+                else:
+                    fp += 1
+            fn += len(gold_list) - len(matched)
+        prec = tp / (tp + fp) if (tp + fp) > 0 else 0
+        rec = tp / (tp + fn) if (tp + fn) > 0 else 0
+        f1 = 2 * prec * rec / (prec + rec) if (prec + rec) > 0 else 0
+        return prec, rec, f1
+
+    pred_files = list(OUTPUT_DIR.glob("predictions_*.csv"))
+    if not pred_files:
+        print("No prediction files found.")
+        return
+
+    out_path = OUTPUT_DIR / "threshold_tuning.txt"
+    lines = ["=== ROUGE-L Threshold Sensitivity ===\n"]
+    for thresh in [0.50, 0.55, 0.60]:
+        lines.append(f"\nThreshold {thresh}:\n")
+        lines.append(f"{'Model':<25} {'Precision':>10} {'Recall':>10} {'F1':>10}\n")
+        lines.append("-" * 57 + "\n")
+        for f in sorted(pred_files):
+            name = f.stem.replace("predictions_", "")
+            df = pd.read_csv(f)
+            preds = df.to_dict("records")
+            prec, rec, f1 = eval_at_threshold(preds, thresh)
+            lines.append(f"{name:<25} {prec:>10.4f} {rec:>10.4f} {f1:>10.4f}\n")
+    with open(out_path, "w") as f:
+        f.writelines(lines)
+    print("".join(lines))
+    print(f"\nSaved to {out_path}")
+
+
+def run_comparison():
+    from rouge_score import rouge_scorer
+
+    gold_path = OUTPUT_DIR / "gold_standard.csv"
+    if not gold_path.exists():
+        print("No gold_standard.csv found. Run extraction first.")
+        return
+
+    gold_df = pd.read_csv(gold_path)
+    gold_df = gold_df[gold_df["gold_gap_sentences"].notna() & (gold_df["gold_gap_sentences"].astype(str).str.strip() != "")]
+    gold_ids = set(gold_df["chunk_id"])
+    gold_by_chunk = gold_df.set_index("chunk_id")["gold_gap_sentences"].to_dict()
+
+    def load_preds(x):
+        if isinstance(x, str):
+            try: return json.loads(x)
+            except: return []
+        return x if isinstance(x, list) else []
+
+    def eval_predictions(predictions, name):
+        pred_filtered = [p for p in predictions if p["chunk_id"] in gold_ids]
+        scorer = rouge_scorer.RougeScorer(["rougeL"], use_stemmer=True)
+        threshold = 0.55
+        tp = fp = fn = 0
+        for p in pred_filtered:
+            cid = p["chunk_id"]
+            preds = load_preds(p["predictions"])
+            gold_list = [g.strip() for g in str(gold_by_chunk.get(cid, "")).split(";") if g.strip()]
+            matched_gold_idxs = set()
+            for pred in preds:
+                best_idx, best_f1 = None, 0.0
+                for i, gold in enumerate(gold_list):
+                    f1 = scorer.score(gold, pred)["rougeL"].fmeasure
+                    if f1 >= threshold and f1 > best_f1:
+                        best_idx, best_f1 = i, f1
+                if best_idx is not None:
+                    matched_gold_idxs.add(best_idx)
+                    tp += 1
+                else:
+                    fp += 1
+            fn += len(gold_list) - len(matched_gold_idxs)
+        prec = tp / (tp + fp) if (tp + fp) > 0 else 0
+        rec = tp / (tp + fn) if (tp + fn) > 0 else 0
+        f1 = 2 * prec * rec / (prec + rec) if (prec + rec) > 0 else 0
+        return {"name": name, "prec": prec, "rec": rec, "f1": f1}
+
+    # Find all prediction files
+    pred_files = list(OUTPUT_DIR.glob("predictions_*.csv"))
+    if not pred_files:
+        print("No prediction files found in Part2_Output/")
+        return
+
+    results = []
+    all_preds_by_name = {}
+    for f in sorted(pred_files):
+        name = f.stem.replace("predictions_", "")
+        df = pd.read_csv(f)
+        preds = df.to_dict("records")
+        r = eval_predictions(preds, name)
+        results.append(r)
+        all_preds_by_name[name] = preds
+
+    print("\n=== Model Comparison (ROUGE-L, threshold 0.55) ===\n")
+    print(f"{'Model':<25} {'Precision':>10} {'Recall':>10} {'F1':>10}")
+    print("-" * 57)
+    for r in results:
+        print(f"{r['name']:<25} {r['prec']:>10.4f} {r['rec']:>10.4f} {r['f1']:>10.4f}")
+
+    # Overlap table (chunks where each model found ≥1 gap)
+    if len(pred_files) >= 2:
+        names = [r["name"] for r in results]
+        pred_dicts = {
+            name: {p["chunk_id"]: load_preds(p["predictions"]) for p in all_preds_by_name[name] if load_preds(p["predictions"])}
+            for name in names
+        }
+        chunks_with_any = set()
+        for d in pred_dicts.values():
+            for cid, preds in d.items():
+                if preds:
+                    chunks_with_any.add(cid)
+
+        print("\n=== Overlap (chunks with ≥1 gap found) ===")
+        if len(names) == 2:
+            a, b = names[0], names[1]
+            both = sum(1 for cid in chunks_with_any if pred_dicts[a].get(cid) and pred_dicts[b].get(cid))
+            only_a = sum(1 for cid in chunks_with_any if pred_dicts[a].get(cid) and not pred_dicts[b].get(cid))
+            only_b = sum(1 for cid in chunks_with_any if not pred_dicts[a].get(cid) and pred_dicts[b].get(cid))
+            print(f"Both {a} and {b}: {both}")
+            print(f"Only {a}: {only_a}")
+            print(f"Only {b}: {only_b}")
+        else:
+            for cid in sorted(chunks_with_any)[:20]:  # sample
+                found = [n for n in names if pred_dicts[n].get(cid)]
+                print(f"  chunk {cid}: {', '.join(found)}")
+            if len(chunks_with_any) > 20:
+                print(f"  ... ({len(chunks_with_any)} total chunks with gaps)")
+
+
+def main():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--annotation-only", action="store_true", help="Regenerate chunks_for_annotation.csv only (no API key needed)")
+    parser.add_argument("--compare", action="store_true", help="Compare all prediction files (P/R/F1 + overlap table)")
+    parser.add_argument("--model", choices=["openai", "gemini", "ollama"], help="Force model (default: gemini if key set, else openai, else ollama)")
+    parser.add_argument("--no-post-filter", action="store_true", help="Disable pattern-based post-filter (compare performance)")
+    parser.add_argument("--filter-and-eval", action="store_true", help="Apply post-filter to existing prediction files and re-evaluate (no API)")
+    parser.add_argument("--apply-filter", action="store_true", help="Apply post-filter to prediction files and overwrite them (no API)")
+    parser.add_argument("--hybrid", action="store_true", help="Merge rule-based extractions with LLM predictions when extracting (boosts recall)")
+    parser.add_argument("--apply-hybrid", action="store_true", help="Apply hybrid merge to existing prediction files (no API)")
+    parser.add_argument("--error-analysis", action="store_true", help="Analyze FP/FN and write Part2_Output/error_analysis.md")
+    parser.add_argument("--threshold-tuning", action="store_true", help="Evaluate at ROUGE thresholds 0.50, 0.55, 0.60")
+    args = parser.parse_args()
+
+    if args.compare:
+        run_comparison()
+        return
+
+    if args.filter_and_eval:
+        run_filter_and_eval()
+        return
+
+    if args.apply_filter:
+        _apply_filter_to_files()
+        return
+
+    if args.apply_hybrid:
+        _apply_hybrid_to_files()
+        return
+
+    if args.error_analysis:
+        run_error_analysis()
+        return
+
+    if args.threshold_tuning:
+        run_threshold_tuning()
+        return
+
+    print("Loading articles...")
+    articles = load_articles()
+    print(f"Loaded {len(articles)} articles")
+
+    print("Chunking...")
+    chunks = chunk_all(articles)
+    print(f"Created {len(chunks)} chunks")
+
+    if args.annotation_only:
+        template_path = OUTPUT_DIR / "chunks_for_annotation.csv"
+        pd.DataFrame([{
+            "chunk_id": c["chunk_id"],
+            "article_filename": c["article_filename"],
+            "text_preview": c["text"][:500] + ("..." if len(c["text"]) > 500 else ""),
+            "gold_gap_sentences": ""
+        } for c in chunks]).to_csv(template_path, index=False)
+        print(f"\nSaved annotation template to {template_path}")
+        print("Annotate ≥50 chunks, then save as gold_standard.csv (columns: chunk_id, gold_gap_sentences)")
+        return
+
+    gemini_key = os.environ.get("GEMINI_API_KEY", "").strip()
+    openai_key = os.environ.get("OPENAI_API_KEY", "").strip()
+
+    use_post_filter = not args.no_post_filter
+
+    if args.model == "ollama":
+        print("Using Ollama (local Llama)")
+        try:
+            predictions = extract_with_ollama(chunks, use_post_filter=use_post_filter)
+            out_path = OUTPUT_DIR / "predictions_ollama.csv"
+        except Exception as e:
+            print(f"Ollama error: {e}")
+            print("Install: https://ollama.com  Then: ollama run llama3.2")
+            return
+    elif args.model == "gemini" or (not args.model and gemini_key):
+        if not gemini_key:
+            print("Set GEMINI_API_KEY for Gemini")
+            return
+        print("Using Google Gemini (free)")
+        predictions = extract_with_gemini(chunks, use_post_filter=use_post_filter)
+        out_path = OUTPUT_DIR / "predictions_gemini.csv"
+    elif args.model == "openai" or (not args.model and openai_key and openai_key.startswith("sk-")):
+        if not (openai_key and openai_key.startswith("sk-")):
+            print("Set OPENAI_API_KEY for OpenAI")
+            return
+        openai_model = os.environ.get("OPENAI_MODEL", "gpt-4o-mini")
+        print(f"Using OpenAI {openai_model}")
+        predictions = extract_with_openai(chunks, model=openai_model, use_post_filter=use_post_filter)
+        out_path = OUTPUT_DIR / f"predictions_{openai_model.replace('-', '_')}.csv"
+    else:
+        print("\n*** Set an API key or use Ollama ***")
+        print("FREE: export GEMINI_API_KEY=your-key  (https://aistudio.google.com/apikey)")
+        print("Paid: export OPENAI_API_KEY=sk-your-key")
+        print("Local: ollama run llama3.2  then  python run_part2.py --model ollama")
+        return
+
+    if args.hybrid:
+        chunk_by_id = {c["chunk_id"]: c for c in chunks}
+        for p in predictions:
+            raw = json.loads(p["predictions"]) if isinstance(p["predictions"], str) else p["predictions"]
+            rule_extracts = rule_based_extract(chunk_by_id.get(p["chunk_id"], {}).get("text", ""))
+            combined = list(dict.fromkeys((raw or []) + rule_extracts))
+            p["predictions"] = json.dumps(combined)
+
+    predictions.sort(key=lambda x: x["chunk_id"])
+    pd.DataFrame(predictions).to_csv(out_path, index=False)
+    print(f"\nSaved predictions to {out_path}")
+
+    # Run evaluation if gold standard exists
+    gold_path = OUTPUT_DIR / "gold_standard.csv"
+    if gold_path.exists():
+        from rouge_score import rouge_scorer
+        gold_df = pd.read_csv(gold_path)
+        gold_df = gold_df[gold_df["gold_gap_sentences"].notna() & (gold_df["gold_gap_sentences"].astype(str).str.strip() != "")]
+        gold_ids = set(gold_df["chunk_id"])
+        pred_filtered = [p for p in predictions if p["chunk_id"] in gold_ids]
+
+        def load_preds(x):
+            if isinstance(x, str):
+                try: return json.loads(x)
+                except: return []
+            return x if isinstance(x, list) else []
+
+        scorer = rouge_scorer.RougeScorer(["rougeL"], use_stemmer=True)
+        threshold = 0.55
+        tp = fp = fn = 0
+        gold_by_chunk = gold_df.set_index("chunk_id")["gold_gap_sentences"].to_dict()
+
+        for p in pred_filtered:
+            cid = p["chunk_id"]
+            preds = load_preds(p["predictions"])
+            gold_list = [g.strip() for g in str(gold_by_chunk.get(cid, "")).split(";") if g.strip()]
+            matched_gold_idxs = set()
+            for pred in preds:
+                best_idx, best_f1 = None, 0.0
+                for i, gold in enumerate(gold_list):
+                    f1 = scorer.score(gold, pred)["rougeL"].fmeasure
+                    if f1 >= threshold and f1 > best_f1:
+                        best_idx, best_f1 = i, f1
+                if best_idx is not None:
+                    matched_gold_idxs.add(best_idx)
+                    tp += 1
+                else:
+                    fp += 1
+            fn += len(gold_list) - len(matched_gold_idxs)
+
+        prec = tp / (tp + fp) if (tp + fp) > 0 else 0
+        rec = tp / (tp + fn) if (tp + fn) > 0 else 0
+        f1 = 2 * prec * rec / (prec + rec) if (prec + rec) > 0 else 0
+        print(f"\n=== Results (ROUGE-L, threshold 0.55) ===")
+        print(f"Precision: {prec:.4f}  Recall: {rec:.4f}  F1: {f1:.4f}")
+    else:
+        print("\nNo gold_standard.csv found. Run evaluation in notebook after creating it.")
+
+if __name__ == "__main__":
+    main()

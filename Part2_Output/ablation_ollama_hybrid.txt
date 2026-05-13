@@ -1,0 +1,15 @@
+=== Ollama hybrid-merge ablation (93 gold chunks, paired, ROUGE-L 0.55) ===
+
+Config                                TP   FP   FN     Prec      Rec       F1
+--------------------------------------------------------------------------------
+hybrid OFF (filter ON, baseline)     151  148   20   0.5050   0.8830   0.6426
+hybrid ON  (filter ON + rule_based)  151  148   20   0.5050   0.8830   0.6426
+
+Paired bootstrap (B=1000) hybrid - baseline:
+  ΔP  mean=+0.0000  95% CI [+0.0000, +0.0000]
+  ΔR  mean=+0.0000  95% CI [+0.0000, +0.0000]
+  ΔF1 mean=+0.0000  95% CI [+0.0000, +0.0000]
+
+Independent (non-paired) bootstrap CIs for each row:
+  hybrid OFF              P=0.5050 [0.4344, 0.5861]  R=0.8830 [0.8052, 0.9471]  F1=0.6426 [0.5792, 0.7111]
+  hybrid ON               P=0.5050 [0.4344, 0.5861]  R=0.8830 [0.8052, 0.9471]  F1=0.6426 [0.5792, 0.7111]

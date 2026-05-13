@@ -1,0 +1,6 @@
+# Optional: RoBERTa-MNLI entailment for `run_part3.py tabi-validate`
+# First run downloads ~1.5GB model weights.
+# Install into the project venv (not conda base):
+#   .venv/bin/python -m pip install -r requirements_part3_optional.txt
+torch>=2.0.0
+transformers>=4.36.0

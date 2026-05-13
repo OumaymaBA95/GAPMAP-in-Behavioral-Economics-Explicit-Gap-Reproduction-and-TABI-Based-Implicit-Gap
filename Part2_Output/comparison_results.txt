@@ -1,0 +1,31 @@
+
+=== Model Comparison (ROUGE-L, threshold 0.55) ===
+
+Model                      Precision     Recall         F1
+---------------------------------------------------------
+gpt4o_mini                    0.5634     0.9139     0.6971
+gpt_4o                        0.8527     0.9139     0.8822
+ollama                        0.5050     0.8830     0.6426
+
+=== Overlap (chunks with ≥1 gap found) ===
+  chunk 1: gpt4o_mini, ollama
+  chunk 2: ollama
+  chunk 4: ollama
+  chunk 18: ollama
+  chunk 21: gpt4o_mini, gpt_4o, ollama
+  chunk 26: ollama
+  chunk 27: ollama
+  chunk 29: ollama
+  chunk 30: ollama
+  chunk 37: ollama
+  chunk 38: gpt_4o, ollama
+  chunk 42: gpt4o_mini, ollama
+  chunk 43: gpt4o_mini, gpt_4o, ollama
+  chunk 45: gpt4o_mini, ollama
+  chunk 46: gpt4o_mini
+  chunk 50: gpt4o_mini, gpt_4o, ollama
+  chunk 51: ollama
+  chunk 57: gpt4o_mini
+  chunk 62: ollama
+  chunk 67: gpt_4o
+  ... (404 total chunks with gaps)

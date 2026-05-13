@@ -1,0 +1,6 @@
+=== Semantic-augmented match: max(ROUGE-L, bow-cosine) >= 0.55 ===
+Model                      Precision     Recall         F1
+---------------------------------------------------------
+gpt4o_mini                    0.5870     0.9213     0.7171
+gpt_4o                        0.8839     0.9167     0.9000
+ollama                        0.5351     0.8939     0.6695

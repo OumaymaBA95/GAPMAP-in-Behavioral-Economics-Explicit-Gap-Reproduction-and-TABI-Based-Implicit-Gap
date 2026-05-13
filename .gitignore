@@ -1,0 +1,56 @@
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- editors / IDEs ---
+.vscode/
+.idea/
+.Rhistory
+.ipynb_checkpoints/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+.python-version
+*.egg-info/
+
+# --- LaTeX build artifacts ---
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+*.xml
+
+# --- local build / temp files ---
+.script_build.md
+output.txt
+
+# --- corpus: copyrighted JBEE PDFs, ~200 MB; not redistributable ---
+Dataset/
+
+# --- NLTK data: regenerable via nltk.download() ---
+nltk_data/
+
+# --- if you ever add a .env for API keys, never commit it ---
+.env
+.env.*
+*.pem
+*.key

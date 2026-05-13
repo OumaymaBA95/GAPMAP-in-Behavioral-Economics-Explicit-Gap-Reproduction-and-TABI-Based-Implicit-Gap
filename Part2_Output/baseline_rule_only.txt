@@ -1,0 +1,12 @@
+=== Rule-based-only baseline (no LLM) on 93 gold chunks ===
+  Method: rp2.rule_based_extract(chunk_text)  (cue regex applied to sentences)
+  Eval:   ROUGE-L F1 >= 0.55, stemming
+  CI:     1,000-sample chunk-level bootstrap, seed=7
+
+Rule-based only (no LLM)         P=0.9910 [0.9714, 1.0000]  R=0.8397 [0.7464, 0.9213]  F1=0.9091 [0.8487, 0.9569]
+  TP=110  FP=1  FN=21
+
+For comparison (from bootstrap_ci.txt, same procedure):
+  GPT-4o                    F1=0.8822 [0.8377, 0.9234]
+  GPT-4o-mini               F1=0.6971 [0.5389, 0.8988]
+  Ollama (Llama 3.2)        F1=0.6426 [0.5792, 0.7111]

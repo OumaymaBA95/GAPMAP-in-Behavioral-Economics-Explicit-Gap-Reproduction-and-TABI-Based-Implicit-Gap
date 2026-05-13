@@ -1,0 +1,8 @@
+=== Ollama post-filter ablation (93 sampled gold chunks, ROUGE-L 0.55) ===
+  N=93  seed=7  maxchars=3500  timeout=600s  failures=0
+
+Config                                          TP   FP   FN     Prec      Rec       F1
+------------------------------------------------------------------------------------------
+Ollama, post-filter OFF (raw)                   41  289   98   0.1242   0.2950   0.1748
+Ollama, post-filter ON (same raw)               37   97  100   0.2761   0.2701   0.2731
+On-disk predictions_ollama.csv (ref)           151  148   20   0.5050   0.8830   0.6426

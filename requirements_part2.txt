@@ -1,0 +1,12 @@
+# Part 2: GAPMAP Explicit Gap Extraction Pipeline
+pypdf>=4.0.0
+nltk>=3.8
+rouge-score>=0.1.2
+pandas>=2.0.0
+tqdm>=4.65.0
+
+# Free LLM (Google Gemini) - no credit card needed
+google-genai>=1.0.0
+
+# Paid alternative (OpenAI)
+openai>=1.0.0

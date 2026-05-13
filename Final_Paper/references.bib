@@ -1,0 +1,871 @@
+% Complete bibliography for the course project (Part 2--3 + final paper).
+% BibTeX keys (all cited from Final_Paper/main.tex):
+%   salem2025gapmap, lin2004rouge, boguslav2023ignorance,
+%   rougescore, thorne2018fever,
+%   bowman2015large, williams2018mnli, devlin2019bert, liu2019roberta,
+%   vaswani2017attention, wolf2020transformers, paszke2019pytorch,
+%   toulmin1958uses,
+%   dubey2024llama3, gemmateam2024gemma2, openai2023gpt4,
+%   ipbes2019global, beee2026,
+%   pypdf, openaiapi, ollama
+%
+% --- Core project papers (explicitly listed in Part2_Report / Part3_Report) ---
+
+@article{salem2025gapmap,
+  title={GAPMAP: Mapping Scientific Knowledge Gaps in Biomedical Literature Using Large Language Models},
+  author={Salem, Nourah M. and White, Elizabeth and Bada, Michael and Hunter, Lawrence},
+  journal={arXiv preprint arXiv:2510.25055},
+  year={2025},
+  note={\url{https://arxiv.org/abs/2510.25055}}
+}
+
+@inproceedings{lin2004rouge,
+  title={{ROUGE}: A Package for Automatic Evaluation of Summaries},
+  author={Lin, Chin-Yew},
+  booktitle={Proceedings of the Workshop on Text Summarization Branches Out},
+  year={2004},
+  note={\url{https://aclanthology.org/W04-1013/}}
+}
+
+@article{boguslav2023ignorance,
+  title={A scalable approach to identify ignorance statements and opportunities for knowledge base completion in scientific literature},
+  author={Boguslav, Mackenzie R. and Cohen, K. Bretonnel and Hunter, Lawrence E.},
+  journal={Journal of Biomedical Semantics},
+  volume={14},
+  number={1},
+  pages={11},
+  year={2023},
+  note={\url{https://doi.org/10.1186/s13326-023-00294-8}}
+}
+
+% --- Evaluation + claim verification (used in discussion / related work) ---
+
+@misc{rougescore,
+  author={{Google Research}},
+  title={{rouge\_score}: {ROUGE} {F}-measure implementation in {Python}},
+  year={2024},
+  note={\url{https://pypi.org/project/rouge-score/}}
+}
+
+@inproceedings{thorne2018fever,
+  title={{FEVER}: a large-scale dataset for fact extraction and {VER}ification},
+  author={Thorne, James and Vlachos, Andreas and Cocarascu, Oana and Mittal, Arpit and Riedel, Sebastian},
+  booktitle={Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long Papers)},
+  year={2018},
+  note={\url{https://aclanthology.org/N18-1074/}}
+}
+
+% --- NLI stack (RoBERTa-large-MNLI in tabi-validate) ---
+
+@inproceedings{bowman2015large,
+  title={A large annotated corpus for learning natural language inference},
+  author={Bowman, Samuel R. and Angeli, Gabor and Potts, Christopher and Manning, Christopher D.},
+  booktitle={Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing},
+  year={2015},
+  note={\url{https://aclanthology.org/D15-1075/}}
+}
+
+@inproceedings{williams2018mnli,
+  title={{MultiNLI}: Evaluating Cross-Domain Natural Language Inference},
+  author={Williams, Adina and Nangia, Nikita and Bowman, Samuel R.},
+  booktitle={Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long Papers)},
+  year={2018},
+  note={\url{https://aclanthology.org/N18-1101/}}
+}
+
+@inproceedings{devlin2019bert,
+  title={{BERT}: Pre-training of Deep Bidirectional Transformers for Language Understanding},
+  author={Devlin, Jacob and Chang, Ming-Wei and Lee, Kenton and Toutanova, Kristina},
+  booktitle={Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)},
+  year={2019},
+  note={\url{https://aclanthology.org/N19-1423/}}
+}
+
+@article{liu2019roberta,
+  title={RoBERTa: A Robustly Optimized {BERT} Pretraining Approach},
+  author={Liu, Yinhan and Ott, Myle and Goyal, Naman and Du, Jingfei and Joshi, Mandar and Chen, Danqi and Levy, Omer and Lewis, Mike and Zettlemoyer, Luke and Stoyanov, Veselin},
+  journal={arXiv preprint arXiv:1907.11692},
+  year={2019},
+  note={\url{https://arxiv.org/abs/1907.11692}}
+}
+
+@inproceedings{wolf2020transformers,
+  title={Transformers: State-of-the-Art Natural Language Processing},
+  author={Wolf, Thomas and Debut, Lysandre and Sanh, Victor and Chaumond, Julien and Delangue, Cl{\'e}ment and Moi, Anthony and Cistac, Pierric and Rault, Tim and Louf, R{\'e}mi and Funtowicz, Morgan and Brew, Jamie},
+  booktitle={Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations},
+  year={2020},
+  note={\url{https://aclanthology.org/2020.emnlp-demos.6/}}
+}
+
+@inproceedings{vaswani2017attention,
+  title={Attention is All You Need},
+  author={Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan~N. and Kaiser, Lukasz and Polosukhin, Illia},
+  booktitle={Advances in Neural Information Processing Systems},
+  year={2017},
+  note={\url{https://arxiv.org/abs/1706.03762}}
+}
+
+@inproceedings{paszke2019pytorch,
+  title={{PyTorch}: An Imperative Style, High-Performance Deep Learning Library},
+  author={Paszke, Adam and Gross, Sam and Massa, Francisco and Lerer, Adam and Bradbury, James and Chanan, Gregory and Killeen, Trevor and Lin, Zeming and Gimelshein, Natalia and Antiga, Luca and others},
+  booktitle={Advances in Neural Information Processing Systems},
+  year={2019},
+  note={\url{https://arxiv.org/abs/1912.01703}}
+}
+
+% --- TABI / structured argument (conceptual basis for Claim--Grounds--Warrant) ---
+
+@book{toulmin1958uses,
+  title={The Uses of Argument},
+  author={Toulmin, Stephen E.},
+  publisher={Cambridge University Press},
+  year={1958}
+}
+
+% --- Models named in GAPMAP comparisons and our pipeline ---
+
+@article{dubey2024llama3,
+  title={The {Llama} 3 Herd of Models},
+  author={Dubey, Abhimanyu and Jauhri, Abhinav and Pandey, Anush and Kadian, Abhishek and {Al-Dahle}, Ahmad and Letman, Aiesha and Mathur, Alan and Schelten, Alan and Yang, Amy and Fan, Angela and Goyal, Ashvin and Hartshorn, Anthony and Yang, Aobo and Mitra, Archi and Sravankumar, Archie and Korenev, Artem and Hinsvark, Arthur and Rao, Arun and Zhang, Aston and Rodriguez, Aurelien and Gregersen, Austen and Spataru, Ava and Roziere, Baptiste and Birch, Bethany and Chern, Blake and Cargile, Boby and Ni, Bonnie and Murali, Braden and White, Bryan and Legaspy, Carl and Huang, Chenyu and Cho, Chung and Mejia, Chris and Muller, Chris and McConnell, Chris and Keller, Christian and Touret, Christophe and Wu, Chunyang and Wong, Corinne},
+  journal={arXiv preprint arXiv:2407.21783},
+  year={2024},
+  note={Full author list on arXiv. \url{https://arxiv.org/abs/2407.21783}}
+}
+
+@article{gemmateam2024gemma2,
+  title={Gemma 2: Improving Open Language Models at a Practical Size},
+  author={Rivi{\`e}re, Morgane and Pathak, Shreya and Sessa, Pier Giuseppe and Hardin, Cassidy and Bhupatiraju, Surya and Hussenot, L{\'e}onard and Mesnard, Thomas and Shahriari, Bobak and Ram{\'e}, Alexandre and Ferret, Johan},
+  journal={arXiv preprint arXiv:2408.00118},
+  year={2024},
+  note={Full author list on arXiv. \url{https://arxiv.org/abs/2408.00118}}
+}
+
+@misc{openai2023gpt4,
+  author={{OpenAI}},
+  title={{GPT-4} Technical Report},
+  year={2023},
+  note={\url{https://arxiv.org/abs/2303.08774}}
+}
+
+% --- Data / policy corpus context (GAPMAP explicit benchmark track) ---
+
+@misc{ipbes2019global,
+  author={{IPBES}},
+  title={Summary for policymakers of the global assessment report on biodiversity and ecosystem services},
+  year={2019},
+  note={Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services; \url{https://www.ipbes.net/global-assessment}}
+}
+
+@misc{beee2026,
+  author={{Elsevier}},
+  title={Journal of {B}ehavioral and {E}xperimental {E}conomics},
+  year={2026},
+  note={Journal home page; accessed April 2026. \url{https://www.journals.elsevier.com/journal-of-behavioral-and-experimental-economics}}
+}
+
+% --- Engineering / tooling (used to run experiments) ---
+
+@misc{pypdf,
+  title={{pypdf}: A Pure-Python {PDF} Library},
+  author={{pypdf contributors}},
+  year={2025},
+  note={Documentation accessed Apr.\ 2026. \url{https://pypdf.readthedocs.io/}}
+}
+
+@misc{openaiapi,
+  title={OpenAI {API} Documentation},
+  author={{OpenAI}},
+  year={2025},
+  note={Accessed Apr.\ 2026. \url{https://platform.openai.com/docs/}}
+}
+
+@misc{ollama,
+  title={Ollama: local large language model runner},
+  author={{Ollama}},
+  year={2025},
+  note={Software accessed Apr.\ 2026. \url{https://ollama.com/}}
+}
+
+% --- Full local PDF corpus (1 entry per PDF) ---
+% These entries intentionally cite the *exact documents used* in our JBEE PDF corpus.
+% We do not have standardized BibTeX metadata for each PDF in-repo, so we cite them
+% as local documents by filename and path.
+
+@misc{jbee_pdf_001,
+  title={{Does college education make women less likely to 2025 Journal of Behavioral}},
+  author={{JBEE Corpus Document 001}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-02-11.549/Does-college-education-make-women-less-likely-to-_2025_Journal-of-Behavioral.pdf}}
+}
+@misc{jbee_pdf_002,
+  title={{Pre merger performance and merger success 2025 Journal of Behavioral and Exp}},
+  author={{JBEE Corpus Document 002}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-02-11.549/Pre-merger-performance-and-merger-success_2025_Journal-of-Behavioral-and-Exp.pdf}}
+}
+@misc{jbee_pdf_003,
+  title={{The effects of cognitive load and mindfulness m 2025 Journal of Behavioral a}},
+  author={{JBEE Corpus Document 003}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-02-11.549/The-effects-of-cognitive-load-and-mindfulness-m_2025_Journal-of-Behavioral-a.pdf}}
+}
+@misc{jbee_pdf_004,
+  title={{Dishonesty and justifications Evidence fro 2026 Journal of Behavioral and E}},
+  author={{JBEE Corpus Document 004}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-08-13.780/Dishonesty-and-justifications--Evidence-fro_2026_Journal-of-Behavioral-and-E.pdf}}
+}
+@misc{jbee_pdf_005,
+  title={{Hey what did you expect Confirmation bias in c 2026 Journal of Behavioral}},
+  author={{JBEE Corpus Document 005}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-08-13.780/Hey--what-did-you-expect---Confirmation-bias-in-c_2026_Journal-of-Behavioral.pdf}}
+}
+@misc{jbee_pdf_006,
+  title={{Legal reforms norms and child marriage observa 2026 Journal of Behavioral}},
+  author={{JBEE Corpus Document 006}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-08-13.780/Legal-reforms--norms--and-child-marriage--observa_2026_Journal-of-Behavioral.pdf}}
+}
+@misc{jbee_pdf_007,
+  title={{Meritocracy meets cooperative behavior in 2026 Journal of Behavioral and Exp}},
+  author={{JBEE Corpus Document 007}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-08-13.780/Meritocracy-meets-cooperative-behavior-in_2026_Journal-of-Behavioral-and-Exp.pdf}}
+}
+@misc{jbee_pdf_008,
+  title={{Misperception of descriptive norms and adopt 2026 Journal of Behavioral and}},
+  author={{JBEE Corpus Document 008}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-08-13.780/Misperception-of-descriptive-norms-and-adopt_2026_Journal-of-Behavioral-and-.pdf}}
+}
+@misc{jbee_pdf_009,
+  title={{Remembering past present bia 2026 Journal of Behavioral and Experimental Eco}},
+  author={{JBEE Corpus Document 009}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-08-13.780/Remembering-past-present-bia_2026_Journal-of-Behavioral-and-Experimental-Eco.pdf}}
+}
+@misc{jbee_pdf_010,
+  title={{The effect of trust and information on hous 2026 Journal of Behavioral and E}},
+  author={{JBEE Corpus Document 010}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-08-13.780/The-effect-of-trust-and-information-on-hous_2026_Journal-of-Behavioral-and-E.pdf}}
+}
+@misc{jbee_pdf_011,
+  title={{Beat the market or Take care of your savings Can lang 2025 Journal of}},
+  author={{JBEE Corpus Document 011}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-11-50.856/-Beat-the-market---or--Take-care-of-your-savings---Can-lang_2025_Journal-of-.pdf}}
+}
+@misc{jbee_pdf_012,
+  title={{Assessing risk attitudes among physicians medica 2025 Journal of Behavioral}},
+  author={{JBEE Corpus Document 012}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-11-50.856/Assessing-risk-attitudes-among-physicians--medica_2025_Journal-of-Behavioral.pdf}}
+}
+@misc{jbee_pdf_013,
+  title={{Can reference dependent loss aversion ex 2025 Journal of Behavioral and Expe}},
+  author={{JBEE Corpus Document 013}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-11-50.856/Can-reference-dependent-loss-aversion-ex_2025_Journal-of-Behavioral-and-Expe.pdf}}
+}
+@misc{jbee_pdf_014,
+  title={{Challenging the free rider Children behav 2025 Journal of Behavioral and Ex}},
+  author={{JBEE Corpus Document 014}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-11-50.856/Challenging-the-free-rider--Children-behav_2025_Journal-of-Behavioral-and-Ex.pdf}}
+}
+@misc{jbee_pdf_015,
+  title={{Do giving voice and social information help in 2025 Journal of Behavioral an}},
+  author={{JBEE Corpus Document 015}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-11-50.856/Do-giving-voice-and-social-information-help-in_2025_Journal-of-Behavioral-an.pdf}}
+}
+@misc{jbee_pdf_016,
+  title={{Does lobbying discourage individuals from 2025 Journal of Behavioral and Exp}},
+  author={{JBEE Corpus Document 016}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-11-50.856/Does-lobbying-discourage-individuals-from_2025_Journal-of-Behavioral-and-Exp.pdf}}
+}
+@misc{jbee_pdf_017,
+  title={{Editorial Board 2025 Journal of Behavioral and Experimental Economics}},
+  author={{JBEE Corpus Document 017}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-11-50.856/Editorial-Board_2025_Journal-of-Behavioral-and-Experimental-Economics.pdf}}
+}
+@misc{jbee_pdf_018,
+  title={{Extreme temperatures Gender differenc 2025 Journal of Behavioral and Experi}},
+  author={{JBEE Corpus Document 018}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-11-50.856/Extreme-temperatures--Gender-differenc_2025_Journal-of-Behavioral-and-Experi.pdf}}
+}
+@misc{jbee_pdf_019,
+  title={{Food waste salience and task knowledge to reduce i 2025 Journal of Behaviora}},
+  author={{JBEE Corpus Document 019}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-11-50.856/Food-waste-salience-and-task-knowledge-to-reduce-i_2025_Journal-of-Behaviora.pdf}}
+}
+@misc{jbee_pdf_020,
+  title={{Incentivizing participation with full complet 2025 Journal of Behavioral and}},
+  author={{JBEE Corpus Document 020}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-11-50.856/Incentivizing-participation-with-full-complet_2025_Journal-of-Behavioral-and.pdf}}
+}
+@misc{jbee_pdf_021,
+  title={{Moral preferences in ultimatum and i 2025 Journal of Behavioral and Experime}},
+  author={{JBEE Corpus Document 021}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-11-50.856/Moral-preferences-in-ultimatum-and-i_2025_Journal-of-Behavioral-and-Experime.pdf}}
+}
+@misc{jbee_pdf_022,
+  title={{The effects of party size and dining dura 2025 Journal of Behavioral and Exp}},
+  author={{JBEE Corpus Document 022}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-11-50.856/The-effects-of-party-size-and-dining-dura_2025_Journal-of-Behavioral-and-Exp.pdf}}
+}
+@misc{jbee_pdf_023,
+  title={{The impact of process automation on 2025 Journal of Behavioral and Experimen}},
+  author={{JBEE Corpus Document 023}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-11-50.856/The-impact-of-process-automation-on_2025_Journal-of-Behavioral-and-Experimen.pdf}}
+}
+@misc{jbee_pdf_024,
+  title={{Using a brief contact to improve trust in 2025 Journal of Behavioral and Exp}},
+  author={{JBEE Corpus Document 024}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-11-50.856/Using-a-brief-contact-to-improve-trust-in_2025_Journal-of-Behavioral-and-Exp.pdf}}
+}
+@misc{jbee_pdf_025,
+  title={{You can quit Exploring the efficacy of new 2025 Journal of Behavioral an}},
+  author={{JBEE Corpus Document 025}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/-You-can-quit----Exploring-the-efficacy-of-new_2025_Journal-of-Behavioral-an.pdf}}
+}
+@misc{jbee_pdf_026,
+  title={{Advancing openness in economic research through 2025 Journal of Behavioral a}},
+  author={{JBEE Corpus Document 026}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/Advancing-openness-in-economic-research-through_2025_Journal-of-Behavioral-a.pdf}}
+}
+@misc{jbee_pdf_027,
+  title={{Avoiding cognitive inconsistency Experimenta 2025 Journal of Behavioral and}},
+  author={{JBEE Corpus Document 027}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/Avoiding-cognitive-inconsistency--Experimenta_2025_Journal-of-Behavioral-and.pdf}}
+}
+@misc{jbee_pdf_028,
+  title={{Best practices for reproducibility research asse 2025 Journal of Behavioral}},
+  author={{JBEE Corpus Document 028}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/Best-practices-for-reproducibility--research-asse_2025_Journal-of-Behavioral.pdf}}
+}
+@misc{jbee_pdf_029,
+  title={{Buyer side gender discrimination in bargainin 2025 Journal of Behavioral and}},
+  author={{JBEE Corpus Document 029}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/Buyer-side-gender-discrimination-in-bargainin_2025_Journal-of-Behavioral-and.pdf}}
+}
+@misc{jbee_pdf_030,
+  title={{Communication and coordination in firms A lab in 2025 Journal of Behavioral}},
+  author={{JBEE Corpus Document 030}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/Communication-and-coordination-in-firms-A-lab-in-_2025_Journal-of-Behavioral.pdf}}
+}
+@misc{jbee_pdf_031,
+  title={{Consumers privacy concerns and price sett 2025 Journal of Behavioral and Ex}},
+  author={{JBEE Corpus Document 031}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/Consumers--privacy-concerns-and-price-sett_2025_Journal-of-Behavioral-and-Ex.pdf}}
+}
+@misc{jbee_pdf_032,
+  title={{Drivers of tax compliance Survey evidence 2025 Journal of Behavioral and Ex}},
+  author={{JBEE Corpus Document 032}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/Drivers-of-tax-compliance--Survey-evidence_2025_Journal-of-Behavioral-and-Ex.pdf}}
+}
+@misc{jbee_pdf_033,
+  title={{Editorial Board 2025 Journal of Behavioral and Experimental Economics}},
+  author={{JBEE Corpus Document 033}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/Editorial-Board_2025_Journal-of-Behavioral-and-Experimental-Economics.pdf}}
+}
+@misc{jbee_pdf_034,
+  title={{Elicitation bias in Multiple Price List 2025 Journal of Behavioral and Exper}},
+  author={{JBEE Corpus Document 034}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/Elicitation-bias-in-Multiple-Price-List_2025_Journal-of-Behavioral-and-Exper.pdf}}
+}
+@misc{jbee_pdf_035,
+  title={{Environmental edutainment games and pro environment 2025 Journal of Behavior}},
+  author={{JBEE Corpus Document 035}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/Environmental-edutainment-games-and-pro-environment_2025_Journal-of-Behavior.pdf}}
+}
+@misc{jbee_pdf_036,
+  title={{Evaluating behavioural strategies for environme 2025 Journal of Behavioral a}},
+  author={{JBEE Corpus Document 036}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/Evaluating-behavioural-strategies-for-environme_2025_Journal-of-Behavioral-a.pdf}}
+}
+@misc{jbee_pdf_037,
+  title={{Evaluators masculine gender identity may drive 2025 Journal of Behavioral a}},
+  author={{JBEE Corpus Document 037}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/Evaluators--masculine-gender-identity-may-drive_2025_Journal-of-Behavioral-a.pdf}}
+}
+@misc{jbee_pdf_038,
+  title={{Experimental methods Learning your own risk pr 2025 Journal of Behavioral a}},
+  author={{JBEE Corpus Document 038}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/Experimental-methods--Learning-your-own-risk-pr_2025_Journal-of-Behavioral-a.pdf}}
+}
+@misc{jbee_pdf_039,
+  title={{Gender differences in performance 2025 Journal of Behavioral and Experiment}},
+  author={{JBEE Corpus Document 039}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/Gender-differences-in-performance-_2025_Journal-of-Behavioral-and-Experiment.pdf}}
+}
+@misc{jbee_pdf_040,
+  title={{Gender of the opponent and reaction to 2025 Journal of Behavioral and Exper}},
+  author={{JBEE Corpus Document 040}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/Gender-of-the-opponent-and-reaction-to-_2025_Journal-of-Behavioral-and-Exper.pdf}}
+}
+@misc{jbee_pdf_041,
+  title={{Go your own way social perception mi 2025 Journal of Behavioral and Experi}},
+  author={{JBEE Corpus Document 041}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/Go-your-own-way--social-perception--mi_2025_Journal-of-Behavioral-and-Experi.pdf}}
+}
+@misc{jbee_pdf_042,
+  title={{Peers performance feedback Evidence fro 2025 Journal of Behavioral and Exp}},
+  author={{JBEE Corpus Document 042}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/Peers--performance-feedback--Evidence-fro_2025_Journal-of-Behavioral-and-Exp.pdf}}
+}
+@misc{jbee_pdf_043,
+  title={{Return intentions of Ukrainian refugees The 2025 Journal of Behavioral and}},
+  author={{JBEE Corpus Document 043}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/Return-intentions-of-Ukrainian-refugees--The_2025_Journal-of-Behavioral-and-.pdf}}
+}
+@misc{jbee_pdf_044,
+  title={{Risk perception in food safety and the Value of 2025 Journal of Behavioral a}},
+  author={{JBEE Corpus Document 044}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/Risk-perception-in-food-safety-and-the-Value-of_2025_Journal-of-Behavioral-a.pdf}}
+}
+@misc{jbee_pdf_045,
+  title={{Search costs choice overload and intermediary devi 2025 Journal of Behavio}},
+  author={{JBEE Corpus Document 045}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/Search-costs--choice-overload--and-intermediary-devi_2025_Journal-of-Behavio.pdf}}
+}
+@misc{jbee_pdf_046,
+  title={{The attitude behavior gap is not one sided Som 2025 Journal of Behavioral a}},
+  author={{JBEE Corpus Document 046}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/The-attitude-behavior-gap-is-not-one-sided--Som_2025_Journal-of-Behavioral-a.pdf}}
+}
+@misc{jbee_pdf_047,
+  title={{The effect of social distancing on tru 2025 Journal of Behavioral and Experi}},
+  author={{JBEE Corpus Document 047}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/The-effect-of-social-distancing-on-tru_2025_Journal-of-Behavioral-and-Experi.pdf}}
+}
+@misc{jbee_pdf_048,
+  title={{The effect of social norms on parents beliefs an 2025 Journal of Behavioral}},
+  author={{JBEE Corpus Document 048}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/The-effect-of-social-norms-on-parents--beliefs-an_2025_Journal-of-Behavioral.pdf}}
+}
+@misc{jbee_pdf_049,
+  title={{The honest electricity thief Experimental eviden 2025 Journal of Behaviora}},
+  author={{JBEE Corpus Document 049}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/The-honest--electricity--thief-Experimental-eviden_2025_Journal-of-Behaviora.pdf}}
+}
+@misc{jbee_pdf_050,
+  title={{Time pressure and motivated delay effects on san 2025 Journal of Behavioral}},
+  author={{JBEE Corpus Document 050}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/Time-pressure-and-motivated-delay-effects-on-san_2025_Journal-of-Behavioral-.pdf}}
+}
+@misc{jbee_pdf_051,
+  title={{Unintended consequences of nudges Challenges i 2025 Journal of Behavioral a}},
+  author={{JBEE Corpus Document 051}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/Unintended-consequences-of-nudges--Challenges-i_2025_Journal-of-Behavioral-a.pdf}}
+}
+@misc{jbee_pdf_052,
+  title={{Verification and reputational concern 2025 Journal of Behavioral and Experim}},
+  author={{JBEE Corpus Document 052}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/Verification-and-reputational-concern_2025_Journal-of-Behavioral-and-Experim.pdf}}
+}
+@misc{jbee_pdf_053,
+  title={{What works in financial education Experime 2025 Journal of Behavioral and E}},
+  author={{JBEE Corpus Document 053}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/What-works-in-financial-education--Experime_2025_Journal-of-Behavioral-and-E.pdf}}
+}
+@misc{jbee_pdf_054,
+  title={{When leadership messaging fails to encourage produc 2025 Journal of Behavior}},
+  author={{JBEE Corpus Document 054}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/When-leadership-messaging-fails-to-encourage-produc_2025_Journal-of-Behavior.pdf}}
+}
+@misc{jbee_pdf_055,
+  title={{Work meaningfulness and eff 2025 Journal of Behavioral and Experimental Econ}},
+  author={{JBEE Corpus Document 055}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-14-25.442/Work-meaningfulness-and-eff_2025_Journal-of-Behavioral-and-Experimental-Econ.pdf}}
+}
+@misc{jbee_pdf_056,
+  title={{Anticipatory effects of competition on con 2025 Journal of Behavioral and Ex}},
+  author={{JBEE Corpus Document 056}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-31-23.505/Anticipatory-effects-of-competition-on-con_2025_Journal-of-Behavioral-and-Ex.pdf}}
+}
+@misc{jbee_pdf_057,
+  title={{Comparing transparent and covert nudges A meta an 2025 Journal of Behaviora}},
+  author={{JBEE Corpus Document 057}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-31-23.505/Comparing-transparent-and-covert-nudges--A-meta-an_2025_Journal-of-Behaviora.pdf}}
+}
+@misc{jbee_pdf_058,
+  title={{Happiness and willingness to c 2025 Journal of Behavioral and Experimental E}},
+  author={{JBEE Corpus Document 058}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-31-23.505/Happiness-and-willingness-to-c_2025_Journal-of-Behavioral-and-Experimental-E.pdf}}
+}
+@misc{jbee_pdf_059,
+  title={{How gender and prosociality affect machine inter 2025 Journal of Behavioral}},
+  author={{JBEE Corpus Document 059}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-31-23.505/How-gender-and-prosociality-affect-machine-inter_2025_Journal-of-Behavioral-.pdf}}
+}
+@misc{jbee_pdf_060,
+  title={{Influenced by others Trusting behaviour 2025 Journal of Behavioral and Expe}},
+  author={{JBEE Corpus Document 060}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-31-23.505/Influenced-by-others--Trusting-behaviour_2025_Journal-of-Behavioral-and-Expe.pdf}}
+}
+@misc{jbee_pdf_061,
+  title={{Mood and the malleability of moral reasoning th 2025 Journal of Behavioral}},
+  author={{JBEE Corpus Document 061}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-31-23.505/Mood-and-the-malleability-of-moral-reasoning--th_2025_Journal-of-Behavioral-.pdf}}
+}
+@misc{jbee_pdf_062,
+  title={{Revisiting the Dunning Kruger effect Composi 2025 Journal of Behavioral and}},
+  author={{JBEE Corpus Document 062}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-31-23.505/Revisiting-the-Dunning-Kruger-effect--Composi_2025_Journal-of-Behavioral-and.pdf}}
+}
+@misc{jbee_pdf_063,
+  title={{The Napoleon complex revisited New eviden 2025 Journal of Behavioral and Ex}},
+  author={{JBEE Corpus Document 063}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-31-23.505/The-Napoleon-complex-revisited--New-eviden_2025_Journal-of-Behavioral-and-Ex.pdf}}
+}
+@misc{jbee_pdf_064,
+  title={{Does college education make women less likely to 2025 Journal of Behavioral}},
+  author={{JBEE Corpus Document 064}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-31-55.542/Does-college-education-make-women-less-likely-to-_2025_Journal-of-Behavioral.pdf}}
+}
+@misc{jbee_pdf_065,
+  title={{Pre merger performance and merger success 2025 Journal of Behavioral and Exp}},
+  author={{JBEE Corpus Document 065}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-31-55.542/Pre-merger-performance-and-merger-success_2025_Journal-of-Behavioral-and-Exp.pdf}}
+}
+@misc{jbee_pdf_066,
+  title={{The effects of cognitive load and mindfulness m 2025 Journal of Behavioral a}},
+  author={{JBEE Corpus Document 066}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_18-31-55.542/The-effects-of-cognitive-load-and-mindfulness-m_2025_Journal-of-Behavioral-a.pdf}}
+}
+@misc{jbee_pdf_067,
+  title={{Anticipatory effects of competition on con 2025 Journal of Behavioral and Ex}},
+  author={{JBEE Corpus Document 067}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-12.203/Anticipatory-effects-of-competition-on-con_2025_Journal-of-Behavioral-and-Ex.pdf}}
+}
+@misc{jbee_pdf_068,
+  title={{Comparing transparent and covert nudges A meta an 2025 Journal of Behaviora}},
+  author={{JBEE Corpus Document 068}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-12.203/Comparing-transparent-and-covert-nudges--A-meta-an_2025_Journal-of-Behaviora.pdf}}
+}
+@misc{jbee_pdf_069,
+  title={{Editorial Board 2025 Journal of Behavioral and Experimental Economics}},
+  author={{JBEE Corpus Document 069}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-12.203/Editorial-Board_2025_Journal-of-Behavioral-and-Experimental-Economics.pdf}}
+}
+@misc{jbee_pdf_070,
+  title={{Happiness and willingness to c 2025 Journal of Behavioral and Experimental E}},
+  author={{JBEE Corpus Document 070}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-12.203/Happiness-and-willingness-to-c_2025_Journal-of-Behavioral-and-Experimental-E.pdf}}
+}
+@misc{jbee_pdf_071,
+  title={{How gender and prosociality affect machine inter 2025 Journal of Behavioral}},
+  author={{JBEE Corpus Document 071}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-12.203/How-gender-and-prosociality-affect-machine-inter_2025_Journal-of-Behavioral-.pdf}}
+}
+@misc{jbee_pdf_072,
+  title={{Influenced by others Trusting behaviour 2025 Journal of Behavioral and Expe}},
+  author={{JBEE Corpus Document 072}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-12.203/Influenced-by-others--Trusting-behaviour_2025_Journal-of-Behavioral-and-Expe.pdf}}
+}
+@misc{jbee_pdf_073,
+  title={{Mood and the malleability of moral reasoning th 2025 Journal of Behavioral}},
+  author={{JBEE Corpus Document 073}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-12.203/Mood-and-the-malleability-of-moral-reasoning--th_2025_Journal-of-Behavioral-.pdf}}
+}
+@misc{jbee_pdf_074,
+  title={{Revisiting the Dunning Kruger effect Composi 2025 Journal of Behavioral and}},
+  author={{JBEE Corpus Document 074}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-12.203/Revisiting-the-Dunning-Kruger-effect--Composi_2025_Journal-of-Behavioral-and.pdf}}
+}
+@misc{jbee_pdf_075,
+  title={{The Napoleon complex revisited New eviden 2025 Journal of Behavioral and Ex}},
+  author={{JBEE Corpus Document 075}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-12.203/The-Napoleon-complex-revisited--New-eviden_2025_Journal-of-Behavioral-and-Ex.pdf}}
+}
+@misc{jbee_pdf_076,
+  title={{A comment on growth and inequality in public good p 2025 Journal of Behavio}},
+  author={{JBEE Corpus Document 076}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-28.745/A-comment-on--growth-and-inequality-in-public-good-p_2025_Journal-of-Behavio.pdf}}
+}
+@misc{jbee_pdf_077,
+  title={{Are employers happy to hire happy candidates 2025 Journal of Behavioral and}},
+  author={{JBEE Corpus Document 077}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-28.745/Are-employers-happy-to-hire-happy-candidates_2025_Journal-of-Behavioral-and-.pdf}}
+}
+@misc{jbee_pdf_078,
+  title={{Unraveling gender norms Social and personal n 2025 Journal of Behavioral an}},
+  author={{JBEE Corpus Document 078}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-28.745/Unraveling-gender-norms--Social-and-personal-n_2025_Journal-of-Behavioral-an.pdf}}
+}
+@misc{jbee_pdf_079,
+  title={{A longitudinal study on the association between 2025 Journal of Behavioral}},
+  author={{JBEE Corpus Document 079}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-37.991/A-longitudinal-study-on-the-association-between-_2025_Journal-of-Behavioral-.pdf}}
+}
+@misc{jbee_pdf_080,
+  title={{Behavioral interventions and market efficiency 2025 Journal of Behavioral a}},
+  author={{JBEE Corpus Document 080}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-37.991/Behavioral-interventions-and-market-efficiency-_2025_Journal-of-Behavioral-a.pdf}}
+}
+@misc{jbee_pdf_081,
+  title={{Do emotional carryover effects ca 2025 Journal of Behavioral and Experimenta}},
+  author={{JBEE Corpus Document 081}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-37.991/Do-emotional-carryover-effects-ca_2025_Journal-of-Behavioral-and-Experimenta.pdf}}
+}
+@misc{jbee_pdf_082,
+  title={{Editorial Board 2025 Journal of Behavioral and Experimental Economics}},
+  author={{JBEE Corpus Document 082}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-37.991/Editorial-Board_2025_Journal-of-Behavioral-and-Experimental-Economics.pdf}}
+}
+@misc{jbee_pdf_083,
+  title={{Expectations and social decision making An in 2025 Journal of Behavioral an}},
+  author={{JBEE Corpus Document 083}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-37.991/Expectations-and-social-decision-making--An-in_2025_Journal-of-Behavioral-an.pdf}}
+}
+@misc{jbee_pdf_084,
+  title={{Increased cooperation in stochastic social dil 2025 Journal of Behavioral an}},
+  author={{JBEE Corpus Document 084}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-37.991/Increased-cooperation-in-stochastic-social-dil_2025_Journal-of-Behavioral-an.pdf}}
+}
+@misc{jbee_pdf_085,
+  title={{Instinctiveness and reflexivity in behav 2025 Journal of Behavioral and Expe}},
+  author={{JBEE Corpus Document 085}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-37.991/Instinctiveness-and-reflexivity-in-behav_2025_Journal-of-Behavioral-and-Expe.pdf}}
+}
+@misc{jbee_pdf_086,
+  title={{Lotto lotteries Decision making under unc 2025 Journal of Behavioral and E}},
+  author={{JBEE Corpus Document 086}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-37.991/Lotto-lotteries---Decision-making-under-unc_2025_Journal-of-Behavioral-and-E.pdf}}
+}
+@misc{jbee_pdf_087,
+  title={{Social learning under ambiguity An ex 2025 Journal of Behavioral and Experim}},
+  author={{JBEE Corpus Document 087}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-37.991/Social-learning-under-ambiguity-An-ex_2025_Journal-of-Behavioral-and-Experim.pdf}}
+}
+@misc{jbee_pdf_088,
+  title={{Update Bias Manipulating past information 2024 Journal of Behavioral and}},
+  author={{JBEE Corpus Document 088}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-49.502/-Update-Bias---Manipulating-past-information_2024_Journal-of-Behavioral-and-.pdf}}
+}
+@misc{jbee_pdf_089,
+  title={{Adding nudge based reminders to financial incentives 2024 Journal of Behavio}},
+  author={{JBEE Corpus Document 089}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-49.502/Adding-nudge-based-reminders-to-financial-incentives_2024_Journal-of-Behavio.pdf}}
+}
+@misc{jbee_pdf_090,
+  title={{Asking for a friend Reminders and incentive 2024 Journal of Behavioral and}},
+  author={{JBEE Corpus Document 090}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-49.502/Asking-for-a-friend--Reminders-and-incentive_2024_Journal-of-Behavioral-and-.pdf}}
+}
+@misc{jbee_pdf_091,
+  title={{Coordination in stag hunt ga 2024 Journal of Behavioral and Experimental Eco}},
+  author={{JBEE Corpus Document 091}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-49.502/Coordination-in-stag-hunt-ga_2024_Journal-of-Behavioral-and-Experimental-Eco.pdf}}
+}
+@misc{jbee_pdf_092,
+  title={{Does society influence the gender gap in risk 2024 Journal of Behavioral an}},
+  author={{JBEE Corpus Document 092}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-49.502/Does-society-influence-the-gender-gap-in-risk-_2024_Journal-of-Behavioral-an.pdf}}
+}
+@misc{jbee_pdf_093,
+  title={{Editorial Board 2024 Journal of Behavioral and Experimental Economics}},
+  author={{JBEE Corpus Document 093}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-49.502/Editorial-Board_2024_Journal-of-Behavioral-and-Experimental-Economics.pdf}}
+}
+@misc{jbee_pdf_094,
+  title={{Individual differences in Bitcoin investment T 2024 Journal of Behavioral a}},
+  author={{JBEE Corpus Document 094}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-49.502/Individual-differences-in-Bitcoin-investment--T_2024_Journal-of-Behavioral-a.pdf}}
+}
+@misc{jbee_pdf_095,
+  title={{Inflation expectations in the wake of 2024 Journal of Behavioral and Experi}},
+  author={{JBEE Corpus Document 095}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-49.502/Inflation-expectations-in-the-wake-of-_2024_Journal-of-Behavioral-and-Experi.pdf}}
+}
+@misc{jbee_pdf_096,
+  title={{Privacy during pandemics Attitudes to pu 2024 Journal of Behavioral and Exp}},
+  author={{JBEE Corpus Document 096}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-49.502/Privacy-during-pandemics--Attitudes-to-pu_2024_Journal-of-Behavioral-and-Exp.pdf}}
+}
+@misc{jbee_pdf_097,
+  title={{The drunk side of trust Generalized and ins 2024 Journal of Behavioral and}},
+  author={{JBEE Corpus Document 097}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-49.502/The-drunk-side-of-trust--Generalized-and-ins_2024_Journal-of-Behavioral-and-.pdf}}
+}
+@misc{jbee_pdf_098,
+  title={{Trust a few Natural disasters and the dis 2024 Journal of Behavioral and Ex}},
+  author={{JBEE Corpus Document 098}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-49.502/Trust-a-few--Natural-disasters-and-the-dis_2024_Journal-of-Behavioral-and-Ex.pdf}}
+}
+@misc{jbee_pdf_099,
+  title={{Understanding inconsistencies in risk attitude elic 2024 Journal of Behavior}},
+  author={{JBEE Corpus Document 099}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-49.502/Understanding-inconsistencies-in-risk-attitude-elic_2024_Journal-of-Behavior.pdf}}
+}
+@misc{jbee_pdf_100,
+  title={{COVID 19 and economic preferences Evidenc 2024 Journal of Behavioral and Ex}},
+  author={{JBEE Corpus Document 100}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-57.897/COVID-19-and-economic-preferences--Evidenc_2024_Journal-of-Behavioral-and-Ex.pdf}}
+}
+@misc{jbee_pdf_101,
+  title={{Choosing a victim you know Introducing com 2024 Journal of Behavioral and E}},
+  author={{JBEE Corpus Document 101}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-57.897/Choosing-a-victim-you-know--Introducing-com_2024_Journal-of-Behavioral-and-E.pdf}}
+}
+@misc{jbee_pdf_102,
+  title={{Deciding for others Local public good con 2024 Journal of Behavioral and Ex}},
+  author={{JBEE Corpus Document 102}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-57.897/Deciding-for-others--Local-public-good-con_2024_Journal-of-Behavioral-and-Ex.pdf}}
+}
+@misc{jbee_pdf_103,
+  title={{Editorial Board 2024 Journal of Behavioral and Experimental Economics}},
+  author={{JBEE Corpus Document 103}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-57.897/Editorial-Board_2024_Journal-of-Behavioral-and-Experimental-Economics.pdf}}
+}
+@misc{jbee_pdf_104,
+  title={{Gen Z and financial education Evidence from a 2024 Journal of Behavioral a}},
+  author={{JBEE Corpus Document 104}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-57.897/Gen-Z-and-financial-education--Evidence-from-a-_2024_Journal-of-Behavioral-a.pdf}}
+}
+@misc{jbee_pdf_105,
+  title={{Gender and generosity How contribution informa 2024 Journal of Behavioral a}},
+  author={{JBEE Corpus Document 105}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-57.897/Gender-and-generosity--How-contribution-informa_2024_Journal-of-Behavioral-a.pdf}}
+}
+@misc{jbee_pdf_106,
+  title={{Manipulating response times in the cognitive refle 2024 Journal of Behaviora}},
+  author={{JBEE Corpus Document 106}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-57.897/Manipulating-response-times-in-the-cognitive-refle_2024_Journal-of-Behaviora.pdf}}
+}
+@misc{jbee_pdf_107,
+  title={{Married to the job When your partner s busi 2024 Journal of Behavioral and}},
+  author={{JBEE Corpus Document 107}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-57.897/Married-to-the-job--When-your-partner-s-busi_2024_Journal-of-Behavioral-and-.pdf}}
+}
+@misc{jbee_pdf_108,
+  title={{Measuring preferences for algorithms How wil 2024 Journal of Behavioral an}},
+  author={{JBEE Corpus Document 108}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-57.897/Measuring-preferences-for-algorithms---How-wil_2024_Journal-of-Behavioral-an.pdf}}
+}
+@misc{jbee_pdf_109,
+  title={{Recruiting mid qualified workers in product inn 2024 Journal of Behavioral a}},
+  author={{JBEE Corpus Document 109}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-57.897/Recruiting-mid-qualified-workers-in-product-inn_2024_Journal-of-Behavioral-a.pdf}}
+}
+@misc{jbee_pdf_110,
+  title={{Social antagonism identity driven beliefs a 2024 Journal of Behavioral and}},
+  author={{JBEE Corpus Document 110}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-57.897/Social-antagonism--identity-driven-beliefs--a_2024_Journal-of-Behavioral-and.pdf}}
+}
+@misc{jbee_pdf_111,
+  title={{Spillovers from incentive schemes on distrib 2024 Journal of Behavioral and}},
+  author={{JBEE Corpus Document 111}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-57.897/Spillovers-from-incentive-schemes-on-distrib_2024_Journal-of-Behavioral-and-.pdf}}
+}
+@misc{jbee_pdf_112,
+  title={{Strategic dimensions of solar geoengineering 2024 Journal of Behavioral and}},
+  author={{JBEE Corpus Document 112}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-57.897/Strategic-dimensions-of-solar-geoengineering_2024_Journal-of-Behavioral-and-.pdf}}
+}
+@misc{jbee_pdf_113,
+  title={{Would I lie to you How interaction with c 2024 Journal of Behavioral and Ex}},
+  author={{JBEE Corpus Document 113}},
+  year={2026},
+  note={Local corpus PDF: \url{Dataset/ScienceDirect_articles_25Feb2026_19-17-57.897/Would-I-lie-to-you--How-interaction-with-c_2024_Journal-of-Behavioral-and-Ex.pdf}}
+}

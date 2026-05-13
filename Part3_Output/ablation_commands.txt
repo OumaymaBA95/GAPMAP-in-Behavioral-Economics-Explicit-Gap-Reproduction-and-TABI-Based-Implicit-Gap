@@ -1,0 +1,14 @@
+# Part 3 ablation: re-run extraction with different flags (saves new CSV filenames).
+
+# Baseline (post-filter ON, hybrid OFF — default in run_part2.py):
+#   .venv/bin/python run_part2.py --model openai
+# With hybrid merge:
+#   .venv/bin/python run_part2.py --model openai --hybrid
+# Post-filter OFF (no phrase filter after LLM):
+#   .venv/bin/python run_part2.py --model openai --no-post-filter
+
+# After each run, compare:
+#   .venv/bin/python run_part2.py --compare
+
+# Rename outputs between runs so files are not overwritten, e.g.:
+#   mv Part2_Output/predictions_gpt4o_mini.csv Part2_Output/predictions_gpt4o_mini_nofilter.csv
