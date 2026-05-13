@@ -43,6 +43,9 @@ env/
 .script_build.md
 output.txt
 
+# --- generated presenter handout (rebuild via ./build_script_pdf.sh) ---
+Speaker_Script.pdf
+
 # --- corpus: copyrighted JBEE PDFs, ~200 MB; not redistributable ---
 Dataset/
 
